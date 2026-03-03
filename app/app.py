@@ -10,7 +10,6 @@ card_event_df = pd.read_csv('../card_event_df.csv')
 raw_5cb_stats = pd.read_csv('../raw_5cb_stats.csv')
 
 ### working with data
-# creating sorting map
 # weeks count
 N_weeks = raw_5cb_stats['Week'].max()
 
@@ -21,7 +20,7 @@ def app_ui():
         ui.input_slider('weeks', 'Weeks', 0, N_weeks, [0,N_weeks]),
         ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 5, 5),
         ui.input_checkbox('banned','Include Banned Decks', True),
-       # ui.input_checkbox('')
+        ui.input_checkbox('silly', 'Include Silly Weeks', True),
         ui.output_ui('my_plot')
     )
     return(my_ui)
@@ -36,9 +35,14 @@ def server(input: Inputs, output, session):
         graphing_df =  card_event_df[(~card_event_df['Card'].isin(basic_lands))
                         & (card_event_df['Week'] >= input.weeks()[0]) & (card_event_df['Week'] <= input.weeks()[1])
                         ]
-        
+
+        if not input.silly():
+            silly_weeks = [17,21]
+            graphing_df = graphing_df[~graphing_df['Week'].isin(silly_weeks)]
+
         if not input.banned():
             graphing_df = graphing_df[graphing_df['Deck Legal'] == True]
+
 
         score_agg = graphing_df.drop(columns=['Color Identity','Week']).groupby(by='Card',as_index=False).agg('mean').sort_values('Deck Score', ascending=False)
         score_sort = dict(zip(score_agg['Card'],score_agg['Deck Score']))
@@ -63,7 +67,6 @@ def server(input: Inputs, output, session):
 
     @render.ui
     def my_plot():
-        print(input.banned())
         return ui.output_plot('plot', width= '1000px', height=str(filtered_graphing_df()[1]) + 'px')
 
 # This is a shiny.App object. It must be named `app`.
