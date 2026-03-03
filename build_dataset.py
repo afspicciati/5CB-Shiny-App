@@ -3,9 +3,11 @@ This file builds the dataset for the shiny app to use, cleaning the data, and ou
 '''
 import pandas as pd
 
-# reading in data from google doc
+# reading in data from google sheet
 filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8VISOoiM3TTh9JGk/export?format=csv&gid=0"
 df = pd.read_csv(filepath)
+# write original data 
+df.to_csv('./raw_5cb_stats.csv')
 
 # banlist
 banned_cards = ['swift reconfiguration', 'ghost quarter', 'volatile fault', "thassa's oracle", 
