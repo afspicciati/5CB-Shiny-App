@@ -6,9 +6,8 @@ import seaborn as sns
 basic_lands = ['plains', 'island', 'swamp', 'mountain', 'forest']
 
 # load data
-card_event_df = pd.read_csv('../card_event_df.csv')
-raw_5cb_stats = pd.read_csv('../raw_5cb_stats.csv')
-print(max(raw_5cb_stats['Week']))
+card_event_df = pd.read_csv('./data/card_event_df.csv')
+raw_5cb_stats = pd.read_csv('./data/raw_5cb_stats.csv')
 
 ### working with data
 # weeks count
@@ -19,7 +18,7 @@ def app_ui():
 
     my_ui = ui.page_fluid(
         ui.input_slider('weeks', 'Weeks', 0, N_weeks, [0,N_weeks]),
-        ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 10, 5),
+        ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 10, 6),
         ui.input_checkbox('banned','Include Banned Decks', True),
         ui.input_checkbox('silly', 'Include Silly Weeks', True),
         ui.output_ui('my_plot')

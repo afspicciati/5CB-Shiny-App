@@ -7,7 +7,7 @@ import pandas as pd
 filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8VISOoiM3TTh9JGk/export?format=csv&gid=0"
 df = pd.read_csv(filepath)
 # write original data 
-df.to_csv('./raw_5cb_stats.csv')
+df.to_csv('./app/data/raw_5cb_stats.csv')
 
 # banlist
 banned_cards = ['swift reconfiguration', 'ghost quarter', 'volatile fault', "thassa's oracle", 
@@ -64,4 +64,4 @@ card_event_df = pd.DataFrame(card_event, columns=['Card','Color Identity','Week'
 value_counts = card_event_df['Card'].value_counts() 
 card_event_df['N Decks'] = card_event_df['Card'].apply(lambda x: value_counts[x])
 
-card_event_df.to_csv('./card_event_df.csv')
+card_event_df.to_csv('./app/data/card_event_df.csv')
