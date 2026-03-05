@@ -1,4 +1,4 @@
-from shiny import ui, render, App, Inputs, Outputs, reactive
+from shiny import ui, render, App, Inputs, reactive
 import pandas as pd
 import seaborn as sns
 
@@ -13,7 +13,7 @@ raw_5cb_stats = pd.read_csv('./data/raw_5cb_stats.csv')
 # weeks count
 N_weeks = raw_5cb_stats['Week'].max()
 
-
+# App function
 def app_ui():
 
     my_ui = ui.page_fluid(
