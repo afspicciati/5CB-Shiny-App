@@ -1,1 +1,5 @@
 testing.ipynb
+app/rsconnect-python
+app/rsconnect-python/*
+.venv
+.venv/*
