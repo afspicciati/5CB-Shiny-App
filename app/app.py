@@ -16,12 +16,30 @@ N_weeks = raw_5cb_stats['Week'].max()
 # App function
 def app_ui():
 
-    my_ui = ui.page_fluid(
-        ui.input_slider('weeks', 'Weeks', 1, N_weeks, [0,N_weeks]),
-        ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 10, 6),
-        ui.input_checkbox('banned','Include Banned Decks', True),
-        ui.input_checkbox('silly', 'Include Silly Weeks', True),
-        ui.output_ui('my_plot')
+    my_ui = ui.page_sidebar(
+        ui.sidebar(
+            ui.card(
+                ui.input_slider('weeks', 'Weeks', 1, N_weeks, [0,N_weeks]),
+                ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 10, 6),
+                ui.input_checkbox('banned','Include Banned Decks', True),
+                ui.input_checkbox('silly', 'Include Silly Weeks', True)
+            ),
+            ui.card(
+                ui.markdown(
+                """
+                #### Mirrored Winrates:
+                Matches played against the same card are included in the dataset, so cards with high play rates will tend towards middle scores.
+                #### Silly Weeks:
+                The 4th week of each month, starting with week 17.
+                """
+                )
+            ),
+            ui.tags.a("GitHub", href='https://github.com/afspicciati/5CB-Shiny-App', target='_blank'),
+            bg='#e6e6e6'
+        ),
+        ui.page_fluid(
+            ui.output_ui('my_plot')
+        )
     )
     return(my_ui)
 
