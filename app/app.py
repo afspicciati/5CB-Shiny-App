@@ -31,6 +31,8 @@ def app_ui():
                 Matches played against the same card are included in the dataset, so cards with high play rates will tend towards middle scores.
                 #### Silly Weeks:
                 The 4th week of each month, starting with week 17.
+                #### Mobile:
+                On mobile, I recommend opening the plot in a seperate tab or saving it, for easier viewing.
                 """
                 )
             ),

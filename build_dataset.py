@@ -16,7 +16,8 @@ banned_cards = ['swift reconfiguration', 'ghost quarter', 'volatile fault', "tha
 
 # reading in card data from scryfall
 # json link does not update automatically, I'm not sure how to do that :-)
-scryfall_cards_original = pd.read_json('https://data.scryfall.io/default-cards/default-cards-20260224100756.json')
+# updated 3/11/26 for tmnt
+scryfall_cards_original = pd.read_json('https://data.scryfall.io/default-cards/default-cards-20260311090729.json')
 # cleaning scryfall card data
 columns = ['oracle_id', 'name', 'scryfall_uri', 'colors', 'color_identity', 'type_line','image_uris', 'released_at', 'card_faces']
 scryfall_cards = scryfall_cards_original[columns].sort_values('released_at', ascending = True)
