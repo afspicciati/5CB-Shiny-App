@@ -36,6 +36,7 @@ def app_ui():
                 """
                 )
             ),
+            ui.tags.a("View Decklists!", href='https://tappedout.net/users/knobbodi/mtg-decks/', target='_blank'),
             ui.tags.a("GitHub", href='https://github.com/afspicciati/5CB-Shiny-App', target='_blank'),
             bg='#e6e6e6'
         ),

@@ -1,1036 +1,1036 @@
 ,Card,Color Identity,Week,Deck Score,Deck Legal,N Decks
-0,burning inquiry,R,1,2.76,True,4
-1,mishra's factory,colorless,1,2.76,True,16
-2,the filigree sylex,colorless,1,2.76,True,6
-3,silverbluff bridge,colorless,1,2.76,True,4
-4,sleep-cursed faerie,U,1,2.76,True,15
-5,"luxior, giada's gift",colorless,1,0.65,False,1
-6,devoted druid,G,1,0.65,False,2
+0,silverbluff bridge,colorless,1,2.76,True,4
+1,sleep-cursed faerie,U,1,2.76,True,15
+2,mishra's factory,colorless,1,2.76,True,16
+3,burning inquiry,R,1,2.76,True,4
+4,the filigree sylex,colorless,1,2.76,True,6
+5,"yavimaya, cradle of growth",colorless,1,0.65,False,2
+6,"luxior, giada's gift",colorless,1,0.65,False,1
 7,dark depths,colorless,1,0.65,False,4
-8,blast zone,colorless,1,0.65,False,1
-9,"yavimaya, cradle of growth",colorless,1,0.65,False,2
-10,thespian's stage,colorless,1,2.82,False,3
-11,nezumi shortfang,B,1,2.82,False,1
-12,sinkhole surveyor,B,1,2.82,False,1
-13,dark depths,colorless,1,2.82,False,4
-14,"urborg, tomb of yawgmoth",colorless,1,2.82,False,9
-15,leyline binding,W,1,3.53,False,3
+8,devoted druid,G,1,0.65,False,2
+9,blast zone,colorless,1,0.65,False,1
+10,nezumi shortfang,B,1,2.82,False,1
+11,thespian's stage,colorless,1,2.82,False,3
+12,"urborg, tomb of yawgmoth",colorless,1,2.82,False,9
+13,sinkhole surveyor,B,1,2.82,False,1
+14,dark depths,colorless,1,2.82,False,4
+15,scion of draco,colorless,1,3.53,False,3
 16,snow-covered plains,W,1,3.53,False,2
-17,scion of draco,colorless,1,3.53,False,3
-18,leyline of the guildpact,gold,1,3.53,False,11
-19,simian spirit guide,R,1,3.53,False,21
-20,chancellor of the annex,W,1,0.94,False,16
-21,ephemerate,colorless,1,0.94,False,2
-22,solitude,W,1,0.94,False,7
+17,leyline of the guildpact,gold,1,3.53,False,11
+18,simian spirit guide,R,1,3.53,False,21
+19,leyline binding,W,1,3.53,False,3
+20,ephemerate,colorless,1,0.94,False,2
+21,solitude,W,1,0.94,False,7
+22,chancellor of the annex,W,1,0.94,False,16
 23,plains,W,1,0.94,False,10
-24,chancellor of the annex,W,1,2.47,False,16
+24,cavern of souls,colorless,1,2.47,False,26
 25,norin the wary,R,1,2.47,False,1
-26,cavern of souls,colorless,1,2.47,False,26
+26,chancellor of the annex,W,1,2.47,False,16
 27,guide of souls,W,1,2.47,False,1
 28,geier reach sanitarium,colorless,1,2.82,False,2
-29,calciform pools,gold,1,2.82,False,5
-30,"ulamog, the infinite gyre",colorless,1,2.82,False,1
+29,"ulamog, the infinite gyre",colorless,1,2.82,False,1
+30,calciform pools,gold,1,2.82,False,5
 31,volatile fault,colorless,1,2.82,False,4
 32,engineered explosives,colorless,1,2.82,False,1
-33,battlefield forge,gold,1,1.76,True,1
-34,stomping ground,gold,1,1.76,True,1
-35,lightning bolt,R,1,1.76,True,2
-36,"thalia, guardian of thraben",W,1,1.76,True,6
-37,wheel of sun and moon,gold,1,1.76,True,2
-38,chancellor of the tangle,G,1,1.71,False,20
-39,cavern of souls,colorless,1,1.71,False,26
-40,chancellor of the annex,W,1,1.71,False,16
+33,"thalia, guardian of thraben",W,1,1.76,True,6
+34,wheel of sun and moon,gold,1,1.76,True,2
+35,stomping ground,gold,1,1.76,True,1
+36,lightning bolt,R,1,1.76,True,2
+37,battlefield forge,gold,1,1.76,True,1
+38,"thalia, guardian of thraben",W,1,1.71,False,6
+39,chancellor of the annex,W,1,1.71,False,16
+40,chancellor of the tangle,G,1,1.71,False,20
 41,solitude,W,1,1.71,False,7
-42,"thalia, guardian of thraben",W,1,1.71,False,6
-43,volatile fault,colorless,1,2.94,False,4
-44,thornglint bridge,colorless,1,2.94,False,1
-45,serene remembrance,G,1,2.94,False,4
-46,path to exile,W,1,2.94,False,5
+42,cavern of souls,colorless,1,1.71,False,26
+43,thornglint bridge,colorless,1,2.94,False,1
+44,serene remembrance,G,1,2.94,False,4
+45,path to exile,W,1,2.94,False,5
+46,volatile fault,colorless,1,2.94,False,4
 47,helix pinnacle,G,1,2.94,False,3
-48,orzhov basilica,gold,1,1.94,False,1
-49,chancellor of the annex,W,1,1.94,False,16
-50,solitude,W,1,1.94,False,7
-51,spawning pool,B,1,1.94,False,1
-52,malakir rebirth,B,1,1.94,False,2
+48,chancellor of the annex,W,1,1.94,False,16
+49,spawning pool,B,1,1.94,False,1
+50,orzhov basilica,gold,1,1.94,False,1
+51,malakir rebirth,B,1,1.94,False,2
+52,solitude,W,1,1.94,False,7
 53,chancellor of the annex,W,1,4.06,False,16
-54,echoing truth,U,1,4.06,False,1
-55,volatile fault,colorless,1,4.06,False,4
+54,island,U,1,4.06,False,13
+55,echoing truth,U,1,4.06,False,1
 56,sleep-cursed faerie,U,1,4.06,False,15
-57,island,U,1,4.06,False,13
-58,consign to memory,U,1,2.12,True,2
-59,pact of negation,U,1,2.12,True,7
-60,sleep-cursed faerie,U,1,2.12,True,15
-61,island,U,1,2.12,True,13
-62,mental misstep,U,1,2.12,True,27
+57,volatile fault,colorless,1,4.06,False,4
+58,pact of negation,U,1,2.12,False,7
+59,island,U,1,2.12,False,13
+60,sleep-cursed faerie,U,1,2.12,False,15
+61,mental misstep,U,1,2.12,False,27
+62,consign to memory,U,1,2.12,False,2
 63,scion of draco,colorless,1,3.88,False,3
-64,leyline of the guildpact,gold,1,3.88,False,11
-65,mockery of nature,G,1,3.88,False,1
-66,disruptor flute,colorless,1,3.88,False,1
-67,ugin's labyrinth,colorless,1,3.88,False,5
-68,lotus bloom,colorless,1,3.65,False,14
-69,into the flood maw,U,1,3.65,False,3
-70,pact of negation,U,1,3.65,False,7
-71,island,U,1,3.65,False,13
-72,"jace, wielder of mysteries",U,1,3.65,False,2
-73,"phelia, exuberant shepherd",colorless,1,2.71,False,2
-74,volatile fault,colorless,1,2.71,False,4
-75,plains,W,1,2.71,False,10
-76,"ajani, nacatl pariah",gold,1,2.71,False,2
-77,dismember,B,1,2.71,False,4
-78,crack the earth,R,1,4.06,False,5
-79,curse of silence,W,1,4.06,False,1
+64,disruptor flute,colorless,1,3.88,False,1
+65,ugin's labyrinth,colorless,1,3.88,False,5
+66,leyline of the guildpact,gold,1,3.88,False,11
+67,mockery of nature,G,1,3.88,False,1
+68,pact of negation,U,1,3.65,False,7
+69,island,U,1,3.65,False,13
+70,into the flood maw,U,1,3.65,False,3
+71,"jace, wielder of mysteries",U,1,3.65,False,2
+72,lotus bloom,colorless,1,3.65,False,14
+73,dismember,B,1,2.71,False,4
+74,plains,W,1,2.71,False,10
+75,"phelia, exuberant shepherd",colorless,1,2.71,False,2
+76,volatile fault,colorless,1,2.71,False,4
+77,"ajani, nacatl pariah",gold,1,2.71,False,2
+78,chancellor of the annex,W,1,4.06,False,16
+79,crack the earth,R,1,4.06,False,5
 80,inspiring vantage,gold,1,4.06,False,5
-81,chancellor of the annex,W,1,4.06,False,16
-82,memnite,colorless,1,4.06,False,5
-83,chancellor of the annex,W,2,2.82,False,16
-84,chrome mox,colorless,2,2.82,False,24
-85,plains,W,2,2.82,False,10
-86,"thalia, guardian of thraben",W,2,2.82,False,6
+81,memnite,colorless,1,4.06,False,5
+82,curse of silence,W,1,4.06,False,1
+83,chrome mox,colorless,2,2.82,False,24
+84,plains,W,2,2.82,False,10
+85,"thalia, guardian of thraben",W,2,2.82,False,6
+86,chancellor of the annex,W,2,2.82,False,16
 87,white orchid phantom,W,2,2.82,False,3
-88,thespian's stage,colorless,2,4.0,False,3
-89,pick your poison,gold,2,4.0,False,3
-90,dark depths,colorless,2,4.0,False,4
-91,serene remembrance,G,2,4.0,False,4
-92,"yavimaya, cradle of growth",colorless,2,4.0,False,2
+88,"yavimaya, cradle of growth",colorless,2,4.0,False,2
+89,thespian's stage,colorless,2,4.0,False,3
+90,serene remembrance,G,2,4.0,False,4
+91,dark depths,colorless,2,4.0,False,4
+92,pick your poison,gold,2,4.0,False,3
 93,smallpox,B,2,1.73,True,6
-94,swamp,B,2,1.73,True,12
+94,force of despair,colorless,2,1.73,True,5
 95,infestation sage,B,2,1.73,True,1
-96,force of despair,colorless,2,1.73,True,5
-97,sleep-cursed faerie,U,2,1.73,True,15
-98,pick your poison,gold,2,1.73,True,3
-99,botanical sanctum,gold,2,1.73,True,5
-100,seachrome coast,gold,2,1.73,True,6
-101,sheltered by ghosts,W,2,1.73,True,1
-102,smallpox,B,2,3.82,False,6
-103,thespian's stage,colorless,2,3.82,False,3
-104,"emrakul, the aeons torn",colorless,2,3.82,False,13
-105,dark depths,colorless,2,3.82,False,4
-106,"urborg, tomb of yawgmoth",colorless,2,3.82,False,9
-107,bloodhall ooze,R,2,2.55,True,2
-108,cavern of souls,colorless,2,2.55,True,26
-109,leyline of sanctity,W,2,2.55,True,1
-110,leyline of the guildpact,gold,2,2.55,True,11
-111,crack the earth,R,2,1.82,False,5
-112,gemstone mine,colorless,2,1.82,False,2
-113,chancellor of the annex,W,2,1.82,False,16
-114,simian spirit guide,R,2,1.82,False,21
-115,sleep-cursed faerie,U,2,1.82,False,15
-116,chancellor of the annex,W,2,1.45,False,16
-117,sunscour,W,2,1.45,False,2
-118,cavern of souls,colorless,2,1.45,False,26
-119,sleep-cursed faerie,U,2,1.45,False,15
+96,swamp,B,2,1.73,True,12
+97,botanical sanctum,gold,2,1.73,True,5
+98,sleep-cursed faerie,U,2,1.73,True,15
+99,pick your poison,gold,2,1.73,True,3
+100,sheltered by ghosts,W,2,1.73,True,1
+101,seachrome coast,gold,2,1.73,True,6
+102,thespian's stage,colorless,2,3.82,False,3
+103,"urborg, tomb of yawgmoth",colorless,2,3.82,False,9
+104,dark depths,colorless,2,3.82,False,4
+105,"emrakul, the aeons torn",colorless,2,3.82,False,13
+106,smallpox,B,2,3.82,False,6
+107,leyline of the guildpact,gold,2,2.55,True,11
+108,leyline of sanctity,W,2,2.55,True,1
+109,bloodhall ooze,R,2,2.55,True,2
+110,cavern of souls,colorless,2,2.55,True,26
+111,chancellor of the annex,W,2,1.82,False,16
+112,crack the earth,R,2,1.82,False,5
+113,simian spirit guide,R,2,1.82,False,21
+114,sleep-cursed faerie,U,2,1.82,False,15
+115,gemstone mine,colorless,2,1.82,False,2
+116,sleep-cursed faerie,U,2,1.45,False,15
+117,chancellor of the annex,W,2,1.45,False,16
+118,sunscour,W,2,1.45,False,2
+119,cavern of souls,colorless,2,1.45,False,26
 120,radiant fountain,colorless,2,4.55,False,3
-121,lotus bloom,colorless,2,4.55,False,14
-122,"jace, wielder of mysteries",U,2,4.55,False,2
-123,"boseiju, who endures",G,2,4.55,False,12
-124,leyline binding,W,2,2.18,False,3
-125,cavern of souls,colorless,2,2.18,False,26
-126,scion of draco,colorless,2,2.18,False,3
-127,leyline of the guildpact,gold,2,2.18,False,11
-128,simian spirit guide,R,2,2.18,False,21
-129,chancellor of the tangle,G,2,0.91,True,20
-130,cavern of souls,colorless,2,0.91,True,26
-131,pithing needle,colorless,2,0.91,True,10
+121,"boseiju, who endures",G,2,4.55,False,12
+122,lotus bloom,colorless,2,4.55,False,14
+123,"jace, wielder of mysteries",U,2,4.55,False,2
+124,scion of draco,colorless,2,2.18,False,3
+125,simian spirit guide,R,2,2.18,False,21
+126,leyline of the guildpact,gold,2,2.18,False,11
+127,leyline binding,W,2,2.18,False,3
+128,cavern of souls,colorless,2,2.18,False,26
+129,pithing needle,colorless,2,0.91,True,10
+130,"thalia, guardian of thraben",W,2,0.91,True,6
+131,chancellor of the tangle,G,2,0.91,True,20
 132,saltcrusted steppe,gold,2,0.91,True,2
-133,"thalia, guardian of thraben",W,2,0.91,True,6
-134,merchant of the vale,R,3,3.8,True,2
+133,cavern of souls,colorless,2,0.91,True,26
+134,island,U,3,3.8,True,13
 135,simian spirit guide,R,3,3.8,True,21
-136,shelldock isle,U,3,3.8,True,5
+136,merchant of the vale,R,3,3.8,True,2
 137,"emrakul, the aeons torn",colorless,3,3.8,True,13
-138,island,U,3,3.8,True,13
-139,speaker of the heavens,W,3,2.2,True,2
+138,shelldock isle,U,3,3.8,True,5
+139,providence,W,3,2.2,True,2
 140,leyline of hope,W,3,2.2,True,3
-141,cavern of souls,colorless,3,2.2,True,26
-142,providence,W,3,2.2,True,2
-143,turn the earth,G,3,3.4,True,5
-144,"cecil, dark knight",gold,3,3.4,True,11
-145,assassin's trophy,gold,3,3.4,True,3
-146,blooming marsh,gold,3,3.4,True,2
-147,"boseiju, who endures",G,3,3.4,True,12
-148,mountain,R,3,0.6,True,7
-149,chancellor of the tangle,G,3,0.6,True,20
-150,gut shot,R,3,0.6,True,3
-151,hypergenesis,G,3,0.6,True,4
-152,jungle hollow,gold,3,2.3,True,1
-153,smallpox,B,3,2.3,True,6
-154,tormod's crypt,colorless,3,2.3,True,1
-155,"emrakul, the aeons torn",colorless,3,2.3,True,13
-156,"urborg, tomb of yawgmoth",colorless,3,2.3,True,9
-157,mountain,R,3,3.2,False,7
-158,hypergenesis,G,3,3.2,False,4
-159,rite of flame,R,3,3.2,False,4
-160,"emrakul, the aeons torn",colorless,3,3.2,False,13
-161,electrodominance,R,3,3.2,False,4
-162,island,U,3,0.0,True,13
-163,slippery bogle,gold,3,0.0,True,3
-164,cavern of souls,colorless,3,0.0,True,26
-165,hands of binding,U,3,0.0,True,1
-166,plains,W,3,1.6,True,10
-167,angel's grace,W,3,1.6,True,3
-168,pact of the titan,R,3,1.6,True,6
-169,chancellor of the forge,R,3,3.3,True,5
-170,leyline of the meek,W,3,3.3,True,2
-171,trinisphere,colorless,3,3.6,True,4
-172,fungal reaches,gold,3,3.6,True,2
-173,karn liberated,colorless,3,3.6,True,3
-174,simian spirit guide,R,3,3.6,True,21
-175,ugin's labyrinth,colorless,3,3.6,True,5
-176,academy ruins,U,4,4.25,True,5
+141,speaker of the heavens,W,3,2.2,True,2
+142,cavern of souls,colorless,3,2.2,True,26
+143,assassin's trophy,gold,3,3.4,True,3
+144,blooming marsh,gold,3,3.4,True,2
+145,turn the earth,G,3,3.4,True,5
+146,"boseiju, who endures",G,3,3.4,True,12
+147,"cecil, dark knight",gold,3,3.4,True,11
+148,hypergenesis,G,3,0.6,True,4
+149,gut shot,R,3,0.6,True,3
+150,mountain,R,3,0.6,True,7
+151,chancellor of the tangle,G,3,0.6,True,20
+152,"urborg, tomb of yawgmoth",colorless,3,2.3,True,9
+153,jungle hollow,gold,3,2.3,True,1
+154,"emrakul, the aeons torn",colorless,3,2.3,True,13
+155,smallpox,B,3,2.3,True,6
+156,tormod's crypt,colorless,3,2.3,True,1
+157,hypergenesis,G,3,3.2,False,4
+158,electrodominance,R,3,3.2,False,4
+159,mountain,R,3,3.2,False,7
+160,rite of flame,R,3,3.2,False,4
+161,"emrakul, the aeons torn",colorless,3,3.2,False,13
+162,slippery bogle,gold,3,0.0,True,3
+163,island,U,3,0.0,True,13
+164,hands of binding,U,3,0.0,True,1
+165,cavern of souls,colorless,3,0.0,True,26
+166,angel's grace,W,3,1.6,True,3
+167,pact of the titan,R,3,1.6,True,6
+168,plains,W,3,1.6,True,10
+169,leyline of the meek,W,3,3.3,True,2
+170,chancellor of the forge,R,3,3.3,True,5
+171,fungal reaches,gold,3,3.6,True,2
+172,ugin's labyrinth,colorless,3,3.6,True,5
+173,simian spirit guide,R,3,3.6,True,21
+174,karn liberated,colorless,3,3.6,True,3
+175,trinisphere,colorless,3,3.6,True,4
+176,island,U,4,4.25,True,13
 177,into the flood maw,U,4,4.25,True,3
-178,mishra's factory,colorless,4,4.25,True,16
-179,the filigree sylex,colorless,4,4.25,True,6
-180,island,U,4,4.25,True,13
-181,chancellor of the annex,W,4,3.75,False,16
-182,chrome mox,colorless,4,3.75,False,24
-183,sleep-cursed faerie,U,4,3.75,False,15
-184,island,U,4,3.75,False,13
-185,"lavinia, azorius renegade",gold,4,3.75,False,3
-186,cavern of souls,colorless,4,2.75,False,26
+178,academy ruins,U,4,4.25,True,5
+179,mishra's factory,colorless,4,4.25,True,16
+180,the filigree sylex,colorless,4,4.25,True,6
+181,chrome mox,colorless,4,3.75,False,24
+182,chancellor of the annex,W,4,3.75,False,16
+183,island,U,4,3.75,False,13
+184,"lavinia, azorius renegade",gold,4,3.75,False,3
+185,sleep-cursed faerie,U,4,3.75,False,15
+186,chrome mox,colorless,4,2.75,False,24
 187,chancellor of the annex,W,4,2.75,False,16
-188,chrome mox,colorless,4,2.75,False,24
+188,"lavinia, azorius renegade",gold,4,2.75,False,3
 189,soul partition,W,4,2.75,False,3
-190,"lavinia, azorius renegade",gold,4,2.75,False,3
+190,cavern of souls,colorless,4,2.75,False,26
 191,swamp,B,4,1.5,False,12
 192,chancellor of the annex,W,4,1.5,False,16
-193,solitude,W,4,1.5,False,7
-194,"cecil, dark knight",gold,4,1.5,False,11
-195,malakir rebirth,B,4,1.5,False,2
+193,malakir rebirth,B,4,1.5,False,2
+194,solitude,W,4,1.5,False,7
+195,"cecil, dark knight",gold,4,1.5,False,11
 196,locket of yesterdays,colorless,4,1.0,True,2
 197,conjurer's bauble,colorless,4,1.0,True,11
-198,cavern of souls,colorless,4,1.0,True,26
-199,disciple of the vault,B,4,1.0,True,2
-200,mountain,R,4,3.25,False,7
+198,disciple of the vault,B,4,1.0,True,2
+199,cavern of souls,colorless,4,1.0,True,26
+200,the rack,colorless,4,3.25,False,2
 201,restore balance,W,4,3.25,False,3
-202,blazemire verge,gold,4,3.25,False,1
-203,the rack,colorless,4,3.25,False,2
-204,electrodominance,R,4,3.25,False,4
-205,"cecil, dark knight",gold,4,3.75,False,11
-206,chancellor of the annex,W,4,3.75,False,16
-207,cavern of souls,colorless,4,3.75,False,26
-208,solitude,W,4,3.75,False,7
-209,swamp,B,4,0.12,True,12
-210,force of despair,colorless,4,0.12,True,5
-211,demon of death's gate,B,4,0.12,True,1
-212,fell the profane,B,4,0.12,True,1
-213,bitterblossom,B,4,0.12,True,2
-214,"boseiju, who endures",G,5,3.56,True,12
+202,electrodominance,R,4,3.25,False,4
+203,mountain,R,4,3.25,False,7
+204,blazemire verge,gold,4,3.25,False,1
+205,cavern of souls,colorless,4,3.75,False,26
+206,solitude,W,4,3.75,False,7
+207,chancellor of the annex,W,4,3.75,False,16
+208,"cecil, dark knight",gold,4,3.75,False,11
+209,fell the profane,B,4,0.12,True,1
+210,bitterblossom,B,4,0.12,True,2
+211,force of despair,colorless,4,0.12,True,5
+212,demon of death's gate,B,4,0.12,True,1
+213,swamp,B,4,0.12,True,12
+214,push,gold,5,3.56,True,1
 215,inkmoth nexus,colorless,5,3.56,True,4
-216,push,gold,5,3.56,True,1
+216,blazing shoal,R,5,3.56,True,2
 217,forest,G,5,3.56,True,3
-218,blazing shoal,R,5,3.56,True,2
+218,"boseiju, who endures",G,5,3.56,True,12
 219,ocelot pride,W,5,3.11,True,2
-220,cavern of souls,colorless,5,3.11,True,26
-221,leyline of vitality,G,5,3.11,True,2
-222,inverter of truth,B,5,3.78,True,1
-223,eldrazi mimic,colorless,5,3.78,True,2
+220,leyline of vitality,G,5,3.11,True,2
+221,cavern of souls,colorless,5,3.11,True,26
+222,eldrazi mimic,colorless,5,3.78,True,2
+223,inverter of truth,B,5,3.78,True,1
 224,"urborg, tomb of yawgmoth",colorless,5,3.78,True,9
 225,eye of ugin,colorless,5,3.78,True,7
 226,crack the earth,R,5,1.56,True,5
 227,inspiring vantage,gold,5,1.56,True,5
-228,madcap skills,R,5,1.56,True,1
+228,portable hole,W,5,1.56,True,1
 229,"ragavan, nimble pilferer",R,5,1.56,True,3
-230,portable hole,W,5,1.56,True,1
-231,fiery temper,R,5,0.56,True,1
-232,blackcleave cliffs,gold,5,0.56,True,1
-233,psychic frog,gold,5,0.56,True,1
-234,botanical sanctum,gold,5,0.56,True,5
-235,serene remembrance,G,5,0.56,True,4
-236,chancellor of the tangle,G,5,4.78,False,20
-237,plains,W,5,4.78,False,10
-238,wurmcalling,G,5,4.78,False,1
+230,madcap skills,R,5,1.56,True,1
+231,botanical sanctum,gold,5,0.56,True,5
+232,serene remembrance,G,5,0.56,True,4
+233,blackcleave cliffs,gold,5,0.56,True,1
+234,fiery temper,R,5,0.56,True,1
+235,psychic frog,gold,5,0.56,True,1
+236,plains,W,5,4.78,False,10
+237,wurmcalling,G,5,4.78,False,1
+238,chancellor of the tangle,G,5,4.78,False,20
 239,devoted druid,G,5,4.78,False,2
 240,swift reconfiguration,W,5,4.78,False,1
-241,chancellor of the tangle,G,5,0.67,True,20
-242,chrome mox,colorless,5,0.67,True,24
-243,mishra's factory,colorless,5,0.67,True,16
-244,troll ascetic,G,5,0.67,True,1
-245,heritage reclamation,G,5,0.67,True,1
-246,chancellor of the annex,W,5,3.78,False,16
-247,chrome mox,colorless,5,3.78,False,24
+241,chrome mox,colorless,5,0.67,True,24
+242,troll ascetic,G,5,0.67,True,1
+243,heritage reclamation,G,5,0.67,True,1
+244,chancellor of the tangle,G,5,0.67,True,20
+245,mishra's factory,colorless,5,0.67,True,16
+246,chrome mox,colorless,5,3.78,False,24
+247,chancellor of the annex,W,5,3.78,False,16
 248,"arachne, psionic weaver",W,5,3.78,False,6
-249,sleep-cursed faerie,U,5,3.78,False,15
-250,island,U,5,3.78,False,13
-251,academy ruins,U,5,4.0,True,5
-252,the filigree sylex,colorless,5,4.0,True,6
-253,conjurer's bauble,colorless,5,4.0,True,11
-254,sunken citadel,colorless,5,4.0,True,6
-255,demolition field,colorless,5,4.0,True,2
-256,simic growth chamber,gold,5,1.78,True,3
-257,"oko, thief of crowns",gold,5,1.78,True,5
-258,turn the earth,G,5,1.78,True,5
-259,crashing footfalls,G,5,1.78,True,8
+249,island,U,5,3.78,False,13
+250,sleep-cursed faerie,U,5,3.78,False,15
+251,conjurer's bauble,colorless,5,4.0,True,11
+252,demolition field,colorless,5,4.0,True,2
+253,sunken citadel,colorless,5,4.0,True,6
+254,academy ruins,U,5,4.0,True,5
+255,the filigree sylex,colorless,5,4.0,True,6
+256,"oko, thief of crowns",gold,5,1.78,True,5
+257,crashing footfalls,G,5,1.78,True,8
+258,simic growth chamber,gold,5,1.78,True,3
+259,turn the earth,G,5,1.78,True,5
 260,"boseiju, who endures",G,5,1.78,True,12
 261,lupine prototype,colorless,6,2.5,True,2
 262,myr superion,colorless,6,2.5,True,2
 263,steel overseer,colorless,6,2.5,True,2
 264,leyline of transformation,U,6,2.5,True,4
 265,eye of ugin,colorless,6,2.5,True,7
-266,castle ardenvale,W,6,4.2,False,1
+266,pithing needle,colorless,6,4.2,False,10
 267,chancellor of the annex,W,6,4.2,False,16
-268,pithing needle,colorless,6,4.2,False,10
-269,saltcrusted steppe,gold,6,4.2,False,2
-270,march of otherworldly light,W,6,4.2,False,1
+268,castle ardenvale,W,6,4.2,False,1
+269,march of otherworldly light,W,6,4.2,False,1
+270,saltcrusted steppe,gold,6,4.2,False,2
 271,pithing needle,colorless,6,2.0,True,10
-272,mistvault bridge,colorless,6,2.0,True,1
-273,shelldock isle,U,6,2.0,True,5
+272,tinybones joins up,B,6,2.0,True,1
+273,mistvault bridge,colorless,6,2.0,True,1
 274,"emrakul, the aeons torn",colorless,6,2.0,True,13
-275,tinybones joins up,B,6,2.0,True,1
-276,"cecil, dark knight",gold,6,3.2,True,11
+275,shelldock isle,U,6,2.0,True,5
+276,anointed peacekeeper,W,6,3.2,True,5
 277,simian spirit guide,R,6,3.2,True,21
-278,cavern of souls,colorless,6,3.2,True,26
-279,anointed peacekeeper,W,6,3.2,True,5
-280,magus of the moon,R,6,2.5,True,3
-281,simian spirit guide,R,6,2.5,True,21
-282,ornithopter,colorless,6,2.5,True,2
-283,leyline of anticipation,U,6,2.5,True,5
+278,"cecil, dark knight",gold,6,3.2,True,11
+279,cavern of souls,colorless,6,3.2,True,26
+280,ornithopter,colorless,6,2.5,True,2
+281,leyline of anticipation,U,6,2.5,True,5
+282,simian spirit guide,R,6,2.5,True,21
+283,magus of the moon,R,6,2.5,True,3
 284,infernal plunge,R,6,2.5,True,1
-285,"elspeth, sun's champion",W,6,1.8,True,1
-286,summer bloom,G,6,1.8,True,4
-287,simian spirit guide,R,6,1.8,True,21
-288,selesnya sanctuary,gold,6,1.8,True,1
-289,amulet of vigor,colorless,6,1.8,True,7
-290,chancellor of the annex,W,6,3.2,False,16
-291,cavern of souls,colorless,6,3.2,False,26
-292,simian spirit guide,R,6,3.2,False,21
-293,anointed peacekeeper,W,6,3.2,False,5
-294,form of the dragon,R,6,3.5,False,1
+285,selesnya sanctuary,gold,6,1.8,True,1
+286,"elspeth, sun's champion",W,6,1.8,True,1
+287,amulet of vigor,colorless,6,1.8,True,7
+288,simian spirit guide,R,6,1.8,True,21
+289,summer bloom,G,6,1.8,True,4
+290,anointed peacekeeper,W,6,3.2,False,5
+291,simian spirit guide,R,6,3.2,False,21
+292,chancellor of the annex,W,6,3.2,False,16
+293,cavern of souls,colorless,6,3.2,False,26
+294,electrodominance,R,6,3.5,False,4
 295,simian spirit guide,R,6,3.5,False,21
-296,hypergenesis,G,6,3.5,False,4
-297,electrodominance,R,6,3.5,False,4
-298,smallpox,B,6,3.8,True,6
-299,bone shards,B,6,3.8,True,1
-300,"emrakul, the aeons torn",colorless,6,3.8,True,13
-301,dreadship reef,gold,6,3.8,True,5
-302,"urborg, tomb of yawgmoth",colorless,6,3.8,True,9
-303,rustvale bridge,gold,6,2.2,False,1
-304,restore balance,W,6,2.2,False,3
-305,the rack,colorless,6,2.2,False,2
-306,simian spirit guide,R,6,2.2,False,21
+296,form of the dragon,R,6,3.5,False,1
+297,hypergenesis,G,6,3.5,False,4
+298,bone shards,B,6,3.8,True,1
+299,"urborg, tomb of yawgmoth",colorless,6,3.8,True,9
+300,dreadship reef,gold,6,3.8,True,5
+301,"emrakul, the aeons torn",colorless,6,3.8,True,13
+302,smallpox,B,6,3.8,True,6
+303,the rack,colorless,6,2.2,False,2
+304,simian spirit guide,R,6,2.2,False,21
+305,rustvale bridge,gold,6,2.2,False,1
+306,restore balance,W,6,2.2,False,3
 307,electrodominance,R,6,2.2,False,4
-308,calciform pools,gold,6,1.7,True,5
-309,stoneforge mystic,W,6,1.7,True,1
-310,plains,W,6,1.7,True,10
-311,kaldra compleat,colorless,6,1.7,True,1
-312,mana tithe,W,6,1.7,True,3
-313,swamp,B,6,1.1,True,12
-314,death's shadow,B,6,1.1,True,4
-315,sleeper agent,B,6,1.1,True,1
+308,plains,W,6,1.7,True,10
+309,calciform pools,gold,6,1.7,True,5
+310,kaldra compleat,colorless,6,1.7,True,1
+311,mana tithe,W,6,1.7,True,3
+312,stoneforge mystic,W,6,1.7,True,1
+313,sleeper agent,B,6,1.1,True,1
+314,swamp,B,6,1.1,True,12
+315,force of despair,colorless,6,1.1,True,5
 316,leyline of the void,B,6,1.1,True,3
-317,force of despair,colorless,6,1.1,True,5
-318,simic growth chamber,gold,7,3.8,True,3
-319,summer bloom,G,7,3.8,True,4
-320,simian spirit guide,R,7,3.8,True,21
-321,frost titan,U,7,3.8,True,1
-322,amulet of vigor,colorless,7,3.8,True,7
-323,porphyry nodes,W,7,2.0,True,2
-324,forbidden orchard,colorless,7,2.0,True,1
-325,trespasser's curse,B,7,2.0,True,1
-326,"boseiju, who endures",G,7,2.0,True,12
-327,"nykthos, shrine to nyx",colorless,7,2.7,True,1
-328,karn liberated,colorless,7,2.7,True,3
-329,sunken citadel,colorless,7,2.7,True,6
-330,leyline of the guildpact,gold,7,2.7,True,11
-331,trinisphere,colorless,7,2.7,True,4
+317,death's shadow,B,6,1.1,True,4
+318,amulet of vigor,colorless,7,3.8,True,7
+319,simian spirit guide,R,7,3.8,True,21
+320,frost titan,U,7,3.8,True,1
+321,summer bloom,G,7,3.8,True,4
+322,simic growth chamber,gold,7,3.8,True,3
+323,forbidden orchard,colorless,7,2.0,True,1
+324,porphyry nodes,W,7,2.0,True,2
+325,"boseiju, who endures",G,7,2.0,True,12
+326,trespasser's curse,B,7,2.0,True,1
+327,karn liberated,colorless,7,2.7,True,3
+328,leyline of the guildpact,gold,7,2.7,True,11
+329,"nykthos, shrine to nyx",colorless,7,2.7,True,1
+330,sunken citadel,colorless,7,2.7,True,6
+331,chrome mox,colorless,7,2.7,True,24
 332,chancellor of the tangle,G,7,2.7,True,20
-333,chrome mox,colorless,7,2.7,True,24
-334,"tezzeret, agent of bolas",gold,7,2.7,True,2
-335,dreadship reef,gold,7,2.7,True,5
-336,snow-covered plains,W,7,1.4,True,2
-337,riling dawnbreaker,W,7,1.4,True,4
+333,dreadship reef,gold,7,2.7,True,5
+334,trinisphere,colorless,7,2.7,True,4
+335,"tezzeret, agent of bolas",gold,7,2.7,True,2
+336,aether vial,colorless,7,1.4,True,3
+337,snow-covered plains,W,7,1.4,True,2
 338,snow-covered mountain,R,7,1.4,True,1
-339,aether vial,colorless,7,1.4,True,3
-340,twinmaw stormbrood,gold,7,1.4,True,3
-341,turn the earth,G,7,2.6,True,5
-342,"cecil, dark knight",gold,7,2.6,True,11
-343,assassin's trophy,gold,7,2.6,True,3
-344,blooming marsh,gold,7,2.6,True,2
-345,"boseiju, who endures",G,7,2.6,True,12
-346,lotus bloom,colorless,7,3.0,True,14
+339,twinmaw stormbrood,gold,7,1.4,True,3
+340,riling dawnbreaker,W,7,1.4,True,4
+341,assassin's trophy,gold,7,2.6,True,3
+342,blooming marsh,gold,7,2.6,True,2
+343,turn the earth,G,7,2.6,True,5
+344,"boseiju, who endures",G,7,2.6,True,12
+345,"cecil, dark knight",gold,7,2.6,True,11
+346,leyline of anticipation,U,7,3.0,True,5
 347,pact of the titan,R,7,3.0,True,6
 348,hive mind,U,7,3.0,True,4
-349,leyline of anticipation,U,7,3.0,True,5
-350,urza's tower,colorless,7,1.7,True,2
+349,lotus bloom,colorless,7,3.0,True,14
+350,conjurer's bauble,colorless,7,1.7,True,11
 351,urza's power plant,colorless,7,1.7,True,2
-352,urza's mine,colorless,7,1.7,True,2
-353,conjurer's bauble,colorless,7,1.7,True,11
-354,karn liberated,colorless,7,1.7,True,3
-355,smallpox,B,7,3.1,True,6
-356,cabal therapist,B,7,3.1,True,4
-357,radiant fountain,colorless,7,3.1,True,3
+352,karn liberated,colorless,7,1.7,True,3
+353,urza's mine,colorless,7,1.7,True,2
+354,urza's tower,colorless,7,1.7,True,2
+355,"urborg, tomb of yawgmoth",colorless,7,3.1,True,9
+356,radiant fountain,colorless,7,3.1,True,3
+357,cabal therapist,B,7,3.1,True,4
 358,"kozilek, butcher of truth",colorless,7,3.1,True,1
-359,"urborg, tomb of yawgmoth",colorless,7,3.1,True,9
-360,khalni garden,G,7,1.0,True,1
-361,blade of the bloodchief,colorless,7,1.0,True,1
-362,basking broodscale,G,7,1.0,True,1
-363,phyrexian tower,B,7,1.0,True,7
-364,walking ballista,colorless,7,1.0,True,2
-365,cavern of souls,colorless,8,5.0,True,26
+359,smallpox,B,7,3.1,True,6
+360,phyrexian tower,B,7,1.0,True,7
+361,khalni garden,G,7,1.0,True,1
+362,blade of the bloodchief,colorless,7,1.0,True,1
+363,walking ballista,colorless,7,1.0,True,2
+364,basking broodscale,G,7,1.0,True,1
+365,mistbreath elder,G,8,5.0,True,1
 366,mishra's factory,colorless,8,5.0,True,16
-367,mistbreath elder,G,8,5.0,True,1
-368,"ajani, nacatl pariah",gold,8,5.0,True,2
-369,stingscourger,R,8,5.0,True,1
-370,alpine moon,R,8,2.2,True,1
-371,hope-ender coatl,U,8,2.2,True,3
-372,leyline of the guildpact,gold,8,2.2,True,11
+367,"ajani, nacatl pariah",gold,8,5.0,True,2
+368,stingscourger,R,8,5.0,True,1
+369,cavern of souls,colorless,8,5.0,True,26
+370,hope-ender coatl,U,8,2.2,True,3
+371,leyline of the guildpact,gold,8,2.2,True,11
+372,alpine moon,R,8,2.2,True,1
 373,eye of ugin,colorless,8,2.2,True,7
-374,force of negation,U,8,3.7,True,10
-375,"cecil, dark knight",gold,8,3.7,True,11
-376,consign to memory,U,8,3.7,True,2
-377,darkslick shores,gold,8,3.7,True,4
-378,mental misstep,U,8,3.7,True,27
-379,chancellor of the tangle,G,8,1.4,True,20
-380,chrome mox,colorless,8,1.4,True,24
+374,darkslick shores,gold,8,3.7,False,4
+375,mental misstep,U,8,3.7,False,27
+376,force of negation,U,8,3.7,False,10
+377,consign to memory,U,8,3.7,False,2
+378,"cecil, dark knight",gold,8,3.7,False,11
+379,chrome mox,colorless,8,1.4,True,24
+380,chancellor of the tangle,G,8,1.4,True,20
 381,"sorin, imperious bloodlord",B,8,1.4,True,3
-382,vein ripper,B,8,1.4,True,3
-383,snow-covered swamp,B,8,1.4,True,2
-384,ancient den,W,8,1.1,True,1
-385,pithing needle,colorless,8,1.1,True,10
-386,mox opal,colorless,8,1.1,True,8
-387,glint hawk,W,8,1.1,True,1
-388,mana tithe,W,8,1.1,True,3
-389,spirebluff canal,gold,8,2.7,True,1
-390,nivmagus elemental,gold,8,2.7,True,1
-391,gut shot,R,8,2.7,True,3
-392,mental misstep,U,8,2.7,True,27
-393,flusterstorm,U,8,2.7,True,1
-394,force of negation,U,8,3.7,True,10
-395,sea's claim,U,8,3.7,True,2
-396,stream of thought,U,8,3.7,True,2
-397,"cecil, dark knight",gold,8,3.7,True,11
-398,darkslick shores,gold,8,3.7,True,4
-399,mental misstep,U,8,0.6,True,27
-400,chancellor of the tangle,G,8,0.6,True,20
-401,hypergenesis,G,8,0.6,True,4
-402,westvale abbey,B,8,1.6,True,1
-403,dryad arbor,G,8,1.6,True,2
-404,moonmist,G,8,1.6,True,1
-405,leyline of transformation,U,8,1.6,True,4
-406,badgermole cub,G,8,1.6,True,2
-407,rite of flame,R,8,2.6,True,4
-408,mountain,R,8,2.6,True,7
-409,mental misstep,U,8,2.6,True,27
-410,lodestone golem,colorless,8,2.6,True,1
-411,grove of the burnwillows,gold,9,3.0,True,1
-412,punishing fire,R,9,3.0,True,1
-413,wrenn and six,colorless,9,3.0,True,1
-414,chrome mox,colorless,9,3.0,True,24
+382,snow-covered swamp,B,8,1.4,True,2
+383,vein ripper,B,8,1.4,True,3
+384,pithing needle,colorless,8,1.1,True,10
+385,mox opal,colorless,8,1.1,True,8
+386,mana tithe,W,8,1.1,True,3
+387,ancient den,W,8,1.1,True,1
+388,glint hawk,W,8,1.1,True,1
+389,spirebluff canal,gold,8,2.7,False,1
+390,nivmagus elemental,gold,8,2.7,False,1
+391,flusterstorm,U,8,2.7,False,1
+392,mental misstep,U,8,2.7,False,27
+393,gut shot,R,8,2.7,False,3
+394,stream of thought,U,8,3.7,True,2
+395,darkslick shores,gold,8,3.7,True,4
+396,force of negation,U,8,3.7,True,10
+397,sea's claim,U,8,3.7,True,2
+398,"cecil, dark knight",gold,8,3.7,True,11
+399,mental misstep,U,8,0.6,False,27
+400,hypergenesis,G,8,0.6,False,4
+401,chancellor of the tangle,G,8,0.6,False,20
+402,dryad arbor,G,8,1.6,True,2
+403,westvale abbey,B,8,1.6,True,1
+404,badgermole cub,G,8,1.6,True,2
+405,moonmist,G,8,1.6,True,1
+406,leyline of transformation,U,8,1.6,True,4
+407,lodestone golem,colorless,8,2.6,False,1
+408,rite of flame,R,8,2.6,False,4
+409,mountain,R,8,2.6,False,7
+410,mental misstep,U,8,2.6,False,27
+411,chrome mox,colorless,9,3.0,True,24
+412,grove of the burnwillows,gold,9,3.0,True,1
+413,punishing fire,R,9,3.0,True,1
+414,wrenn and six,colorless,9,3.0,True,1
 415,"boseiju, who endures",G,9,3.0,True,12
-416,dryad arbor,G,9,2.0,True,2
-417,pili-pala,colorless,9,2.0,True,1
-418,leyline of abundance,G,9,2.0,True,2
-419,song of freyalise,G,9,2.0,True,1
-420,mental misstep,U,9,2.0,True,27
-421,paradise mantle,colorless,9,2.1,True,3
-422,mox opal,colorless,9,2.1,True,8
-423,leyline of abundance,G,9,2.1,True,2
-424,patrol signaler,W,9,2.1,True,1
-425,darksteel citadel,colorless,9,2.1,True,3
-426,chancellor of the forge,R,9,1.8,True,5
-427,leyline of the meek,W,9,1.8,True,2
-428,second sunrise,W,9,2.3,True,1
+416,dryad arbor,G,9,2.0,False,2
+417,leyline of abundance,G,9,2.0,False,2
+418,pili-pala,colorless,9,2.0,False,1
+419,mental misstep,U,9,2.0,False,27
+420,song of freyalise,G,9,2.0,False,1
+421,darksteel citadel,colorless,9,2.1,True,3
+422,patrol signaler,W,9,2.1,True,1
+423,mox opal,colorless,9,2.1,True,8
+424,paradise mantle,colorless,9,2.1,True,3
+425,leyline of abundance,G,9,2.1,True,2
+426,leyline of the meek,W,9,1.8,True,2
+427,chancellor of the forge,R,9,1.8,True,5
+428,conjurer's bauble,colorless,9,2.3,True,11
 429,dunes of the dead,colorless,9,2.3,True,1
-430,conjurer's bauble,colorless,9,2.3,True,11
-431,lotus field,colorless,9,2.3,True,1
-432,amulet of vigor,colorless,9,2.3,True,7
-433,cabal therapist,B,9,3.8,True,4
-434,concealed courtyard,gold,9,3.8,True,1
-435,fury,R,9,3.8,True,2
-436,ephemerate,colorless,9,3.8,True,2
-437,chancellor of the forge,R,9,3.8,True,5
-438,mana confluence,colorless,9,3.0,True,1
-439,turn the earth,G,9,3.0,True,5
-440,assassin's trophy,gold,9,3.0,True,3
+430,amulet of vigor,colorless,9,2.3,True,7
+431,second sunrise,W,9,2.3,True,1
+432,lotus field,colorless,9,2.3,True,1
+433,ephemerate,colorless,9,3.8,True,2
+434,fury,R,9,3.8,True,2
+435,chancellor of the forge,R,9,3.8,True,5
+436,cabal therapist,B,9,3.8,True,4
+437,concealed courtyard,gold,9,3.8,True,1
+438,assassin's trophy,gold,9,3.0,True,3
+439,mana confluence,colorless,9,3.0,True,1
+440,turn the earth,G,9,3.0,True,5
 441,"ragavan, nimble pilferer",R,9,3.0,True,3
 442,"boseiju, who endures",G,9,3.0,True,12
-443,swamp,B,9,1.1,True,12
-444,chrome mox,colorless,9,1.1,True,24
-445,"senu, keen-eyed protector",W,9,1.1,True,2
-446,"syr vondam, sunstar exemplar",gold,9,1.1,True,2
-447,dusk rose reliquary,W,9,1.1,True,2
-448,cavern of souls,colorless,10,2.7,True,26
-449,chrome mox,colorless,10,2.7,True,24
-450,soul partition,W,10,2.7,True,3
-451,"arachne, psionic weaver",W,10,2.7,True,6
-452,sleep-cursed faerie,U,10,2.7,True,15
-453,sunset saboteur,B,10,3.0,True,1
-454,swamp,B,10,3.0,True,12
-455,cabal therapist,B,10,3.0,True,4
-456,fatal push,B,10,3.0,True,1
-457,force of negation,U,10,4.0,True,10
-458,into the flood maw,U,10,4.0,True,3
-459,botanical sanctum,gold,10,4.0,True,5
-460,crashing footfalls,G,10,4.0,True,8
-461,mental misstep,U,10,4.0,True,27
-462,"oko, thief of crowns",gold,10,2.3,True,5
-463,chancellor of the tangle,G,10,2.3,True,20
-464,chrome mox,colorless,10,2.3,True,24
-465,decisive denial,gold,10,2.3,True,1
-466,island,U,10,2.3,True,13
-467,inspiring vantage,gold,10,4.0,True,5
-468,riling dawnbreaker,W,10,4.0,True,4
-469,mishra's factory,colorless,10,4.0,True,16
-470,aether vial,colorless,10,4.0,True,3
+443,chrome mox,colorless,9,1.1,True,24
+444,dusk rose reliquary,W,9,1.1,True,2
+445,"syr vondam, sunstar exemplar",gold,9,1.1,True,2
+446,"senu, keen-eyed protector",W,9,1.1,True,2
+447,swamp,B,9,1.1,True,12
+448,chrome mox,colorless,10,2.7,True,24
+449,"arachne, psionic weaver",W,10,2.7,True,6
+450,sleep-cursed faerie,U,10,2.7,True,15
+451,soul partition,W,10,2.7,True,3
+452,cavern of souls,colorless,10,2.7,True,26
+453,cabal therapist,B,10,3.0,True,4
+454,fatal push,B,10,3.0,True,1
+455,sunset saboteur,B,10,3.0,True,1
+456,swamp,B,10,3.0,True,12
+457,crashing footfalls,G,10,4.0,False,8
+458,botanical sanctum,gold,10,4.0,False,5
+459,into the flood maw,U,10,4.0,False,3
+460,mental misstep,U,10,4.0,False,27
+461,force of negation,U,10,4.0,False,10
+462,chrome mox,colorless,10,2.3,True,24
+463,"oko, thief of crowns",gold,10,2.3,True,5
+464,island,U,10,2.3,True,13
+465,chancellor of the tangle,G,10,2.3,True,20
+466,decisive denial,gold,10,2.3,True,1
+467,aether vial,colorless,10,4.0,True,3
+468,inspiring vantage,gold,10,4.0,True,5
+469,riling dawnbreaker,W,10,4.0,True,4
+470,mishra's factory,colorless,10,4.0,True,16
 471,twinmaw stormbrood,gold,10,4.0,True,3
-472,springheart nantuko,G,10,0.2,True,1
-473,amulet of vigor,colorless,10,0.2,True,7
-474,crumbling vestige,colorless,10,0.2,True,1
-475,phyrexian tower,B,10,0.2,True,7
-476,badgermole cub,G,10,0.2,True,2
-477,trinisphere,colorless,10,2.2,True,4
+472,phyrexian tower,B,10,0.2,True,7
+473,crumbling vestige,colorless,10,0.2,True,1
+474,amulet of vigor,colorless,10,0.2,True,7
+475,badgermole cub,G,10,0.2,True,2
+476,springheart nantuko,G,10,0.2,True,1
+477,chrome mox,colorless,10,2.2,True,24
 478,chancellor of the tangle,G,10,2.2,True,20
-479,chrome mox,colorless,10,2.2,True,24
-480,"tezzeret, agent of bolas",gold,10,2.2,True,2
-481,dreadship reef,gold,10,2.2,True,5
-482,freed from the real,U,10,0.9,True,2
-483,paradise mantle,colorless,10,0.9,True,3
-484,night market lookout,B,10,0.9,True,1
-485,mox opal,colorless,10,0.9,True,8
+479,dreadship reef,gold,10,2.2,True,5
+480,trinisphere,colorless,10,2.2,True,4
+481,"tezzeret, agent of bolas",gold,10,2.2,True,2
+482,night market lookout,B,10,0.9,True,1
+483,freed from the real,U,10,0.9,True,2
+484,mox opal,colorless,10,0.9,True,8
+485,paradise mantle,colorless,10,0.9,True,3
 486,seat of the synod,U,10,0.9,True,5
-487,coalition victory,gold,10,2.9,True,1
-488,inkmoth nexus,colorless,10,2.9,True,4
-489,blazing shoal,R,10,2.9,True,2
-490,nephalia academy,colorless,10,2.9,True,5
-491,mental misstep,U,10,2.9,True,27
-492,"ugin, the spirit dragon",colorless,11,3.8,True,1
-493,mage-ring network,colorless,11,3.8,True,2
-494,conjurer's bauble,colorless,11,3.8,True,11
+487,nephalia academy,colorless,10,2.9,False,5
+488,coalition victory,gold,10,2.9,False,1
+489,inkmoth nexus,colorless,10,2.9,False,4
+490,mental misstep,U,10,2.9,False,27
+491,blazing shoal,R,10,2.9,False,2
+492,mage-ring network,colorless,11,3.8,True,2
+493,conjurer's bauble,colorless,11,3.8,True,11
+494,ugin's labyrinth,colorless,11,3.8,True,5
 495,ensnaring bridge,colorless,11,3.8,True,3
-496,ugin's labyrinth,colorless,11,3.8,True,5
-497,stormchaser's talent,U,11,4.0,True,1
-498,tel-jilad stylus,colorless,11,4.0,True,5
-499,gut shot,R,11,4.0,True,3
-500,island,U,11,4.0,True,13
-501,mental misstep,U,11,4.0,True,27
-502,hallowed fountain,gold,11,2.3,True,1
-503,angel's grace,W,11,2.3,True,3
-504,slippery bogle,gold,11,2.3,True,3
-505,pact of negation,U,11,2.3,True,7
-506,path to exile,W,11,2.3,True,5
-507,simic growth chamber,gold,11,2.3,True,3
-508,living conundrum,U,11,2.3,True,1
-509,summer bloom,G,11,2.3,True,4
-510,simian spirit guide,R,11,2.3,True,21
-511,amulet of vigor,colorless,11,2.3,True,7
-512,lotus bloom,colorless,11,1.5,True,14
-513,conjurer's bauble,colorless,11,1.5,True,11
-514,amulet of vigor,colorless,11,1.5,True,7
-515,brought back,W,11,1.5,True,1
-516,door to nothingness,gold,11,1.5,True,1
-517,baleful mastery,B,11,1.8,True,1
-518,boomerang basics,U,11,1.8,True,1
+496,"ugin, the spirit dragon",colorless,11,3.8,True,1
+497,tel-jilad stylus,colorless,11,4.0,False,5
+498,island,U,11,4.0,False,13
+499,mental misstep,U,11,4.0,False,27
+500,stormchaser's talent,U,11,4.0,False,1
+501,gut shot,R,11,4.0,False,3
+502,slippery bogle,gold,11,2.3,True,3
+503,pact of negation,U,11,2.3,True,7
+504,hallowed fountain,gold,11,2.3,True,1
+505,path to exile,W,11,2.3,True,5
+506,angel's grace,W,11,2.3,True,3
+507,amulet of vigor,colorless,11,2.3,True,7
+508,simian spirit guide,R,11,2.3,True,21
+509,living conundrum,U,11,2.3,True,1
+510,summer bloom,G,11,2.3,True,4
+511,simic growth chamber,gold,11,2.3,True,3
+512,conjurer's bauble,colorless,11,1.5,True,11
+513,amulet of vigor,colorless,11,1.5,True,7
+514,door to nothingness,gold,11,1.5,True,1
+515,lotus bloom,colorless,11,1.5,True,14
+516,brought back,W,11,1.5,True,1
+517,boomerang basics,U,11,1.8,True,1
+518,baleful mastery,B,11,1.8,True,1
 519,creeping tar pit,gold,11,1.8,True,1
-520,elixir of immortality,colorless,11,1.8,True,2
-521,dreadship reef,gold,11,1.8,True,5
-522,paradise mantle,colorless,11,2.5,True,3
-523,memnite,colorless,11,2.5,True,5
-524,mishra's factory,colorless,11,2.5,True,16
-525,"arachne, psionic weaver",W,11,2.5,True,6
-526,mental misstep,U,11,2.5,True,27
-527,angel's grace,W,11,1.5,True,3
-528,pact of the titan,R,11,1.5,True,6
-529,pact of negation,U,11,1.5,True,7
-530,serene remembrance,G,11,1.5,True,4
-531,razorverge thicket,gold,11,1.5,True,2
-532,metalwork colossus,colorless,12,4.5,True,2
-533,leyline axe,colorless,12,4.5,True,3
-534,salvage titan,B,12,4.5,True,2
-535,eldrazi temple,colorless,12,3.0,True,3
-536,eldrazi mimic,colorless,12,3.0,True,2
-537,thought-knot seer,colorless,12,3.0,True,1
-538,eye of ugin,colorless,12,3.0,True,7
+520,dreadship reef,gold,11,1.8,True,5
+521,elixir of immortality,colorless,11,1.8,True,2
+522,"arachne, psionic weaver",W,11,2.5,False,6
+523,paradise mantle,colorless,11,2.5,False,3
+524,memnite,colorless,11,2.5,False,5
+525,mishra's factory,colorless,11,2.5,False,16
+526,mental misstep,U,11,2.5,False,27
+527,razorverge thicket,gold,11,1.5,True,2
+528,pact of negation,U,11,1.5,True,7
+529,serene remembrance,G,11,1.5,True,4
+530,angel's grace,W,11,1.5,True,3
+531,pact of the titan,R,11,1.5,True,6
+532,salvage titan,B,12,4.5,True,2
+533,metalwork colossus,colorless,12,4.5,True,2
+534,leyline axe,colorless,12,4.5,True,3
+535,eldrazi mimic,colorless,12,3.0,True,2
+536,eye of ugin,colorless,12,3.0,True,7
+537,eldrazi temple,colorless,12,3.0,True,3
+538,thought-knot seer,colorless,12,3.0,True,1
 539,apostle's blessing,W,12,0.3,True,1
-540,cavern of souls,colorless,12,0.3,True,26
-541,inspiring vantage,gold,12,0.3,True,5
-542,demonic ruckus,R,12,0.3,True,1
-543,vault skirge,B,12,0.3,True,1
-544,academy ruins,U,12,2.6,True,5
-545,geier reach sanitarium,colorless,12,2.6,True,2
-546,lupine prototype,colorless,12,2.6,True,2
-547,the filigree sylex,colorless,12,2.6,True,6
-548,sunken citadel,colorless,12,2.6,True,6
+540,inspiring vantage,gold,12,0.3,True,5
+541,demonic ruckus,R,12,0.3,True,1
+542,vault skirge,B,12,0.3,True,1
+543,cavern of souls,colorless,12,0.3,True,26
+544,geier reach sanitarium,colorless,12,2.6,True,2
+545,lupine prototype,colorless,12,2.6,True,2
+546,sunken citadel,colorless,12,2.6,True,6
+547,academy ruins,U,12,2.6,True,5
+548,the filigree sylex,colorless,12,2.6,True,6
 549,ocelot pride,W,12,2.4,True,2
 550,leyline of hope,W,12,2.4,True,3
-551,cavern of souls,colorless,12,2.4,True,26
-552,leyline of vitality,G,12,2.4,True,2
-553,chancellor of the tangle,G,12,1.3,True,20
-554,chrome mox,colorless,12,1.3,True,24
-555,copperline gorge,gold,12,1.3,True,2
-556,lightning bolt,R,12,1.3,True,2
-557,wheel of sun and moon,gold,12,1.3,True,2
+551,leyline of vitality,G,12,2.4,True,2
+552,cavern of souls,colorless,12,2.4,True,26
+553,chrome mox,colorless,12,1.3,True,24
+554,copperline gorge,gold,12,1.3,True,2
+555,chancellor of the tangle,G,12,1.3,True,20
+556,wheel of sun and moon,gold,12,1.3,True,2
+557,lightning bolt,R,12,1.3,True,2
 558,mage-ring network,colorless,12,0.9,True,2
 559,conjurer's bauble,colorless,12,0.9,True,11
-560,long goodbye,B,12,0.9,True,1
-561,cruelclaw's heist,B,12,0.9,True,3
-562,"urborg, tomb of yawgmoth",colorless,12,0.9,True,9
-563,"emrakul, the aeons torn",colorless,12,3.8,True,13
-564,shelldock isle,U,12,3.8,True,5
-565,island,U,12,3.8,True,13
-566,the underworld cookbook,colorless,12,3.8,True,6
-567,mental misstep,U,12,3.8,True,27
-568,magus of the moon,R,13,2.5,True,3
+560,cruelclaw's heist,B,12,0.9,True,3
+561,"urborg, tomb of yawgmoth",colorless,12,0.9,True,9
+562,long goodbye,B,12,0.9,True,1
+563,the underworld cookbook,colorless,12,3.8,False,6
+564,island,U,12,3.8,False,13
+565,mental misstep,U,12,3.8,False,27
+566,"emrakul, the aeons torn",colorless,12,3.8,False,13
+567,shelldock isle,U,12,3.8,False,5
+568,darksteel citadel,colorless,13,2.5,True,3
 569,chrome mox,colorless,13,2.5,True,24
-570,mox opal,colorless,13,2.5,True,8
-571,anointed peacekeeper,W,13,2.5,True,5
-572,darksteel citadel,colorless,13,2.5,True,3
-573,swamp,B,13,1.0,True,12
-574,cabal therapist,B,13,1.0,True,4
-575,rottenmouth viper,colorless,13,1.0,True,1
+570,anointed peacekeeper,W,13,2.5,True,5
+571,mox opal,colorless,13,2.5,True,8
+572,magus of the moon,R,13,2.5,True,3
+573,bitterblossom,B,13,1.0,True,2
+574,rottenmouth viper,colorless,13,1.0,True,1
+575,cabal therapist,B,13,1.0,True,4
 576,molten slagheap,gold,13,1.0,True,1
-577,bitterblossom,B,13,1.0,True,2
+577,swamp,B,13,1.0,True,12
 578,fervent champion,R,13,3.0,True,1
 579,mountain,R,13,3.0,True,7
 580,leyline axe,colorless,13,3.0,True,3
-581,crack the earth,R,13,2.5,True,5
-582,turn the earth,G,13,2.5,True,5
-583,"ragavan, nimble pilferer",R,13,2.5,True,3
-584,"boseiju, who endures",G,13,2.5,True,12
-585,copperline gorge,gold,13,2.5,True,2
+581,copperline gorge,gold,13,2.5,True,2
+582,crack the earth,R,13,2.5,True,5
+583,turn the earth,G,13,2.5,True,5
+584,"ragavan, nimble pilferer",R,13,2.5,True,3
+585,"boseiju, who endures",G,13,2.5,True,12
 586,goryo's vengeance,B,13,2.3,True,1
-587,urza's saga,colorless,13,2.3,True,5
-588,sunken citadel,colorless,13,2.3,True,6
-589,"emrakul, the aeons torn",colorless,13,2.3,True,13
-590,the underworld cookbook,colorless,13,2.3,True,6
-591,swamp,B,13,2.3,True,12
-592,chrome mox,colorless,13,2.3,True,24
-593,"senu, keen-eyed protector",W,13,2.3,True,2
-594,"syr vondam, sunstar exemplar",gold,13,2.3,True,2
-595,dusk rose reliquary,W,13,2.3,True,2
-596,speaker of the heavens,W,13,1.8,True,2
+587,the underworld cookbook,colorless,13,2.3,True,6
+588,urza's saga,colorless,13,2.3,True,5
+589,sunken citadel,colorless,13,2.3,True,6
+590,"emrakul, the aeons torn",colorless,13,2.3,True,13
+591,chrome mox,colorless,13,2.3,True,24
+592,dusk rose reliquary,W,13,2.3,True,2
+593,"syr vondam, sunstar exemplar",gold,13,2.3,True,2
+594,"senu, keen-eyed protector",W,13,2.3,True,2
+595,swamp,B,13,2.3,True,12
+596,providence,W,13,1.8,True,2
 597,leyline of hope,W,13,1.8,True,3
-598,cavern of souls,colorless,13,1.8,True,26
-599,providence,W,13,1.8,True,2
-600,chatterstorm,G,13,3.3,True,1
-601,leyline of transformation,U,13,3.3,True,4
-602,pendelhaven,G,13,3.3,True,1
+598,speaker of the heavens,W,13,1.8,True,2
+599,cavern of souls,colorless,13,1.8,True,26
+600,noble hierarch,gold,13,3.3,True,1
+601,pendelhaven,G,13,3.3,True,1
+602,chatterstorm,G,13,3.3,True,1
 603,wirewood symbiote,G,13,3.3,True,1
-604,noble hierarch,gold,13,3.3,True,1
-605,field of ruin,colorless,14,4.3,True,2
-606,mishra's factory,colorless,14,4.3,True,16
+604,leyline of transformation,U,13,3.3,True,4
+605,"arachne, psionic weaver",W,14,4.3,True,6
+606,springleaf drum,colorless,14,4.3,True,1
 607,memnite,colorless,14,4.3,True,5
-608,springleaf drum,colorless,14,4.3,True,1
-609,"arachne, psionic weaver",W,14,4.3,True,6
-610,sunscorched desert,colorless,14,2.5,True,1
-611,tel-jilad stylus,colorless,14,2.5,True,5
-612,reality acid,U,14,2.5,True,1
-613,mox opal,colorless,14,2.5,True,8
+608,mishra's factory,colorless,14,4.3,True,16
+609,field of ruin,colorless,14,4.3,True,2
+610,tel-jilad stylus,colorless,14,2.5,True,5
+611,mox opal,colorless,14,2.5,True,8
+612,sunscorched desert,colorless,14,2.5,True,1
+613,reality acid,U,14,2.5,True,1
 614,seat of the synod,U,14,2.5,True,5
 615,kami of false hope,W,14,2.5,True,1
 616,hall of heliod's generosity,W,14,2.5,True,1
 617,urza's saga,colorless,14,2.5,True,5
-618,abiding grace,W,14,2.5,True,1
-619,sunken citadel,colorless,14,2.5,True,6
-620,conjurer's bauble,colorless,14,1.5,True,11
-621,locket of yesterdays,colorless,14,1.5,True,2
-622,disciple of the vault,B,14,1.5,True,2
-623,snow-covered swamp,B,14,1.5,True,2
-624,swamp,B,14,1.8,True,12
-625,cavern of souls,colorless,14,1.8,True,26
+618,sunken citadel,colorless,14,2.5,True,6
+619,abiding grace,W,14,2.5,True,1
+620,locket of yesterdays,colorless,14,1.5,True,2
+621,snow-covered swamp,B,14,1.5,True,2
+622,conjurer's bauble,colorless,14,1.5,True,11
+623,disciple of the vault,B,14,1.5,True,2
+624,cavern of souls,colorless,14,1.8,True,26
+625,persist,B,14,1.8,True,3
 626,insolent neonate,R,14,1.8,True,1
-627,persist,B,14,1.8,True,3
-628,nullstone gargoyle,colorless,14,1.8,True,1
-629,spellskite,U,14,0.6,True,1
+627,nullstone gargoyle,colorless,14,1.8,True,1
+628,swamp,B,14,1.8,True,12
+629,ugin's labyrinth,colorless,14,0.6,True,5
 630,calciform pools,gold,14,0.6,True,5
-631,aladdin's ring,colorless,14,0.6,True,1
-632,ensnaring bridge,colorless,14,0.6,True,3
-633,ugin's labyrinth,colorless,14,0.6,True,5
-634,"oko, thief of crowns",gold,14,4.0,True,5
-635,chancellor of the tangle,G,14,4.0,True,20
-636,chrome mox,colorless,14,4.0,True,24
-637,serum snare,U,14,4.0,True,3
-638,seat of the synod,U,14,4.0,True,5
-639,burning inquiry,R,14,2.3,True,4
-640,snapback,U,14,2.3,True,3
-641,silverbluff bridge,colorless,14,2.3,True,4
-642,nether spirit,B,14,2.3,True,1
-643,mental misstep,U,14,2.3,True,27
-644,crack the earth,R,15,1.8,True,5
-645,cavern of souls,colorless,15,1.8,True,26
-646,bloodhall ooze,R,15,1.8,True,2
-647,leyline of the guildpact,gold,15,1.8,True,11
-648,leyline of anticipation,U,15,1.8,True,5
-649,glaring fleshraker,colorless,15,3.0,True,1
-650,eldrazi temple,colorless,15,3.0,True,3
-651,mishra's factory,colorless,15,3.0,True,16
+631,ensnaring bridge,colorless,14,0.6,True,3
+632,spellskite,U,14,0.6,True,1
+633,aladdin's ring,colorless,14,0.6,True,1
+634,chrome mox,colorless,14,4.0,True,24
+635,"oko, thief of crowns",gold,14,4.0,True,5
+636,chancellor of the tangle,G,14,4.0,True,20
+637,seat of the synod,U,14,4.0,True,5
+638,serum snare,U,14,4.0,True,3
+639,silverbluff bridge,colorless,14,2.3,False,4
+640,snapback,U,14,2.3,False,3
+641,burning inquiry,R,14,2.3,False,4
+642,mental misstep,U,14,2.3,False,27
+643,nether spirit,B,14,2.3,False,1
+644,leyline of anticipation,U,15,1.8,True,5
+645,crack the earth,R,15,1.8,True,5
+646,leyline of the guildpact,gold,15,1.8,True,11
+647,bloodhall ooze,R,15,1.8,True,2
+648,cavern of souls,colorless,15,1.8,True,26
+649,eldrazi temple,colorless,15,3.0,True,3
+650,mishra's factory,colorless,15,3.0,True,16
+651,glaring fleshraker,colorless,15,3.0,True,1
 652,conjurer's bauble,colorless,15,3.0,True,11
 653,"minamo, school at water's edge",U,15,2.8,True,1
-654,merchant of the vale,R,15,2.8,True,2
-655,simian spirit guide,R,15,2.8,True,21
-656,shelldock isle,U,15,2.8,True,5
-657,"emrakul, the aeons torn",colorless,15,2.8,True,13
-658,mimic,colorless,15,0.5,True,1
-659,restore balance,W,15,0.5,True,3
-660,"emrakul, the aeons torn",colorless,15,0.5,True,13
-661,as foretold,U,15,0.5,True,1
-662,ugin's labyrinth,colorless,15,0.5,True,5
-663,the sibsig ceremony,B,15,2.3,True,2
-664,myr retriever,colorless,15,2.3,True,2
+654,simian spirit guide,R,15,2.8,True,21
+655,merchant of the vale,R,15,2.8,True,2
+656,"emrakul, the aeons torn",colorless,15,2.8,True,13
+657,shelldock isle,U,15,2.8,True,5
+658,as foretold,U,15,0.5,True,1
+659,mimic,colorless,15,0.5,True,1
+660,ugin's labyrinth,colorless,15,0.5,True,5
+661,restore balance,W,15,0.5,True,3
+662,"emrakul, the aeons torn",colorless,15,0.5,True,13
+663,myr retriever,colorless,15,2.3,True,2
+664,nephalia academy,colorless,15,2.3,True,5
 665,lotus bloom,colorless,15,2.3,True,14
-666,nephalia academy,colorless,15,2.3,True,5
-667,smallpox,B,15,2.8,True,6
-668,"emrakul, the aeons torn",colorless,15,2.8,True,13
-669,the underworld cookbook,colorless,15,2.8,True,6
-670,dreadship reef,gold,15,2.8,True,5
-671,"urborg, tomb of yawgmoth",colorless,15,2.8,True,9
-672,"oko, thief of crowns",gold,15,3.8,True,5
-673,chancellor of the tangle,G,15,3.8,True,20
-674,chrome mox,colorless,15,3.8,True,24
-675,serum snare,U,15,3.8,True,3
-676,seat of the synod,U,15,3.8,True,5
-677,force of negation,U,15,3.3,True,10
-678,slippery bogle,gold,15,3.3,True,3
-679,stern scolding,U,15,3.3,True,1
-680,seachrome coast,gold,15,3.3,True,6
-681,path to exile,W,15,3.3,True,5
-682,force of negation,U,16,4.2,True,10
+666,the sibsig ceremony,B,15,2.3,True,2
+667,the underworld cookbook,colorless,15,2.8,True,6
+668,"urborg, tomb of yawgmoth",colorless,15,2.8,True,9
+669,dreadship reef,gold,15,2.8,True,5
+670,"emrakul, the aeons torn",colorless,15,2.8,True,13
+671,smallpox,B,15,2.8,True,6
+672,chrome mox,colorless,15,3.8,True,24
+673,"oko, thief of crowns",gold,15,3.8,True,5
+674,chancellor of the tangle,G,15,3.8,True,20
+675,seat of the synod,U,15,3.8,True,5
+676,serum snare,U,15,3.8,True,3
+677,slippery bogle,gold,15,3.3,True,3
+678,stern scolding,U,15,3.3,True,1
+679,path to exile,W,15,3.3,True,5
+680,force of negation,U,15,3.3,True,10
+681,seachrome coast,gold,15,3.3,True,6
+682,misthollow griffin,U,16,4.2,True,1
 683,calciform pools,gold,16,4.2,True,5
-684,mishra's factory,colorless,16,4.2,True,16
-685,snapback,U,16,4.2,True,3
-686,misthollow griffin,U,16,4.2,True,1
-687,swamp,B,16,2.0,True,12
-688,terastodon,G,16,2.0,True,1
+684,snapback,U,16,4.2,True,3
+685,mishra's factory,colorless,16,4.2,True,16
+686,force of negation,U,16,4.2,True,10
+687,the underworld cookbook,colorless,16,2.0,True,6
+688,nephalia academy,colorless,16,2.0,True,5
 689,persist,B,16,2.0,True,3
-690,nephalia academy,colorless,16,2.0,True,5
-691,the underworld cookbook,colorless,16,2.0,True,6
-692,lotus bloom,colorless,16,0.8,True,14
+690,terastodon,G,16,2.0,True,1
+691,swamp,B,16,2.0,True,12
+692,"squee, goblin nabob",R,16,0.8,True,1
 693,solitary confinement,W,16,0.8,True,1
-694,"squee, goblin nabob",R,16,0.8,True,1
+694,helix pinnacle,G,16,0.8,True,3
 695,forest,G,16,0.8,True,3
-696,helix pinnacle,G,16,0.8,True,3
-697,sunscour,W,16,3.0,True,2
-698,lotus bloom,colorless,16,3.0,True,14
-699,solitude,W,16,3.0,True,7
-700,barren glory,W,16,3.0,True,1
+696,lotus bloom,colorless,16,0.8,True,14
+697,barren glory,W,16,3.0,True,1
+698,solitude,W,16,3.0,True,7
+699,lotus bloom,colorless,16,3.0,True,14
+700,sunscour,W,16,3.0,True,2
 701,memnite,colorless,16,0.1,True,5
-702,burning inquiry,R,16,3.6,True,4
+702,silverbluff bridge,colorless,16,3.6,True,4
 703,leyline of anticipation,U,16,3.6,True,5
-704,silverbluff bridge,colorless,16,3.6,True,4
+704,burning inquiry,R,16,3.6,True,4
 705,"emrakul, the aeons torn",colorless,16,3.6,True,13
 706,shelldock isle,U,16,3.6,True,5
-707,metalwork colossus,colorless,16,3.3,True,2
-708,leyline axe,colorless,16,3.3,True,3
-709,salvage titan,B,16,3.3,True,2
-710,yotia declares war,R,16,2.0,True,1
-711,tel-jilad stylus,colorless,16,2.0,True,5
-712,pithing needle,colorless,16,2.0,True,10
+707,salvage titan,B,16,3.3,True,2
+708,metalwork colossus,colorless,16,3.3,True,2
+709,leyline axe,colorless,16,3.3,True,3
+710,darksteel citadel,colorless,16,2.0,True,3
+711,pithing needle,colorless,16,2.0,True,10
+712,tel-jilad stylus,colorless,16,2.0,True,5
 713,mox opal,colorless,16,2.0,True,8
-714,darksteel citadel,colorless,16,2.0,True,3
-715,blisterspit gremlin,R,16,2.0,True,1
-716,peter parker's camera,colorless,16,2.0,True,1
-717,retraction helix,U,16,2.0,True,1
-718,silverbluff bridge,colorless,16,2.0,True,4
-719,mox opal,colorless,16,2.0,True,8
-720,leyline binding,W,16,4.0,True,3
-721,gemstone caverns,colorless,16,4.0,True,3
-722,spell pierce,U,16,4.0,True,2
-723,leyline of the guildpact,gold,16,4.0,True,11
-724,crashing footfalls,G,16,4.0,True,8
+714,yotia declares war,R,16,2.0,True,1
+715,silverbluff bridge,colorless,16,2.0,True,4
+716,mox opal,colorless,16,2.0,True,8
+717,blisterspit gremlin,R,16,2.0,True,1
+718,peter parker's camera,colorless,16,2.0,True,1
+719,retraction helix,U,16,2.0,True,1
+720,spell pierce,U,16,4.0,True,2
+721,crashing footfalls,G,16,4.0,True,8
+722,leyline of the guildpact,gold,16,4.0,True,11
+723,gemstone caverns,colorless,16,4.0,True,3
+724,leyline binding,W,16,4.0,True,3
 725,swamp,B,17,2.6,True,12
-726,unearth,B,17,2.6,True,1
-727,leyline of the void,B,17,2.6,True,3
-728,"cecil, dark knight",gold,17,2.6,True,11
-729,force of despair,colorless,17,2.6,True,5
-730,chancellor of the tangle,G,17,3.4,True,20
-731,gemstone caverns,colorless,17,3.4,True,3
-732,spell pierce,U,17,3.4,True,2
-733,pithing needle,colorless,17,3.4,True,10
-734,crashing footfalls,G,17,3.4,True,8
-735,fragmentize,W,17,1.1,True,1
-736,sleep-cursed faerie,U,17,1.1,True,15
-737,seachrome coast,gold,17,1.1,True,6
-738,seam rip,W,17,1.1,True,1
-739,mental misstep,U,17,1.1,True,27
-740,golgari rot farm,gold,17,1.4,True,1
-741,summer bloom,G,17,1.4,True,4
-742,"vraska, relic seeker",gold,17,1.4,True,1
-743,simian spirit guide,R,17,1.4,True,21
-744,amulet of vigor,colorless,17,1.4,True,7
-745,tragic trajectory,B,17,2.0,True,1
-746,conjurer's bauble,colorless,17,2.0,True,11
-747,darkslick shores,gold,17,2.0,True,4
-748,sleep-cursed faerie,U,17,2.0,True,15
-749,mental misstep,U,17,2.0,True,27
-750,force of negation,U,17,3.4,True,10
-751,sea's claim,U,17,3.4,True,2
-752,stream of thought,U,17,3.4,True,2
-753,"cecil, dark knight",gold,17,3.4,True,11
-754,darkslick shores,gold,17,3.4,True,4
-755,chancellor of the tangle,G,17,2.5,True,20
-756,pithing needle,colorless,17,2.5,True,10
+726,force of despair,colorless,17,2.6,True,5
+727,unearth,B,17,2.6,True,1
+728,leyline of the void,B,17,2.6,True,3
+729,"cecil, dark knight",gold,17,2.6,True,11
+730,pithing needle,colorless,17,3.4,True,10
+731,spell pierce,U,17,3.4,True,2
+732,crashing footfalls,G,17,3.4,True,8
+733,gemstone caverns,colorless,17,3.4,True,3
+734,chancellor of the tangle,G,17,3.4,True,20
+735,seam rip,W,17,1.1,False,1
+736,sleep-cursed faerie,U,17,1.1,False,15
+737,mental misstep,U,17,1.1,False,27
+738,fragmentize,W,17,1.1,False,1
+739,seachrome coast,gold,17,1.1,False,6
+740,amulet of vigor,colorless,17,1.4,True,7
+741,simian spirit guide,R,17,1.4,True,21
+742,summer bloom,G,17,1.4,True,4
+743,golgari rot farm,gold,17,1.4,True,1
+744,"vraska, relic seeker",gold,17,1.4,True,1
+745,conjurer's bauble,colorless,17,2.0,False,11
+746,tragic trajectory,B,17,2.0,False,1
+747,darkslick shores,gold,17,2.0,False,4
+748,sleep-cursed faerie,U,17,2.0,False,15
+749,mental misstep,U,17,2.0,False,27
+750,stream of thought,U,17,3.4,True,2
+751,darkslick shores,gold,17,3.4,True,4
+752,force of negation,U,17,3.4,True,10
+753,sea's claim,U,17,3.4,True,2
+754,"cecil, dark knight",gold,17,3.4,True,11
+755,pithing needle,colorless,17,2.5,True,10
+756,nephalia academy,colorless,17,2.5,True,5
 757,crashing footfalls,G,17,2.5,True,8
-758,force of vigor,G,17,2.5,True,3
-759,nephalia academy,colorless,17,2.5,True,5
+758,chancellor of the tangle,G,17,2.5,True,20
+759,force of vigor,G,17,2.5,True,3
 760,botanical sanctum,gold,17,3.2,True,5
 761,crashing footfalls,G,17,3.2,True,8
 762,sleep-cursed faerie,U,17,3.2,True,15
 763,force of vigor,G,17,3.2,True,3
 764,meltstrider's resolve,G,17,3.2,True,1
-765,snow-covered island,U,17,2.8,True,1
-766,"oko, thief of crowns",gold,17,2.8,True,5
-767,chancellor of the tangle,G,17,2.8,True,20
-768,chrome mox,colorless,17,2.8,True,24
+765,"oko, thief of crowns",gold,17,2.8,True,5
+766,chrome mox,colorless,17,2.8,True,24
+767,snow-covered island,U,17,2.8,True,1
+768,chancellor of the tangle,G,17,2.8,True,20
 769,serum snare,U,17,2.8,True,3
-770,pick your poison,gold,17,2.8,True,3
-771,razorverge thicket,gold,17,2.8,True,2
-772,conjurer's bauble,colorless,17,2.8,True,11
-773,path to exile,W,17,2.8,True,5
+770,razorverge thicket,gold,17,2.8,True,2
+771,conjurer's bauble,colorless,17,2.8,True,11
+772,path to exile,W,17,2.8,True,5
+773,pick your poison,gold,17,2.8,True,3
 774,helix pinnacle,G,17,2.8,True,3
-775,magus of the moon,R,18,2.0,True,3
+775,leyline of anticipation,U,18,2.0,True,5
 776,simian spirit guide,R,18,2.0,True,21
-777,leyline of anticipation,U,18,2.0,True,5
-778,lotus bloom,colorless,18,2.4,True,14
-779,death's shadow,B,18,2.4,True,4
-780,hall of the bandit lord,colorless,18,2.4,True,1
-781,"xu-ifit, osteoharmonist",B,18,2.4,True,1
-782,mental misstep,U,18,2.4,True,27
+777,magus of the moon,R,18,2.0,True,3
+778,"xu-ifit, osteoharmonist",B,18,2.4,False,1
+779,mental misstep,U,18,2.4,False,27
+780,hall of the bandit lord,colorless,18,2.4,False,1
+781,lotus bloom,colorless,18,2.4,False,14
+782,death's shadow,B,18,2.4,False,4
 783,rite of flame,R,18,2.0,True,4
 784,abraded bluffs,gold,18,2.0,True,1
 785,stormscale scion,R,18,2.0,True,1
 786,reality smasher,colorless,18,3.0,True,1
-787,hope-ender coatl,U,18,3.0,True,3
-788,leyline of the guildpact,gold,18,3.0,True,11
+787,leyline of the guildpact,gold,18,3.0,True,11
+788,hope-ender coatl,U,18,3.0,True,3
 789,eldrazi temple,colorless,18,3.0,True,3
 790,eye of ugin,colorless,18,3.0,True,7
-791,noxious revival,G,18,3.4,True,1
-792,death's shadow,B,18,3.4,True,4
-793,city of brass,colorless,18,3.4,True,1
-794,dismember,B,18,3.4,True,4
-795,mental misstep,U,18,3.4,True,27
-796,urza's saga,colorless,18,2.2,True,5
-797,mox opal,colorless,18,2.2,True,8
-798,"emrakul, the aeons torn",colorless,18,2.2,True,13
-799,"boseiju, who endures",G,18,2.2,True,12
-800,the underworld cookbook,colorless,18,2.2,True,6
-801,blighted agent,U,18,1.5,True,1
-802,mana leak,U,18,1.5,True,1
-803,inkmoth nexus,colorless,18,1.5,True,4
-804,seachrome coast,gold,18,1.5,True,6
-805,mana tithe,W,18,1.5,True,3
-806,burning inquiry,R,18,3.0,True,4
-807,fungal reaches,gold,18,3.0,True,2
-808,fury,R,18,3.0,True,2
+791,dismember,B,18,3.4,False,4
+792,noxious revival,G,18,3.4,False,1
+793,city of brass,colorless,18,3.4,False,1
+794,mental misstep,U,18,3.4,False,27
+795,death's shadow,B,18,3.4,False,4
+796,the underworld cookbook,colorless,18,2.2,True,6
+797,urza's saga,colorless,18,2.2,True,5
+798,mox opal,colorless,18,2.2,True,8
+799,"emrakul, the aeons torn",colorless,18,2.2,True,13
+800,"boseiju, who endures",G,18,2.2,True,12
+801,mana leak,U,18,1.5,True,1
+802,blighted agent,U,18,1.5,True,1
+803,mana tithe,W,18,1.5,True,3
+804,inkmoth nexus,colorless,18,1.5,True,4
+805,seachrome coast,gold,18,1.5,True,6
+806,fungal reaches,gold,18,3.0,True,2
+807,fury,R,18,3.0,True,2
+808,ancient grudge,gold,18,3.0,True,1
 809,keldon megaliths,R,18,3.0,True,1
-810,ancient grudge,gold,18,3.0,True,1
+810,burning inquiry,R,18,3.0,True,4
 811,sorin's vengeance,B,18,1.8,True,1
-812,reverberate,R,18,1.8,True,1
-813,lotus bloom,colorless,18,1.8,True,14
-814,"phelia, exuberant shepherd",colorless,18,3.6,True,2
-815,momentum breaker,B,18,3.6,True,2
-816,mishra's factory,colorless,18,3.6,True,16
-817,scoured barrens,gold,18,3.6,True,2
-818,mental misstep,U,18,3.6,True,27
-819,academy ruins,U,19,3.3,True,5
-820,field of ruin,colorless,19,3.3,True,2
-821,the filigree sylex,colorless,19,3.3,True,6
-822,sunken citadel,colorless,19,3.3,True,6
-823,dismember,B,19,3.3,True,4
+812,lotus bloom,colorless,18,1.8,True,14
+813,reverberate,R,18,1.8,True,1
+814,momentum breaker,B,18,3.6,False,2
+815,"phelia, exuberant shepherd",colorless,18,3.6,False,2
+816,scoured barrens,gold,18,3.6,False,2
+817,mishra's factory,colorless,18,3.6,False,16
+818,mental misstep,U,18,3.6,False,27
+819,dismember,B,19,3.3,True,4
+820,sunken citadel,colorless,19,3.3,True,6
+821,academy ruins,U,19,3.3,True,5
+822,field of ruin,colorless,19,3.3,True,2
+823,the filigree sylex,colorless,19,3.3,True,6
 824,freed from the real,U,19,0.9,True,2
-825,kessig wolf run,gold,19,0.9,True,1
-826,bloom tender,G,19,0.9,True,1
-827,leyline of the guildpact,gold,19,0.9,True,11
-828,nephalia academy,colorless,19,0.9,True,5
-829,cavern of souls,colorless,19,3.8,True,26
-830,vexing bauble,colorless,19,3.8,True,1
-831,dismember,B,19,3.8,True,4
-832,sleep-cursed faerie,U,19,3.8,True,15
-833,mental misstep,U,19,3.8,True,27
+825,nephalia academy,colorless,19,0.9,True,5
+826,kessig wolf run,gold,19,0.9,True,1
+827,bloom tender,G,19,0.9,True,1
+828,leyline of the guildpact,gold,19,0.9,True,11
+829,dismember,B,19,3.8,False,4
+830,vexing bauble,colorless,19,3.8,False,1
+831,sleep-cursed faerie,U,19,3.8,False,15
+832,mental misstep,U,19,3.8,False,27
+833,cavern of souls,colorless,19,3.8,False,26
 834,island,U,19,3.0,True,13
-835,wind zendikon,U,19,3.0,True,1
-836,force of negation,U,19,3.0,True,10
+835,force of negation,U,19,3.0,True,10
+836,wind zendikon,U,19,3.0,True,1
 837,restless bivouac,gold,19,3.0,True,1
-838,chancellor of the tangle,G,19,1.3,True,20
-839,chancellor of the forge,R,19,1.3,True,5
-840,"sorin, imperious bloodlord",B,19,1.3,True,3
-841,phyrexian tower,B,19,1.3,True,7
+838,phyrexian tower,B,19,1.3,True,7
+839,chancellor of the tangle,G,19,1.3,True,20
+840,chancellor of the forge,R,19,1.3,True,5
+841,"sorin, imperious bloodlord",B,19,1.3,True,3
 842,vein ripper,B,19,1.3,True,3
-843,phyrexian tower,B,19,0.0,True,7
-844,the sibsig ceremony,B,19,0.0,True,2
-845,myr retriever,colorless,19,0.0,True,2
-846,bojuka bog,B,19,0.0,True,1
-847,flare of malice,B,19,3.6,True,1
-848,hope-ender coatl,U,19,3.6,True,3
-849,eye of ugin,colorless,19,3.6,True,7
-850,leyline of the guildpact,gold,19,3.6,True,11
-851,commandeer,U,19,3.6,True,2
-852,botanical sanctum,gold,19,3.6,True,5
-853,crashing footfalls,G,19,3.6,True,8
-854,subtlety,U,19,3.6,True,1
-855,mental misstep,U,19,3.6,True,27
-856,force of negation,U,19,3.0,True,10
-857,cavern of souls,colorless,19,3.0,True,26
-858,commandeer,U,19,3.0,True,2
-859,hexdrinker,G,19,3.0,True,1
-860,mental misstep,U,19,3.0,True,27
-861,cavern of souls,colorless,20,1.9,True,26
+843,the sibsig ceremony,B,19,0.0,True,2
+844,phyrexian tower,B,19,0.0,True,7
+845,bojuka bog,B,19,0.0,True,1
+846,myr retriever,colorless,19,0.0,True,2
+847,hope-ender coatl,U,19,3.6,True,3
+848,flare of malice,B,19,3.6,True,1
+849,leyline of the guildpact,gold,19,3.6,True,11
+850,eye of ugin,colorless,19,3.6,True,7
+851,botanical sanctum,gold,19,3.6,False,5
+852,crashing footfalls,G,19,3.6,False,8
+853,subtlety,U,19,3.6,False,1
+854,mental misstep,U,19,3.6,False,27
+855,commandeer,U,19,3.6,False,2
+856,hexdrinker,G,19,3.0,False,1
+857,mental misstep,U,19,3.0,False,27
+858,force of negation,U,19,3.0,False,10
+859,commandeer,U,19,3.0,False,2
+860,cavern of souls,colorless,19,3.0,False,26
+861,rhys the redeemed,gold,20,1.9,True,1
 862,mishra's factory,colorless,20,1.9,True,16
-863,mox amber,colorless,20,1.9,True,1
-864,rhys the redeemed,gold,20,1.9,True,1
-865,"boseiju, who endures",G,20,1.9,True,12
+863,"boseiju, who endures",G,20,1.9,True,12
+864,mox amber,colorless,20,1.9,True,1
+865,cavern of souls,colorless,20,1.9,True,26
 866,leyline of transformation,U,20,3.6,True,4
 867,myr superion,colorless,20,3.6,True,2
 868,eye of ugin,colorless,20,3.6,True,7
 869,momentum breaker,B,20,1.5,True,2
 870,tel-jilad stylus,colorless,20,1.5,True,5
-871,hopeless nightmare,B,20,1.5,True,2
-872,wastewood verge,gold,20,1.5,True,1
+871,wastewood verge,gold,20,1.5,True,1
+872,hopeless nightmare,B,20,1.5,True,2
 873,forest,G,20,1.5,True,3
-874,cavern of souls,colorless,20,1.8,True,26
+874,plains,W,20,1.8,True,10
 875,"greasefang, okiba boss",gold,20,1.8,True,1
-876,plains,W,20,1.8,True,10
-877,simian spirit guide,R,20,1.8,True,21
-878,detention chariot,W,20,1.8,True,1
+876,simian spirit guide,R,20,1.8,True,21
+877,detention chariot,W,20,1.8,True,1
+878,cavern of souls,colorless,20,1.8,True,26
 879,chrome mox,colorless,20,2.7,True,24
 880,plains,W,20,2.7,True,10
-881,witch enchanter,colorless,20,2.7,True,1
-882,"thalia, guardian of thraben",W,20,2.7,True,6
+881,"thalia, guardian of thraben",W,20,2.7,True,6
+882,witch enchanter,colorless,20,2.7,True,1
 883,white orchid phantom,W,20,2.7,True,3
-884,inspiring vantage,gold,20,3.8,True,5
-885,riling dawnbreaker,W,20,3.8,True,4
-886,mishra's factory,colorless,20,3.8,True,16
-887,aether vial,colorless,20,3.8,True,3
+884,aether vial,colorless,20,3.8,True,3
+885,inspiring vantage,gold,20,3.8,True,5
+886,riling dawnbreaker,W,20,3.8,True,4
+887,mishra's factory,colorless,20,3.8,True,16
 888,twinmaw stormbrood,gold,20,3.8,True,3
 889,chrome mox,colorless,20,1.7,True,24
 890,"arachne, psionic weaver",W,20,1.7,True,6
-891,sleep-cursed faerie,U,20,1.7,True,15
-892,seachrome coast,gold,20,1.7,True,6
-893,"lavinia, azorius renegade",gold,20,1.7,True,3
-894,chancellor of the tangle,G,20,2.8,True,20
-895,leyline of the void,B,20,2.8,True,3
-896,crashing footfalls,G,20,2.8,True,8
-897,force of despair,colorless,20,2.8,True,5
-898,force of vigor,G,20,2.8,True,3
-899,tel-jilad stylus,colorless,20,1.6,True,5
-900,hopeless nightmare,B,20,1.6,True,2
-901,scoured barrens,gold,20,1.6,True,2
-902,porphyry nodes,W,20,1.6,True,2
-903,mental misstep,U,20,1.6,True,27
-904,calciform pools,gold,20,2.7,True,5
-905,riling dawnbreaker,W,20,2.7,True,4
-906,celestial colonnade,gold,20,2.7,True,1
-907,solitude,W,20,2.7,True,7
-908,mental misstep,U,20,2.7,True,27
-909,trinisphere,colorless,21,4.4,True,4
+891,"lavinia, azorius renegade",gold,20,1.7,True,3
+892,sleep-cursed faerie,U,20,1.7,True,15
+893,seachrome coast,gold,20,1.7,True,6
+894,crashing footfalls,G,20,2.8,True,8
+895,force of despair,colorless,20,2.8,True,5
+896,chancellor of the tangle,G,20,2.8,True,20
+897,force of vigor,G,20,2.8,True,3
+898,leyline of the void,B,20,2.8,True,3
+899,porphyry nodes,W,20,1.6,False,2
+900,tel-jilad stylus,colorless,20,1.6,False,5
+901,hopeless nightmare,B,20,1.6,False,2
+902,scoured barrens,gold,20,1.6,False,2
+903,mental misstep,U,20,1.6,False,27
+904,celestial colonnade,gold,20,2.7,False,1
+905,calciform pools,gold,20,2.7,False,5
+906,mental misstep,U,20,2.7,False,27
+907,riling dawnbreaker,W,20,2.7,False,4
+908,solitude,W,20,2.7,False,7
+909,chrome mox,colorless,21,4.4,True,24
 910,chancellor of the tangle,G,21,4.4,True,20
-911,chrome mox,colorless,21,4.4,True,24
-912,mishra's factory,colorless,21,4.4,True,16
+911,mishra's factory,colorless,21,4.4,True,16
+912,trinisphere,colorless,21,4.4,True,4
 913,"boseiju, who endures",G,21,4.4,True,12
-914,gemstone mine,colorless,21,1.3,True,2
-915,"satoru, the infiltrator",gold,21,1.3,True,1
+914,"satoru, the infiltrator",gold,21,1.3,True,1
+915,archway of innovation,U,21,1.3,True,1
 916,soul partition,W,21,1.3,True,3
-917,"kozilek, the broken reality",colorless,21,1.3,True,1
-918,archway of innovation,U,21,1.3,True,1
-919,urza's tower,colorless,21,1.8,True,2
+917,gemstone mine,colorless,21,1.3,True,2
+918,"kozilek, the broken reality",colorless,21,1.3,True,1
+919,pithing needle,colorless,21,1.8,True,10
 920,urza's power plant,colorless,21,1.8,True,2
-921,urza's mine,colorless,21,1.8,True,2
-922,pithing needle,colorless,21,1.8,True,10
-923,goblin charbelcher,colorless,21,1.8,True,1
-924,tasha's hideous laughter,U,21,2.9,True,2
-925,chancellor of the tangle,G,21,2.9,True,20
-926,chrome mox,colorless,21,2.9,True,24
-927,cathedral of war,colorless,21,2.9,True,2
-928,flooded grove,gold,21,2.9,True,1
-929,the filigree sylex,colorless,21,2.7,True,6
-930,cathedral of war,colorless,21,2.7,True,2
-931,pithing needle,colorless,21,2.7,True,10
-932,demolition field,colorless,21,2.7,True,2
+921,goblin charbelcher,colorless,21,1.8,True,1
+922,urza's mine,colorless,21,1.8,True,2
+923,urza's tower,colorless,21,1.8,True,2
+924,chrome mox,colorless,21,2.9,True,24
+925,tasha's hideous laughter,U,21,2.9,True,2
+926,cathedral of war,colorless,21,2.9,True,2
+927,flooded grove,gold,21,2.9,True,1
+928,chancellor of the tangle,G,21,2.9,True,20
+929,demolition field,colorless,21,2.7,True,2
+930,pithing needle,colorless,21,2.7,True,10
+931,cathedral of war,colorless,21,2.7,True,2
+932,the filigree sylex,colorless,21,2.7,True,6
 933,ghostfire blade,colorless,21,1.6,True,1
-934,tasha's hideous laughter,U,21,1.6,True,2
-935,cascade bluffs,gold,21,1.6,True,1
-936,simian spirit guide,R,21,1.6,True,21
-937,radiant fountain,colorless,21,0.0,True,3
-938,bontu's monument,colorless,21,0.0,True,1
-939,mystic forge,colorless,21,0.0,True,1
-940,lotus bloom,colorless,21,0.0,True,14
-941,faithless looting,R,21,3.0,True,1
-942,mountain,R,21,3.0,True,7
-943,dread return,B,21,3.0,True,1
-944,void winnower,colorless,21,3.0,True,1
-945,mental misstep,U,21,3.0,True,27
+934,simian spirit guide,R,21,1.6,True,21
+935,tasha's hideous laughter,U,21,1.6,True,2
+936,cascade bluffs,gold,21,1.6,True,1
+937,mystic forge,colorless,21,0.0,True,1
+938,radiant fountain,colorless,21,0.0,True,3
+939,lotus bloom,colorless,21,0.0,True,14
+940,bontu's monument,colorless,21,0.0,True,1
+941,dread return,B,21,3.0,False,1
+942,void winnower,colorless,21,3.0,False,1
+943,faithless looting,R,21,3.0,False,1
+944,mountain,R,21,3.0,False,7
+945,mental misstep,U,21,3.0,False,27
 946,faerie macabre,B,21,4.7,True,1
-947,mishra's factory,colorless,21,4.7,True,16
-948,steel overseer,colorless,21,4.7,True,2
-949,phyrexian tower,B,21,4.7,True,7
-950,cruelclaw's heist,B,21,4.7,True,3
-951,force of negation,U,22,4.9,True,10
-952,mishra's factory,colorless,22,4.9,True,16
+947,phyrexian tower,B,21,4.7,True,7
+948,cruelclaw's heist,B,21,4.7,True,3
+949,steel overseer,colorless,21,4.7,True,2
+950,mishra's factory,colorless,21,4.7,True,16
+951,urza's saga,colorless,22,4.9,True,5
+952,blinkmoth nexus,colorless,22,4.9,True,1
 953,snapback,U,22,4.9,True,3
-954,urza's saga,colorless,22,4.9,True,5
-955,blinkmoth nexus,colorless,22,4.9,True,1
-956,"sorin, imperious bloodlord",B,22,2.9,True,3
-957,simian spirit guide,R,22,2.9,True,21
-958,ornithopter,colorless,22,2.9,True,2
-959,phyrexian tower,B,22,2.9,True,7
+954,mishra's factory,colorless,22,4.9,True,16
+955,force of negation,U,22,4.9,True,10
+956,ornithopter,colorless,22,2.9,True,2
+957,phyrexian tower,B,22,2.9,True,7
+958,simian spirit guide,R,22,2.9,True,21
+959,"sorin, imperious bloodlord",B,22,2.9,True,3
 960,vein ripper,B,22,2.9,True,3
-961,gemstone caverns,colorless,22,1.8,True,3
-962,"cecil, dark knight",gold,22,1.8,True,11
-963,cruelclaw's heist,B,22,1.8,True,3
-964,mental misstep,U,22,1.8,True,27
-965,"urborg, tomb of yawgmoth",colorless,22,1.8,True,9
-966,primal prayers,G,22,0.4,True,1
-967,greenbelt rampager,G,22,0.4,True,1
-968,impact tremors,R,22,0.4,True,1
-969,lotus bloom,colorless,22,0.4,True,14
-970,phyrexian tower,B,22,3.3,True,7
-971,memnite,colorless,22,3.3,True,5
+961,cruelclaw's heist,B,22,1.8,False,3
+962,"urborg, tomb of yawgmoth",colorless,22,1.8,False,9
+963,gemstone caverns,colorless,22,1.8,False,3
+964,mental misstep,U,22,1.8,False,27
+965,"cecil, dark knight",gold,22,1.8,False,11
+966,greenbelt rampager,G,22,0.4,True,1
+967,impact tremors,R,22,0.4,True,1
+968,lotus bloom,colorless,22,0.4,True,14
+969,primal prayers,G,22,0.4,True,1
+970,anointed peacekeeper,W,22,3.3,True,5
+971,phyrexian tower,B,22,3.3,True,7
 972,"arachne, psionic weaver",W,22,3.3,True,6
-973,anointed peacekeeper,W,22,3.3,True,5
+973,memnite,colorless,22,3.3,True,5
 974,survivors' encampment,colorless,22,3.3,True,1
-975,rite of flame,R,22,1.9,True,4
-976,boldwyr heavyweights,R,22,1.9,True,1
-977,mountain,R,22,1.9,True,7
-978,mental misstep,U,22,1.9,True,27
-979,swamp,B,22,0.9,True,12
-980,mishra's factory,colorless,22,0.9,True,16
+975,rite of flame,R,22,1.9,False,4
+976,boldwyr heavyweights,R,22,1.9,False,1
+977,mountain,R,22,1.9,False,7
+978,mental misstep,U,22,1.9,False,27
+979,the underworld cookbook,colorless,22,0.9,True,6
+980,persist,B,22,0.9,True,3
 981,sire of insanity,gold,22,0.9,True,1
-982,persist,B,22,0.9,True,3
-983,the underworld cookbook,colorless,22,0.9,True,6
-984,"cecil, dark knight",gold,22,4.0,True,11
+982,mishra's factory,colorless,22,0.9,True,16
+983,swamp,B,22,0.9,True,12
+984,anointed peacekeeper,W,22,4.0,True,5
 985,simian spirit guide,R,22,4.0,True,21
-986,cavern of souls,colorless,22,4.0,True,26
-987,anointed peacekeeper,W,22,4.0,True,5
-988,blood crypt,gold,22,1.6,True,1
-989,death's shadow,B,22,1.6,True,4
-990,simian spirit guide,R,22,1.6,True,21
-991,roiling vortex,R,22,1.6,True,1
-992,mental misstep,U,22,1.6,True,27
-993,argent dais,W,23,3.8,True,1
-994,the enigma jewel,U,23,3.8,True,1
-995,urza's saga,colorless,23,3.8,True,5
-996,seachrome coast,gold,23,3.8,True,6
-997,elixir of immortality,colorless,23,3.8,True,2
-998,academy ruins,U,23,0.9,True,5
-999,izzet boilerworks,gold,23,0.9,True,1
-1000,pithing needle,colorless,23,0.9,True,10
-1001,spicy oatmeal pizza,R,23,0.9,True,1
-1002,ensnaring bridge,colorless,23,0.9,True,3
-1003,inkmoth nexus,colorless,23,2.8,True,4
-1004,plains,W,23,2.8,True,10
+986,"cecil, dark knight",gold,22,4.0,True,11
+987,cavern of souls,colorless,22,4.0,True,26
+988,simian spirit guide,R,22,1.6,False,21
+989,blood crypt,gold,22,1.6,False,1
+990,mental misstep,U,22,1.6,False,27
+991,roiling vortex,R,22,1.6,False,1
+992,death's shadow,B,22,1.6,False,4
+993,urza's saga,colorless,23,3.8,True,5
+994,argent dais,W,23,3.8,True,1
+995,elixir of immortality,colorless,23,3.8,True,2
+996,the enigma jewel,U,23,3.8,True,1
+997,seachrome coast,gold,23,3.8,True,6
+998,pithing needle,colorless,23,0.9,True,10
+999,ensnaring bridge,colorless,23,0.9,True,3
+1000,izzet boilerworks,gold,23,0.9,True,1
+1001,academy ruins,U,23,0.9,True,5
+1002,spicy oatmeal pizza,R,23,0.9,True,1
+1003,plains,W,23,2.8,True,10
+1004,"leonardo, cutting edge",W,23,2.8,True,1
 1005,agatha's soul cauldron,colorless,23,2.8,True,1
 1006,walking ballista,colorless,23,2.8,True,2
-1007,"leonardo, cutting edge",W,23,2.8,True,1
-1008,hive mind,U,23,2.0,True,4
-1009,pact of negation,U,23,2.0,True,7
-1010,pact of the titan,R,23,2.0,True,6
+1007,inkmoth nexus,colorless,23,2.8,True,4
+1008,pact of negation,U,23,2.0,True,7
+1009,pact of the titan,R,23,2.0,True,6
+1010,hive mind,U,23,2.0,True,4
 1011,lotus bloom,colorless,23,2.0,True,14
-1012,chrome mox,colorless,23,1.3,True,24
-1013,chancellor of the forge,R,23,1.3,True,5
-1014,red sun's zenith,R,23,1.3,True,1
-1015,"donatello, gadget master",U,23,1.3,True,1
-1016,seat of the synod,U,23,1.3,True,5
+1012,"donatello, gadget master",U,23,1.3,True,1
+1013,chrome mox,colorless,23,1.3,True,24
+1014,chancellor of the forge,R,23,1.3,True,5
+1015,seat of the synod,U,23,1.3,True,5
+1016,red sun's zenith,R,23,1.3,True,1
 1017,pact of negation,U,23,2.0,True,7
-1018,lotus bloom,colorless,23,2.0,True,14
+1018,pact of the titan,R,23,2.0,True,6
 1019,hive mind,U,23,2.0,True,4
-1020,pact of the titan,R,23,2.0,True,6
-1021,unable to scream,U,23,3.1,True,1
-1022,force of negation,U,23,3.1,True,10
-1023,sleep-cursed faerie,U,23,3.1,True,15
-1024,island,U,23,3.1,True,13
-1025,mental misstep,U,23,3.1,True,27
+1020,lotus bloom,colorless,23,2.0,True,14
+1021,island,U,23,3.1,False,13
+1022,sleep-cursed faerie,U,23,3.1,False,15
+1023,mental misstep,U,23,3.1,False,27
+1024,force of negation,U,23,3.1,False,10
+1025,unable to scream,U,23,3.1,False,1
 1026,chrome mox,colorless,23,4.2,True,24
 1027,plains,W,23,4.2,True,10
-1028,path to exile,W,23,4.2,True,5
-1029,"thalia, guardian of thraben",W,23,4.2,True,6
+1028,"thalia, guardian of thraben",W,23,4.2,True,6
+1029,path to exile,W,23,4.2,True,5
 1030,white orchid phantom,W,23,4.2,True,3
 1031,pact of negation,U,23,2.0,True,7
 1032,pact of the titan,R,23,2.0,True,6
-1033,lotus bloom,colorless,23,2.0,True,14
-1034,hive mind,U,23,2.0,True,4
+1033,hive mind,U,23,2.0,True,4
+1034,lotus bloom,colorless,23,2.0,True,14

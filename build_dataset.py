@@ -12,7 +12,8 @@ df.to_csv('./app/data/raw_5cb_stats.csv')
 # banlist
 banned_cards = ['swift reconfiguration', 'ghost quarter', 'volatile fault', "thassa's oracle", 
                 'meddling mage', 'curse of silence', 'disruptor flute', 'dark depths', 
-                'jace, wielder of mysteries', 'chancellor of the annex', 'scion of draco', 'electrodominance']
+                'jace, wielder of mysteries', 'chancellor of the annex', 'scion of draco', 
+                'electrodominance', 'mental misstep']
 
 # reading in card data from scryfall
 # json link does not update automatically, I'm not sure how to do that :-)
