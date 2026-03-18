@@ -2,8 +2,6 @@ from shiny import ui, render, App, Inputs, reactive
 import pandas as pd
 import seaborn as sns
 
-# test 222222
-#test test test
 # constants
 basic_lands = ['plains', 'island', 'swamp', 'mountain', 'forest']
 
@@ -18,34 +16,48 @@ N_weeks = raw_5cb_stats['Week'].max()
 # App function
 def app_ui():
 
-    my_ui = ui.page_sidebar(
-        ui.sidebar(
-            ui.card(
-                ui.input_slider('weeks', 'Weeks', 1, N_weeks, [0,N_weeks]),
-                ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 10, 6),
-                ui.input_checkbox('banned','Include Banned Decks', True),
-                ui.input_checkbox('silly', 'Include Silly Weeks', True)
-            ),
-            ui.card(
-                ui.markdown(
-                """
-                #### Mirrored Winrates:
-                Matches played against the same card are included in the dataset, so cards with high play rates will tend towards middle scores.
-                #### Silly Weeks:
-                The 4th week of each month, starting with week 17.
-                #### Mobile:
-                On mobile, I recommend opening the plot in a seperate tab or saving it, for easier viewing.
-                """
-                )
-            ),
-            ui.tags.a("View Decklists!", href='https://tappedout.net/users/knobbodi/mtg-decks/', target='_blank'),
-            ui.tags.a("GitHub", href='https://github.com/afspicciati/5CB-Shiny-App', target='_blank'),
-            bg='#e6e6e6'
-        ),
-        ui.page_fluid(
-            ui.output_ui('my_plot')
+    my_ui = ui.page_fillable( 
+ui.navset_card_pill(
+    ui.nav_panel('Card Search','test'),
+    ui.nav_panel('Card Stats', 
+                        ui.page_sidebar(
+ui.sidebar(
+    ui.card(
+        ui.input_slider('weeks', 'Weeks', 1, N_weeks, [0,N_weeks]),
+        ui.input_slider('N_decks', 'Minimum Decks Containing Card', 2, 10, 6),
+        ui.input_checkbox('banned','Include Banned Decks', True),
+        ui.input_checkbox('silly', 'Include Silly Weeks', True)
+    ),
+    ui.card(
+        ui.markdown(
+        """
+        #### Mirrored Winrates:
+        Matches played against the same card are included in the dataset, so cards with high play rates will tend towards middle scores.
+        #### Silly Weeks:
+        The 4th week of each month, starting with week 17.
+        #### Mobile:
+        On mobile, I recommend opening the plot in a seperate tab or saving it, for easier viewing.
+        """
         )
+    ),
+    ui.tags.a("View Decklists!", href='https://tappedout.net/users/knobbodi/mtg-decks/', target='_blank'),
+    ui.tags.a("GitHub", href='https://github.com/afspicciati/5CB-Shiny-App', target='_blank'),
+    bg='#e6e6e6'
+),
+ui.page_fluid(
+    ui.output_ui('my_plot')
+)
+)
+                    
+                    
+                    
+                    )
+)
     )
+    
+    
+    
+
     return(my_ui)
 
 
