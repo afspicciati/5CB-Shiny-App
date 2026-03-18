@@ -5,3 +5,5 @@ app/rsconnect-python/*
 .venv/*
 app/data
 app/data/*
+app/requirements_stuffs
+app/requirements_stuffs/*
