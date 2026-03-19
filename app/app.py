@@ -61,22 +61,20 @@ def app_ui():
         """
                             )
                         ),
-                        ui.tags.a(
-                            "View Decklists!",
-                            href="https://tappedout.net/users/knobbodi/mtg-decks/",
-                            target="_blank",
-                        ),
-                        ui.tags.a(
-                            "GitHub",
-                            href="https://github.com/afspicciati/5CB-Shiny-App",
-                            target="_blank",
-                        ),
                         bg="#e6e6e6",
                     ),
-                    ui.page_fluid(ui.output_ui("my_plot")),
+                    ui.page_auto(ui.output_ui("my_plot")),
                 ),
             ),
-        )
+            ui.nav_spacer(),
+            ui.nav_control(
+                ui.a(
+                    "GitHub",
+                    href="https://github.com/afspicciati/5CB-Shiny-App",
+                    target="_blank",
+                ),
+            ),
+        ),
     )
 
     return my_ui
