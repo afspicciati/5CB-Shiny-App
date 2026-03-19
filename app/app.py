@@ -12,6 +12,19 @@ raw_5cb_stats = pd.read_csv("./data/raw_5cb_stats.csv")
 ### working with data
 # weeks count
 N_weeks = raw_5cb_stats["Week"].max()
+# building selectize list
+cards_counts_list = []
+card_value_counts = card_event_df[
+    ~card_event_df["Card"].isin(basic_lands)
+].Card.value_counts()
+for i in range(len(card_value_counts)):
+    cards_counts_list.append([card_value_counts.index[i], card_value_counts.iloc[i]])
+
+sorted_choices = sorted(cards_counts_list, key=lambda x: (-x[1], x[0]))
+selectize_choices = [
+    str(card_name) + " (" + str(card_counts) + ")"
+    for (card_name, card_counts) in sorted_choices
+]
 
 
 # App function
@@ -19,7 +32,11 @@ def app_ui():
 
     my_ui = ui.page_fillable(
         ui.navset_card_pill(
-            ui.nav_panel("Card Search", "test"),
+            ui.nav_panel(
+                "Card Search",
+                ui.input_selectize("selectize_cards", "Card", selectize_choices),
+                ui.page_fluid(ui.output_data_frame("deck_table")),
+            ),
             ui.nav_panel(
                 "Card Stats",
                 ui.page_sidebar(
@@ -68,6 +85,12 @@ def app_ui():
 # Server function
 def server(input: Inputs, output, session):
 
+    ### TAB 1 (card table)
+    @render.data_frame
+    def deck_table():
+        return raw_5cb_stats
+
+    ### TAB 2 (card stats)
     @reactive.calc
     def create_graphing_df():
         graphing_df = card_event_df[
