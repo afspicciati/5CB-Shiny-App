@@ -1,39 +1,19 @@
 from shiny import ui, render, App, Inputs, reactive
 import pandas as pd
 import seaborn as sns
+import json
 
 # constants
 basic_lands = ["plains", "island", "swamp", "mountain", "forest"]
-weeks_5cb = {
-    1: "https://tappedout.net/mtg-decks/5-card-blind-week-1-the-mirror-crackd-1/",
-    2: "https://tappedout.net/mtg-decks/5-card-blind-week-2-mysterious-mysteries/",
-    3: "https://tappedout.net/mtg-decks/5-card-blind-week-3-flying-spaghetti-monsters-1/",
-    4: "https://tappedout.net/mtg-decks/5-card-blind-week-4-return-of-the-hatebears/",
-    5: "https://tappedout.net/mtg-decks/5-card-blind-week-5-oh-the-wurmanity/",
-    6: "https://tappedout.net/mtg-decks/5-card-blind-week-6-combos-galore/",
-    7: "https://tappedout.net/mtg-decks/5-card-blind-week-7-scorched-earth/",
-    8: "https://tappedout.net/mtg-decks/5-card-blind-week-8-misstep-up-to-the-plate-2/",
-    9: "https://tappedout.net/mtg-decks/5-card-blind-week-9-pili-your-palas/",
-    10: "https://tappedout.net/mtg-decks/5-card-blind-week-10-oof-oko/",
-    11: "https://tappedout.net/mtg-decks/5-card-blind-week-11-why-i-otter/",
-    12: "https://tappedout.net/mtg-decks/5-card-blind-week-12-big-guys-and-discard/",
-    13: "https://tappedout.net/mtg-decks/5-card-blind-week-13-be-vigilant/",
-    14: "https://tappedout.net/mtg-decks/5-card-blind-week-14-mirrodin-hosts-5cb/",
-    15: "https://tappedout.net/mtg-decks/5-card-blind-week-15-return-of-the-eldrazi/",
-    16: "https://tappedout.net/mtg-decks/5-card-blind-week-16-wake-up-and-smell-the-lotus/",
-    17: "https://tappedout.net/mtg-decks/5-card-blind-week-17-a-crash-of-footfalls/",
-    18: "https://tappedout.net/mtg-decks/5-card-blind-week-18-shadowy-missteps/",
-    19: "https://tappedout.net/mtg-decks/5-card-blind-week-19-land-of-1000-counters/",
-    20: "https://tappedout.net/mtg-decks/5-card-blind-week-20-hivemind-pairs/",
-    21: "https://tappedout.net/mtg-decks/5-card-blind-week-21-105-card-blind/",
-    22: "https://tappedout.net/mtg-decks/5-card-blind-week-22-keeping-the-peace/",
-    23: "https://tappedout.net/mtg-decks/5-card-blind-week-23-3-of-a-kind/",
-    24: "https://tappedout.net/mtg-decks/5-card-blind-week-24-dont-let-your-guard-down/",
-}
+with open("./data/week_links.json") as file:
+    week_links = json.load(file)
 
 # load data
 card_event_df = pd.read_csv("./data/card_event_df.csv")
 raw_5cb_stats = pd.read_csv("./data/raw_5cb_stats.csv")
+# load card images
+with open("./data/card_uris.json") as file:
+    card_uris = json.load(file)
 
 ### working with data
 # weeks count
@@ -114,8 +94,13 @@ def server(input: Inputs, output, session):
     @render.data_frame
     def deck_table():
         raw_5cb_stats["Week"] = [
-            ui.a(f"""Week {w}""", href=weeks_5cb[w], target="_blank")
+            ui.a(str(w), href=week_links[str(w)], target="_blank")
             for w in raw_5cb_stats["Week"]
+        ]
+
+        raw_5cb_stats["Image"] = [
+            ui.a(card_name, href=card_uris[card_name.lower()], target="_blank")
+            for card_name in raw_5cb_stats["Card 1"]
         ]
 
         return raw_5cb_stats

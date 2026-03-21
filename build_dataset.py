@@ -1,31 +1,61 @@
-'''
+"""
 This file builds the dataset for the shiny app to use, cleaning the data, and outputs a csv file when run
-'''
+"""
+
 import pandas as pd
+import json
 
 # reading in data from google sheet
 filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8VISOoiM3TTh9JGk/export?format=csv&gid=0"
 df = pd.read_csv(filepath)
-# write original data 
-df.to_csv('./app/data/raw_5cb_stats.csv')
+# write original data
+df.to_csv("./app/data/raw_5cb_stats.csv")
 
 # banlist
-banned_cards = ['swift reconfiguration', 'ghost quarter', 'volatile fault', "thassa's oracle", 
-                'meddling mage', 'curse of silence', 'disruptor flute', 'dark depths', 
-                'jace, wielder of mysteries', 'chancellor of the annex', 'scion of draco', 
-                'electrodominance', 'mental misstep']
+banned_cards = [
+    "swift reconfiguration",
+    "ghost quarter",
+    "volatile fault",
+    "thassa's oracle",
+    "meddling mage",
+    "curse of silence",
+    "disruptor flute",
+    "dark depths",
+    "jace, wielder of mysteries",
+    "chancellor of the annex",
+    "scion of draco",
+    "electrodominance",
+    "mental misstep",
+]
 
 # reading in card data from scryfall
 # json link does not update automatically, I'm not sure how to do that :-)
 # updated 3/11/26 for tmnt
-scryfall_cards_original = pd.read_json('https://data.scryfall.io/default-cards/default-cards-20260311090729.json')
+scryfall_cards_original = pd.read_json(
+    "https://data.scryfall.io/default-cards/default-cards-20260311090729.json"
+)
 # cleaning scryfall card data
-columns = ['oracle_id', 'name', 'scryfall_uri', 'colors', 'color_identity', 'type_line','image_uris', 'released_at', 'card_faces']
-scryfall_cards = scryfall_cards_original[columns].sort_values('released_at', ascending = True)
+columns = [
+    "oracle_id",
+    "name",
+    "scryfall_uri",
+    "colors",
+    "color_identity",
+    "type_line",
+    "image_uris",
+    "released_at",
+    "card_faces",
+]
+scryfall_cards = scryfall_cards_original[columns].sort_values(
+    "released_at", ascending=True
+)
 # setting card names to lowercase to match my convention
-scryfall_cards['name'] = [str.lower(x) for x in scryfall_cards['name']]
+scryfall_cards["name"] = [str.lower(x) for x in scryfall_cards["name"]]
 # removing the backside name from double-sided cards
-scryfall_cards.loc[scryfall_cards.name.str.contains('//'), 'name'] = [x.split(' //')[0] for x in scryfall_cards.loc[scryfall_cards.name.str.contains('//'), 'name']]
+scryfall_cards.loc[scryfall_cards.name.str.contains("//"), "name"] = [
+    x.split(" //")[0]
+    for x in scryfall_cards.loc[scryfall_cards.name.str.contains("//"), "name"]
+]
 
 # building card-event dataframe
 card_event = []
@@ -33,7 +63,7 @@ for i in range(len(df)):
     deck = set()
     deck_legal = True
     for j in range(5):
-        card = df.iloc[i]['Card ' + str(j+1)].lower()
+        card = df.iloc[i]["Card " + str(j + 1)].lower()
         if card not in deck:
             deck.add(card)
             if card in banned_cards:
@@ -42,28 +72,85 @@ for i in range(len(df)):
         # adding color identity stat by pulling from scryfall database
         # try/except here to catch cards with typos in name
         try:
-            color_identity = scryfall_cards[scryfall_cards['name'] == card].reset_index().iloc[0].color_identity
+            color_identity = (
+                scryfall_cards[scryfall_cards["name"] == card]
+                .reset_index()
+                .iloc[0]
+                .color_identity
+            )
 
             if len(color_identity) == 0:
-                color_identity = 'colorless'
+                color_identity = "colorless"
             elif len(color_identity) > 1:
-                color_identity = 'gold'
+                color_identity = "gold"
             else:
                 color_identity = color_identity[0]
         except:
             print(card)
-            color_identity = 'colorless'
+            color_identity = "colorless"
 
-        week = df.iloc[i]['Week']
-        deck_score = round(df.iloc[i]['Adjusted Score'], 2)
+        week = df.iloc[i]["Week"]
+        deck_score = round(df.iloc[i]["Adjusted Score"], 2)
 
-        card_event.append([card,color_identity,week,deck_score,deck_legal])
+        card_event.append([card, color_identity, week, deck_score, deck_legal])
 
 # each row is an instance of a single card in a deck (decks with duplicates only contain one entry)
-card_event_df = pd.DataFrame(card_event, columns=['Card','Color Identity','Week','Deck Score','Deck Legal'])
+card_event_df = pd.DataFrame(
+    card_event, columns=["Card", "Color Identity", "Week", "Deck Score", "Deck Legal"]
+)
 
 # adding column for how many decks a given card is played in
-value_counts = card_event_df['Card'].value_counts() 
-card_event_df['N Decks'] = card_event_df['Card'].apply(lambda x: value_counts[x])
+value_counts = card_event_df["Card"].value_counts()
+card_event_df["N Decks"] = card_event_df["Card"].apply(lambda x: value_counts[x])
 
-card_event_df.to_csv('./app/data/card_event_df.csv')
+card_event_df.to_csv("./app/data/card_event_df.csv")
+
+# buildling dictionary of scryfall img links
+card_uris = dict()
+for card in card_event_df["Card"].unique():
+    card_data = scryfall_cards[(scryfall_cards["name"] == card)]
+    if len(card_data[card_data["image_uris"].notnull()]) > 0:
+        card_uris[card] = (
+            card_data[card_data["image_uris"].notnull()]
+            .reset_index()
+            .iloc[0]["image_uris"]["normal"]
+        )
+    # special case for double-sided cards. Only grabbing first printing front face, hence the iloc[0][0]
+    else:
+        card_uris[card] = card_data.reset_index()["card_faces"].iloc[0][0][
+            "image_uris"
+        ]["normal"]
+
+with open("./app/data/card_uris.json", "w") as file:
+    json.dump(card_uris, file, indent=4)
+
+# reading weeks dictionary to file (so github may be cloned)
+week_links = {
+    1: "https://tappedout.net/mtg-decks/5-card-blind-week-1-the-mirror-crackd-1/",
+    2: "https://tappedout.net/mtg-decks/5-card-blind-week-2-mysterious-mysteries/",
+    3: "https://tappedout.net/mtg-decks/5-card-blind-week-3-flying-spaghetti-monsters-1/",
+    4: "https://tappedout.net/mtg-decks/5-card-blind-week-4-return-of-the-hatebears/",
+    5: "https://tappedout.net/mtg-decks/5-card-blind-week-5-oh-the-wurmanity/",
+    6: "https://tappedout.net/mtg-decks/5-card-blind-week-6-combos-galore/",
+    7: "https://tappedout.net/mtg-decks/5-card-blind-week-7-scorched-earth/",
+    8: "https://tappedout.net/mtg-decks/5-card-blind-week-8-misstep-up-to-the-plate-2/",
+    9: "https://tappedout.net/mtg-decks/5-card-blind-week-9-pili-your-palas/",
+    10: "https://tappedout.net/mtg-decks/5-card-blind-week-10-oof-oko/",
+    11: "https://tappedout.net/mtg-decks/5-card-blind-week-11-why-i-otter/",
+    12: "https://tappedout.net/mtg-decks/5-card-blind-week-12-big-guys-and-discard/",
+    13: "https://tappedout.net/mtg-decks/5-card-blind-week-13-be-vigilant/",
+    14: "https://tappedout.net/mtg-decks/5-card-blind-week-14-mirrodin-hosts-5cb/",
+    15: "https://tappedout.net/mtg-decks/5-card-blind-week-15-return-of-the-eldrazi/",
+    16: "https://tappedout.net/mtg-decks/5-card-blind-week-16-wake-up-and-smell-the-lotus/",
+    17: "https://tappedout.net/mtg-decks/5-card-blind-week-17-a-crash-of-footfalls/",
+    18: "https://tappedout.net/mtg-decks/5-card-blind-week-18-shadowy-missteps/",
+    19: "https://tappedout.net/mtg-decks/5-card-blind-week-19-land-of-1000-counters/",
+    20: "https://tappedout.net/mtg-decks/5-card-blind-week-20-hivemind-pairs/",
+    21: "https://tappedout.net/mtg-decks/5-card-blind-week-21-105-card-blind/",
+    22: "https://tappedout.net/mtg-decks/5-card-blind-week-22-keeping-the-peace/",
+    23: "https://tappedout.net/mtg-decks/5-card-blind-week-23-3-of-a-kind/",
+    24: "https://tappedout.net/mtg-decks/5-card-blind-week-24-dont-let-your-guard-down/",
+}
+
+with open("./app/data/week_links.json", "w") as file:
+    json.dump(week_links, file, indent=4)
