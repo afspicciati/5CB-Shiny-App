@@ -10,7 +10,7 @@ filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8
 df = pd.read_csv(filepath)
 df["Adjusted Score"] = round(df["Adjusted Score"], 2)
 # write original data
-df.to_csv("./app/data/raw_5cb_stats.csv")
+df.to_csv("./app/data/raw_5cb_stats.csv", index=False)
 
 # banlist
 banned_cards = [
@@ -104,7 +104,7 @@ card_event_df = pd.DataFrame(
 value_counts = card_event_df["Card"].value_counts()
 card_event_df["N Decks"] = card_event_df["Card"].apply(lambda x: value_counts[x])
 
-card_event_df.to_csv("./app/data/card_event_df.csv")
+card_event_df.to_csv("./app/data/card_event_df.csv", index=False)
 
 # building table-stats dataframe
 decklist = []
@@ -121,9 +121,9 @@ for i in range(len(df)):
 
     decklist.append(deck_individual)
 df["Deck"] = decklist
-df.drop("Score", axis=1)
 df["Score"] = df["Adjusted Score"]
-df.to_csv("./app/data/table_stats.csv")
+df.drop("Adjusted Score", axis=1, inplace=True)
+df.to_csv("./app/data/table_stats.csv", index=False)
 
 
 # buildling dictionary of scryfall img links

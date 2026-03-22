@@ -9,15 +9,17 @@ with open("./data/week_links.json") as file:
     week_links = json.load(file)
 
 # load data
-card_event_df = pd.read_csv("./data/card_event_df.csv")
-raw_5cb_stats = pd.read_csv("./data/raw_5cb_stats.csv")
+card_event_df = pd.read_csv("./data/card_event_df.csv", index_col=False)
+table_stats = pd.read_csv("./data/table_stats.csv", index_col=False)
 # load card images
 with open("./data/card_uris.json") as file:
     card_uris = json.load(file)
 
 ### working with data
+# fixing list read in
+table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
 # weeks count
-N_weeks = raw_5cb_stats["Week"].max()
+N_weeks = table_stats["Week"].max()
 # building selectize list
 cards_counts_list = []
 card_value_counts = card_event_df[
@@ -91,19 +93,35 @@ def app_ui():
 def server(input: Inputs, output, session):
 
     ### TAB 1 (card table)
+    @reactive.calc
+    def create_graphing_table():
+        card = input.selectize_cards().split(" (")[0]
+        graphing_table = table_stats[
+            [card in table_stats["Deck"].iloc[i] for i in range(len(table_stats))]
+        ].reset_index()
+
+        for i in range(len(graphing_table)):
+            for j in range(5):
+                graphing_table.loc[i, f"Card {j+1}"] = ui.a(
+                    graphing_table["Deck"].iloc[i][j],
+                    href=graphing_table[f"Card {j+1}"].iloc[i],
+                    target="_blank",
+                )
+
+        return graphing_table.drop("index", axis=1).sort_values(
+            "Score", ascending=False
+        )
+
     @render.data_frame
     def deck_table():
-        raw_5cb_stats["Week"] = [
-            ui.a(str(w), href=week_links[str(w)], target="_blank")
-            for w in raw_5cb_stats["Week"]
-        ]
+        graphing_table = create_graphing_table()
 
-        raw_5cb_stats["Image"] = [
-            ui.a(card_name, href=card_uris[card_name.lower()], target="_blank")
-            for card_name in raw_5cb_stats["Card 1"]
-        ]
+        # graphing_table["Week"] = [
+        #     ui.a(str(w), href=week_links[str(w)], target="_blank")
+        #     for w in graphing_table["Week"]
+        # ]
 
-        return raw_5cb_stats
+        return graphing_table.drop("Deck", axis=1)
 
     ### TAB 2 (card stats)
     @reactive.calc
