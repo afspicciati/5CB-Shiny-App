@@ -8,6 +8,7 @@ import json
 # reading in data from google sheet
 filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8VISOoiM3TTh9JGk/export?format=csv&gid=0"
 df = pd.read_csv(filepath)
+df["Adjusted Score"] = round(df["Adjusted Score"], 2)
 # write original data
 df.to_csv("./app/data/raw_5cb_stats.csv")
 
@@ -90,7 +91,7 @@ for i in range(len(df)):
             color_identity = "colorless"
 
         week = df.iloc[i]["Week"]
-        deck_score = round(df.iloc[i]["Adjusted Score"], 2)
+        deck_score = df.iloc[i]["Adjusted Score"]
 
         card_event.append([card, color_identity, week, deck_score, deck_legal])
 
@@ -104,6 +105,26 @@ value_counts = card_event_df["Card"].value_counts()
 card_event_df["N Decks"] = card_event_df["Card"].apply(lambda x: value_counts[x])
 
 card_event_df.to_csv("./app/data/card_event_df.csv")
+
+# building table-stats dataframe
+decklist = []
+for i in range(len(df)):
+    deck_individual = []
+    for j in range(5):
+        card = df.iloc[i][f"Card {j+1}"].lower()
+        deck_individual.append(card)
+        df.loc[i, f"Card {j+1}"] = (
+            scryfall_cards[scryfall_cards["name"] == card]
+            .reset_index()
+            .iloc[0]["scryfall_uri"]
+        )
+
+    decklist.append(deck_individual)
+df["Deck"] = decklist
+df.drop("Score", axis=1)
+df["Score"] = df["Adjusted Score"]
+df.to_csv("./app/data/table_stats.csv")
+
 
 # buildling dictionary of scryfall img links
 card_uris = dict()

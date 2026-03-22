@@ -1,32 +1,32 @@
 ,Week,Player,Deck Name,Card 1,Card 2,Card 3,Card 4,Card 5,Score,Adjusted Score
-0,1,colton,burning oil,silverbluff bridge,mishra's factory,sleep-cursed faerie,burning inquiry,the filigree sylex,47,2.764705882
-1,1,edi,my hexgirlfriend got banned,"luxior, giada's gift",devoted druid,"yavimaya, cradle of growth",dark depths,blast zone,11,0.6470588235
-2,1,gwen,critter midrange,dark depths,"urborg, tomb of yawgmoth",thespian's stage,nezumi shortfang,sinkhole surveyor,48,2.823529412
-3,1,spada,snow domain tempo,scion of draco,leyline binding,leyline of the guildpact,simian spirit guide,snow-covered plains,60,3.529411765
-4,1,jesse,ephemeral solitude,solitude,chancellor of the annex,ephemerate,ephemerate,plains,16,0.9411764706
-5,1,athena,norin the merry,guide of souls,guide of souls,norin the wary,chancellor of the annex,cavern of souls,42,2.470588235
-6,1,lapis,pressure cooker,volatile fault,"ulamog, the infinite gyre",geier reach sanitarium,calciform pools,engineered explosives,48,2.823529412
-7,1,harrison,"""please don't have more than 6 toughness""",battlefield forge,stomping ground,lightning bolt,"thalia, guardian of thraben",wheel of sun and moon,30,1.764705882
-8,1,dustin,"""do you pay the 1?""",cavern of souls,chancellor of the annex,chancellor of the tangle,"thalia, guardian of thraben",solitude,29,1.705882353
-9,1,finn,entropy,helix pinnacle,thornglint bridge,serene remembrance,volatile fault,path to exile,50,2.941176471
-10,1,nadia,mono white delver,chancellor of the annex,solitude,malakir rebirth,spawning pool,orzhov basilica,33,1.941176471
-11,1,patrick,uw control,sleep-cursed faerie,echoing truth,chancellor of the annex,island,volatile fault,69,4.058823529
-12,1,sammy,faerie fizzles,pact of negation,consign to memory,mental misstep,sleep-cursed faerie,island,36,2.117647059
-13,1,ryder,mono brown domain,scion of draco,ugin's labyrinth,disruptor flute,leyline of the guildpact,mockery of nature,66,3.882352941
-14,1,john,"""that just sounds like lab man with extra steps""","jace, wielder of mysteries",lotus bloom,island,into the flood maw,pact of negation,62,3.647058824
-15,1,andrew,boros energy,plains,volatile fault,dismember,"ajani, nacatl pariah","phelia, exuberant shepherd",46,2.705882353
-16,1,josh,jank pile,chancellor of the annex,crack the earth,curse of silence,inspiring vantage,memnite,69,4.058823529
-17,2,colton,death & taxes,chrome mox,chancellor of the annex,plains,"thalia, guardian of thraben",white orchid phantom,31,2.818181818
+0,1,colton,burning oil,silverbluff bridge,mishra's factory,sleep-cursed faerie,burning inquiry,the filigree sylex,47,2.76
+1,1,edi,my hexgirlfriend got banned,"luxior, giada's gift",devoted druid,"yavimaya, cradle of growth",dark depths,blast zone,11,0.65
+2,1,gwen,critter midrange,dark depths,"urborg, tomb of yawgmoth",thespian's stage,nezumi shortfang,sinkhole surveyor,48,2.82
+3,1,spada,snow domain tempo,scion of draco,leyline binding,leyline of the guildpact,simian spirit guide,snow-covered plains,60,3.53
+4,1,jesse,ephemeral solitude,solitude,chancellor of the annex,ephemerate,ephemerate,plains,16,0.94
+5,1,athena,norin the merry,guide of souls,guide of souls,norin the wary,chancellor of the annex,cavern of souls,42,2.47
+6,1,lapis,pressure cooker,volatile fault,"ulamog, the infinite gyre",geier reach sanitarium,calciform pools,engineered explosives,48,2.82
+7,1,harrison,"""please don't have more than 6 toughness""",battlefield forge,stomping ground,lightning bolt,"thalia, guardian of thraben",wheel of sun and moon,30,1.76
+8,1,dustin,"""do you pay the 1?""",cavern of souls,chancellor of the annex,chancellor of the tangle,"thalia, guardian of thraben",solitude,29,1.71
+9,1,finn,entropy,helix pinnacle,thornglint bridge,serene remembrance,volatile fault,path to exile,50,2.94
+10,1,nadia,mono white delver,chancellor of the annex,solitude,malakir rebirth,spawning pool,orzhov basilica,33,1.94
+11,1,patrick,uw control,sleep-cursed faerie,echoing truth,chancellor of the annex,island,volatile fault,69,4.06
+12,1,sammy,faerie fizzles,pact of negation,consign to memory,mental misstep,sleep-cursed faerie,island,36,2.12
+13,1,ryder,mono brown domain,scion of draco,ugin's labyrinth,disruptor flute,leyline of the guildpact,mockery of nature,66,3.88
+14,1,john,"""that just sounds like lab man with extra steps""","jace, wielder of mysteries",lotus bloom,island,into the flood maw,pact of negation,62,3.65
+15,1,andrew,boros energy,plains,volatile fault,dismember,"ajani, nacatl pariah","phelia, exuberant shepherd",46,2.71
+16,1,josh,jank pile,chancellor of the annex,crack the earth,curse of silence,inspiring vantage,memnite,69,4.06
+17,2,colton,death & taxes,chrome mox,chancellor of the annex,plains,"thalia, guardian of thraben",white orchid phantom,31,2.82
 18,2,dustin,spaghetti monster(s),"yavimaya, cradle of growth",thespian's stage,dark depths,serene remembrance,pick your poison,44,4.0
-19,2,jack,a pox on your house,swamp,swamp,infestation sage,smallpox,force of despair,19,1.727272727
-20,2,ben,mr. sleepy,sleep-cursed faerie,sheltered by ghosts,pick your poison,botanical sanctum,seachrome coast,19,1.727272727
-21,2,patrick,mono black control,dark depths,"urborg, tomb of yawgmoth",thespian's stage,smallpox,"emrakul, the aeons torn",42,3.818181818
-22,2,athena,the 1985 classic 'the stuff',leyline of sanctity,leyline of the guildpact,cavern of souls,bloodhall ooze,bloodhall ooze,28,2.545454545
-23,2,nadia,mono white delver,simian spirit guide,crack the earth,chancellor of the annex,sleep-cursed faerie,gemstone mine,20,1.818181818
-24,2,edi,blink first and you'll miss it,cavern of souls,sleep-cursed faerie,chancellor of the annex,chancellor of the annex,sunscour,16,1.454545455
-25,2,john,a mindsculptor always pays his debts,"jace, wielder of mysteries",lotus bloom,lotus bloom,radiant fountain,"boseiju, who endures",50,4.545454545
-26,2,ryder,5 color dragons,scion of draco,cavern of souls,simian spirit guide,leyline of the guildpact,leyline binding,24,2.181818182
-27,2,josh,jankier pile,cavern of souls,"thalia, guardian of thraben",saltcrusted steppe,pithing needle,chancellor of the tangle,10,0.9090909091
+19,2,jack,a pox on your house,swamp,swamp,infestation sage,smallpox,force of despair,19,1.73
+20,2,ben,mr. sleepy,sleep-cursed faerie,sheltered by ghosts,pick your poison,botanical sanctum,seachrome coast,19,1.73
+21,2,patrick,mono black control,dark depths,"urborg, tomb of yawgmoth",thespian's stage,smallpox,"emrakul, the aeons torn",42,3.82
+22,2,athena,the 1985 classic 'the stuff',leyline of sanctity,leyline of the guildpact,cavern of souls,bloodhall ooze,bloodhall ooze,28,2.55
+23,2,nadia,mono white delver,simian spirit guide,crack the earth,chancellor of the annex,sleep-cursed faerie,gemstone mine,20,1.82
+24,2,edi,blink first and you'll miss it,cavern of souls,sleep-cursed faerie,chancellor of the annex,chancellor of the annex,sunscour,16,1.45
+25,2,john,a mindsculptor always pays his debts,"jace, wielder of mysteries",lotus bloom,lotus bloom,radiant fountain,"boseiju, who endures",50,4.55
+26,2,ryder,5 color dragons,scion of draco,cavern of souls,simian spirit guide,leyline of the guildpact,leyline binding,24,2.18
+27,2,josh,jankier pile,cavern of souls,"thalia, guardian of thraben",saltcrusted steppe,pithing needle,chancellor of the tangle,10,0.91
 28,3,colton,cthulhu on the half-shell,simian spirit guide,merchant of the vale,shelldock isle,"emrakul, the aeons torn",island,38,3.8
 29,3,john,oops! no interaction,leyline of hope,providence,cavern of souls,speaker of the heavens,speaker of the heavens,22,2.2
 30,3,patrick,the rock,"boseiju, who endures",blooming marsh,"cecil, dark knight",assassin's trophy,turn the earth,34,3.4
@@ -44,17 +44,17 @@
 42,4,josh,i can eggs with this,conjurer's bauble,conjurer's bauble,cavern of souls,disciple of the vault,locket of yesterdays,16,1.0
 43,4,dustin,"""fine, i'll wait until turn 2""",blazemire verge,mountain,electrodominance,restore balance,the rack,52,3.25
 44,4,john,the nolan cut,"cecil, dark knight","cecil, dark knight",cavern of souls,solitude,chancellor of the annex,60,3.75
-45,4,jack,mono black control,fell the profane,swamp,bitterblossom,force of despair,demon of death's gate,2,0.125
-46,5,colton,pushed into a vat of poison,inkmoth nexus,blazing shoal,push,forest,"boseiju, who endures",32,3.555555556
-47,5,patrick,kitty cat attack,cavern of souls,leyline of vitality,ocelot pride,ocelot pride,ocelot pride,28,3.111111111
-48,5,dustin,eldrazi winter,eldrazi mimic,eldrazi mimic,inverter of truth,eye of ugin,"urborg, tomb of yawgmoth",34,3.777777778
-49,5,jack,"""don't try this at home""",inspiring vantage,"ragavan, nimble pilferer",portable hole,crack the earth,madcap skills,14,1.555555556
-50,5,edi,https://youtu.be/P0yKSNq-oLg,botanical sanctum,blackcleave cliffs,psychic frog,fiery temper,serene remembrance,5,0.5555555556
-51,5,jesse,jesse_deck_final_latest(3).dec,swift reconfiguration,devoted druid,chancellor of the tangle,plains,wurmcalling,43,4.777777778
-52,5,nadia,mono white delver,mishra's factory,chancellor of the tangle,chrome mox,troll ascetic,heritage reclamation,6,0.6666666667
-53,5,ben,"""web slinging spider person""",sleep-cursed faerie,chrome mox,chancellor of the annex,island,"arachne, psionic weaver",34,3.777777778
+45,4,jack,mono black control,fell the profane,swamp,bitterblossom,force of despair,demon of death's gate,2,0.12
+46,5,colton,pushed into a vat of poison,inkmoth nexus,blazing shoal,push,forest,"boseiju, who endures",32,3.56
+47,5,patrick,kitty cat attack,cavern of souls,leyline of vitality,ocelot pride,ocelot pride,ocelot pride,28,3.11
+48,5,dustin,eldrazi winter,eldrazi mimic,eldrazi mimic,inverter of truth,eye of ugin,"urborg, tomb of yawgmoth",34,3.78
+49,5,jack,"""don't try this at home""",inspiring vantage,"ragavan, nimble pilferer",portable hole,crack the earth,madcap skills,14,1.56
+50,5,edi,https://youtu.be/P0yKSNq-oLg,botanical sanctum,blackcleave cliffs,psychic frog,fiery temper,serene remembrance,5,0.56
+51,5,jesse,jesse_deck_final_latest(3).dec,swift reconfiguration,devoted druid,chancellor of the tangle,plains,wurmcalling,43,4.78
+52,5,nadia,mono white delver,mishra's factory,chancellor of the tangle,chrome mox,troll ascetic,heritage reclamation,6,0.67
+53,5,ben,"""web slinging spider person""",sleep-cursed faerie,chrome mox,chancellor of the annex,island,"arachne, psionic weaver",34,3.78
 54,5,john,trypanophobia,sunken citadel,demolition field,academy ruins,the filigree sylex,conjurer's bauble,36,4.0
-55,5,andrew,twink death,"boseiju, who endures",simic growth chamber,crashing footfalls,turn the earth,"oko, thief of crowns",16,1.777777778
+55,5,andrew,twink death,"boseiju, who endures",simic growth chamber,crashing footfalls,turn the earth,"oko, thief of crowns",16,1.78
 56,6,colton,rise of the robo-eldrazi,leyline of transformation,eye of ugin,myr superion,lupine prototype,steel overseer,30,2.5
 57,6,jesse,ardenvale exclusion zone,saltcrusted steppe,castle ardenvale,march of otherworldly light,pithing needle,chancellor of the annex,50,4.2
 58,6,nadia,mono white delver,tinybones joins up,"emrakul, the aeons torn",shelldock isle,mistvault bridge,pithing needle,24,2.0
