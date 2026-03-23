@@ -5,6 +5,10 @@ app/rsconnect-python/*
 .venv/*
 app/data
 app/data/*
+app/data/card_event_df.csv
+app/data/raw_5cb_stats.csv
+app/__pycache__
+app/__pycache__/*
 app/requirements_stuffs
 app/requirements_stuffs/*
 testing2.ipynb
