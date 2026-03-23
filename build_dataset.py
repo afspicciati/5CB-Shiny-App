@@ -132,7 +132,6 @@ for i in range(len(df)):
             card_image_uri = card_data.reset_index()["card_faces"].iloc[0][0][
                 "image_uris"
             ]["normal"]
-        print(card_uri, card_image_uri)
         df.loc[i, f"Card {j+1}"] = card_uri + "SPACE" + card_image_uri
     decklist.append(deck_individual)
 df["Deck"] = decklist
