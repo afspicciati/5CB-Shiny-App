@@ -96,32 +96,45 @@ def server(input: Inputs, output, session):
     @reactive.calc
     def create_graphing_table():
         card = input.selectize_cards().split(" (")[0]
+        # filter table to input
         graphing_table = table_stats[
             [card in table_stats["Deck"].iloc[i] for i in range(len(table_stats))]
         ].reset_index()
 
+        # adding cards as links
+        # for i in range(len(graphing_table)):
+        #     for j in range(5):
+        #         graphing_table.loc[i, f"Card {j+1}"] = ui.a(
+        #             graphing_table["Deck"].iloc[i][j],
+        #             href=graphing_table[f"Card {j+1}"].iloc[i],
+        #             target="_blank",
+        #         )
+
+        # adding cards as images
         for i in range(len(graphing_table)):
             for j in range(5):
+                uri = graphing_table[f"Card {j+1}"].iloc[i]
                 graphing_table.loc[i, f"Card {j+1}"] = ui.a(
-                    graphing_table["Deck"].iloc[i][j],
-                    href=graphing_table[f"Card {j+1}"].iloc[i],
-                    target="_blank",
+                    ui.HTML(
+                        f"""<a href="https://www.scryfall.com">
+    <img src="{uri}" alt="Description of the image" style="width:150px;height:210px;">
+            </a>"""
+                    )
                 )
-
-        return graphing_table.drop("index", axis=1).sort_values(
-            "Score", ascending=False
-        )
+        graphing_table.drop(["index", "Deck"], axis=1, inplace=True)
+        graphing_table = graphing_table.sort_values("Score", ascending=False)
+        return graphing_table
 
     @render.data_frame
     def deck_table():
         graphing_table = create_graphing_table()
 
-        # graphing_table["Week"] = [
-        #     ui.a(str(w), href=week_links[str(w)], target="_blank")
-        #     for w in graphing_table["Week"]
-        # ]
+        graphing_table["Week"] = [
+            ui.a(str(w), href=week_links[str(w)], target="_blank")
+            for w in graphing_table["Week"]
+        ]
 
-        return graphing_table.drop("Deck", axis=1)
+        return render.DataTable(graphing_table, height="800px", width="1700px")
 
     ### TAB 2 (card stats)
     @reactive.calc
