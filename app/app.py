@@ -18,13 +18,19 @@ with open("./data/card_uris.json") as file:
 ### working with data
 # fixing list read in
 table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
+
+# for i in range(len(table_stats)):
+#     for j in range(5):
+#         table_stats.loc[i, f"Card {j+1}"] = eval(table_stats[f"Card {j+1}"].iloc[i])
+
+
 # weeks count
 N_weeks = table_stats["Week"].max()
 # building selectize list
-cards_counts_list = []
 card_value_counts = card_event_df[
     ~card_event_df["Card"].isin(basic_lands)
 ].Card.value_counts()
+cards_counts_list = []
 for i in range(len(card_value_counts)):
     cards_counts_list.append([card_value_counts.index[i], card_value_counts.iloc[i]])
 
@@ -33,6 +39,9 @@ selectize_choices = [
     str(card_name) + " (" + str(card_counts) + ")"
     for (card_name, card_counts) in sorted_choices
 ]
+all_decks = "All (" + str(len(table_stats)) + ")"
+print(all_decks)
+selectize_choices = [all_decks] + selectize_choices
 
 
 # App function
@@ -95,11 +104,18 @@ def server(input: Inputs, output, session):
     ### TAB 1 (card table)
     @reactive.calc
     def create_graphing_table():
-        card = input.selectize_cards().split(" (")[0]
-        # filter table to input
-        graphing_table = table_stats[
-            [card in table_stats["Deck"].iloc[i] for i in range(len(table_stats))]
-        ].reset_index()
+        card_choice = input.selectize_cards().split(" (")[0]
+        if card_choice == "All":
+            # reset_index() to fix error cause when dropping the index, not an elegant solution
+            graphing_table = table_stats.reset_index()
+        else:
+            # filter table to input
+            graphing_table = table_stats[
+                [
+                    card_choice in table_stats["Deck"].iloc[i]
+                    for i in range(len(table_stats))
+                ]
+            ].reset_index()
 
         # adding cards as links
         # for i in range(len(graphing_table)):
@@ -113,11 +129,12 @@ def server(input: Inputs, output, session):
         # adding cards as images
         for i in range(len(graphing_table)):
             for j in range(5):
-                uri = graphing_table[f"Card {j+1}"].iloc[i]
+                card_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[0]
+                image_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[1]
                 graphing_table.loc[i, f"Card {j+1}"] = ui.a(
                     ui.HTML(
-                        f"""<a href="https://www.scryfall.com">
-    <img src="{uri}" alt="Description of the image" style="width:150px;height:210px;">
+                        f"""<a href="{card_uri}">
+    <img src="{image_uri}" alt="Description of the image" style="width:150px;height:210px;">
             </a>"""
                     )
                 )

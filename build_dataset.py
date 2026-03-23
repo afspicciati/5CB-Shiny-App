@@ -113,26 +113,27 @@ for i in range(len(df)):
     for j in range(5):
         card = df.iloc[i][f"Card {j+1}"].lower()
         deck_individual.append(card)
-        ## for adding links
-        # df.loc[i, f"Card {j+1}"] = (
-        #     scryfall_cards[scryfall_cards["name"] == card]
-        #     .reset_index()
-        #     .iloc[0]["scryfall_uri"]
-        # )
+        # for adding links
+        card_uri = (
+            scryfall_cards[scryfall_cards["name"] == card]
+            .reset_index()
+            .iloc[0]["scryfall_uri"]
+        )
 
         # for adding images
         card_data = scryfall_cards[(scryfall_cards["name"] == card)]
         if len(card_data[card_data["image_uris"].notnull()]) > 0:
-            card_uri = (
+            card_image_uri = (
                 card_data[card_data["image_uris"].notnull()]
                 .reset_index()
                 .iloc[0]["image_uris"]["normal"]
             )
         else:
-            card_uri = card_data.reset_index()["card_faces"].iloc[0][0]["image_uris"][
-                "small"
-            ]
-        df.loc[i, f"Card {j+1}"] = card_uri
+            card_image_uri = card_data.reset_index()["card_faces"].iloc[0][0][
+                "image_uris"
+            ]["normal"]
+        print(card_uri, card_image_uri)
+        df.loc[i, f"Card {j+1}"] = card_uri + "SPACE" + card_image_uri
     decklist.append(deck_individual)
 df["Deck"] = decklist
 df["Score"] = df["Adjusted Score"]
