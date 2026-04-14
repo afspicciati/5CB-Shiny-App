@@ -8,3 +8,5 @@ app/data/*
 app/requirements_stuffs
 app/requirements_stuffs/*
 testing2.ipynb
+app/__pycache__
+app/__pycache__/*

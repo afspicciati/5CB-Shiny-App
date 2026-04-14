@@ -186,6 +186,8 @@ week_links = {
     23: "https://tappedout.net/mtg-decks/5-card-blind-week-23-3-of-a-kind/",
     24: "https://tappedout.net/mtg-decks/5-card-blind-week-24-dont-let-your-guard-down/",
     25: "https://tappedout.net/mtg-decks/5-card-blind-week-25-123-draw/",
+    26: "https://tappedout.net/mtg-decks/5-card-blind-week-26-creature-combats-back-1/",
+    27: "https://tappedout.net/mtg-decks/5-card-blind-week-27-start-your-engines/",
 }
 
 with open("./app/data/week_links.json", "w") as file:

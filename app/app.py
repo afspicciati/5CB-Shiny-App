@@ -40,7 +40,6 @@ selectize_choices = [
     for (card_name, card_counts) in sorted_choices
 ]
 all_decks = "All (" + str(len(table_stats)) + ")"
-print(all_decks)
 selectize_choices = [all_decks] + selectize_choices
 
 
@@ -117,14 +116,16 @@ def server(input: Inputs, output, session):
                 ]
             ].reset_index()
 
-        # adding cards as links
+        # # adding cards as links
         # for i in range(len(graphing_table)):
         #     for j in range(5):
-        #         graphing_table.loc[i, f"Card {j+1}"] = ui.a(
-        #             graphing_table["Deck"].iloc[i][j],
-        #             href=graphing_table[f"Card {j+1}"].iloc[i],
-        #             target="_blank",
-        #         )
+        #         graphing_table.loc[i, f"Card {j+1}"] = "test"
+
+        # ui.a(
+        #     graphing_table["Deck"].iloc[i][j],
+        #     href=graphing_table[f"Card {j+1}"].iloc[i],
+        #     target="_blank",
+        # )
 
         # adding cards as images
         for i in range(len(graphing_table)):
@@ -134,8 +135,8 @@ def server(input: Inputs, output, session):
                 graphing_table.loc[i, f"Card {j+1}"] = ui.a(
                     ui.HTML(
                         f"""<a href="{card_uri}">
-    <img src="{image_uri}" alt="Description of the image" style="width:150px;height:210px;">
-            </a>"""
+                        <img src="{image_uri}" alt="Description of the image" style="width:150px;height:210px;">
+                                </a>"""
                     )
                 )
         graphing_table.drop(["index", "Deck"], axis=1, inplace=True)
