@@ -135,7 +135,7 @@ def server(input: Inputs, output, session):
                 graphing_table.loc[i, f"Card {j+1}"] = ui.a(
                     ui.HTML(
                         f"""<a href="{card_uri}">
-                        <img src="{image_uri}" alt="Description of the image" style="width:150px;height:210px;">
+                        <img src="{image_uri}" alt="{graphing_table['Deck'].iloc[i][j]}" style="width:150px;height:210px;">
                                 </a>"""
                     )
                 )
