@@ -51,8 +51,14 @@ scryfall_cards = scryfall_cards_original[columns].sort_values(
     "released_at", ascending=True
 )
 # setting card names to lowercase to match my convention
-scryfall_cards["name"] = [str.lower(x) for x in scryfall_cards["name"]]
+scryfall_cards["name_lower"] = [str.lower(x) for x in scryfall_cards["name"]]
 # removing the backside name from double-sided cards
+scryfall_cards.loc[scryfall_cards.name_lower.str.contains("//"), "name_lower"] = [
+    x.split(" //")[0]
+    for x in scryfall_cards.loc[
+        scryfall_cards.name_lower.str.contains("//"), "name_lower"
+    ]
+]
 scryfall_cards.loc[scryfall_cards.name.str.contains("//"), "name"] = [
     x.split(" //")[0]
     for x in scryfall_cards.loc[scryfall_cards.name.str.contains("//"), "name"]
@@ -74,7 +80,7 @@ for i in range(len(df)):
         # try/except here to catch cards with typos in name
         try:
             color_identity = (
-                scryfall_cards[scryfall_cards["name"] == card]
+                scryfall_cards[scryfall_cards["name_lower"] == card]
                 .reset_index()
                 .iloc[0]
                 .color_identity
@@ -115,13 +121,13 @@ for i in range(len(df)):
         deck_individual.append(card)
         # for adding links
         card_uri = (
-            scryfall_cards[scryfall_cards["name"] == card]
+            scryfall_cards[scryfall_cards["name_lower"] == card]
             .reset_index()
             .iloc[0]["scryfall_uri"]
         )
 
         # for adding images
-        card_data = scryfall_cards[(scryfall_cards["name"] == card)]
+        card_data = scryfall_cards[(scryfall_cards["name_lower"] == card)]
         if len(card_data[card_data["image_uris"].notnull()]) > 0:
             card_image_uri = (
                 card_data[card_data["image_uris"].notnull()]
@@ -143,7 +149,7 @@ df.to_csv("./app/data/table_stats.csv", index=False)
 # buildling dictionary of scryfall img links
 card_uris = dict()
 for card in card_event_df["Card"].unique():
-    card_data = scryfall_cards[(scryfall_cards["name"] == card)]
+    card_data = scryfall_cards[(scryfall_cards["name_lower"] == card)]
     if len(card_data[card_data["image_uris"].notnull()]) > 0:
         card_uris[card] = (
             card_data[card_data["image_uris"].notnull()]
@@ -188,6 +194,7 @@ week_links = {
     25: "https://tappedout.net/mtg-decks/5-card-blind-week-25-123-draw/",
     26: "https://tappedout.net/mtg-decks/5-card-blind-week-26-creature-combats-back-1/",
     27: "https://tappedout.net/mtg-decks/5-card-blind-week-27-start-your-engines/",
+    28: "https://tappedout.net/mtg-decks/5-card-blind-week-28-we-hate-lands/?cb=1776269622",
 }
 
 with open("./app/data/week_links.json", "w") as file:
