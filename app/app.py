@@ -4,7 +4,7 @@ import seaborn as sns
 import json
 
 # constants
-basic_lands = ["plains", "island", "swamp", "mountain", "forest"]
+basic_lands = ["Plains", "Island", "Swamp", "Mountain", "Forest"]
 with open("./data/week_links.json") as file:
     week_links = json.load(file)
 
@@ -171,7 +171,7 @@ def server(input: Inputs, output, session):
             graphing_df = graphing_df[graphing_df["Deck Legal"] == True]
 
         score_agg = (
-            graphing_df.drop(columns=["Color Identity", "Week"])
+            graphing_df.drop(columns=["Card Lower", "Color Identity", "Week"])
             .groupby(by="Card", as_index=False)
             .agg("mean")
             .sort_values("Deck Score", ascending=False)

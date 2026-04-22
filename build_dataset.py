@@ -92,18 +92,36 @@ for i in range(len(df)):
                 color_identity = "gold"
             else:
                 color_identity = color_identity[0]
+
+            # additionally adding the capitalized name from scryfall
+            card_name_caps = (
+                scryfall_cards[scryfall_cards["name_lower"] == card]
+                .reset_index()
+                .iloc[0]["name"]
+            )
         except:
             print(card)
             color_identity = "colorless"
+            card_name_caps = card
 
         week = df.iloc[i]["Week"]
         deck_score = df.iloc[i]["Adjusted Score"]
 
-        card_event.append([card, color_identity, week, deck_score, deck_legal])
+        card_event.append(
+            [card_name_caps, card, color_identity, week, deck_score, deck_legal]
+        )
 
 # each row is an instance of a single card in a deck (decks with duplicates only contain one entry)
 card_event_df = pd.DataFrame(
-    card_event, columns=["Card", "Color Identity", "Week", "Deck Score", "Deck Legal"]
+    card_event,
+    columns=[
+        "Card",
+        "Card Lower",
+        "Color Identity",
+        "Week",
+        "Deck Score",
+        "Deck Legal",
+    ],
 )
 
 # adding column for how many decks a given card is played in
@@ -118,7 +136,12 @@ for i in range(len(df)):
     deck_individual = []
     for j in range(5):
         card = df.iloc[i][f"Card {j+1}"].lower()
-        deck_individual.append(card)
+        # for adding card names to decklist
+        deck_individual.append(
+            scryfall_cards[scryfall_cards["name_lower"] == card]
+            .reset_index()
+            .iloc[0]["name"]
+        )
         # for adding links
         card_uri = (
             scryfall_cards[scryfall_cards["name_lower"] == card]
@@ -148,7 +171,7 @@ df.to_csv("./app/data/table_stats.csv", index=False)
 
 # buildling dictionary of scryfall img links
 card_uris = dict()
-for card in card_event_df["Card"].unique():
+for card in card_event_df["Card Lower"].unique():
     card_data = scryfall_cards[(scryfall_cards["name_lower"] == card)]
     if len(card_data[card_data["image_uris"].notnull()]) > 0:
         card_uris[card] = (
