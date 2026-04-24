@@ -164,7 +164,7 @@ def server(input: Inputs, output, session):
         ]
 
         if not input.silly():
-            silly_weeks = [17, 21, 25]
+            silly_weeks = [17, 21, 25, 29]
             graphing_df = graphing_df[~graphing_df["Week"].isin(silly_weeks)]
 
         if not input.banned():
