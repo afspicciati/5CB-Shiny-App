@@ -11,3 +11,4 @@ testing2.ipynb
 app/__pycache__
 app/__pycache__/*
 app/testing3.ipynb
+app/test_app.py

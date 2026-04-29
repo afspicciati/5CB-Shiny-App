@@ -33,7 +33,7 @@ banned_cards = [
 # json link does not update automatically, I'm not sure how to do that :-)
 # updated 3/11/26 for tmnt
 scryfall_cards_original = pd.read_json(
-    "https://data.scryfall.io/default-cards/default-cards-20260311090729.json"
+    "https://data.scryfall.io/default-cards/default-cards-20260429090820.json"
 )
 # cleaning scryfall card data
 columns = [
@@ -219,6 +219,7 @@ week_links = {
     27: "https://tappedout.net/mtg-decks/5-card-blind-week-27-start-your-engines/",
     28: "https://tappedout.net/mtg-decks/5-card-blind-week-28-we-hate-lands/?cb=1776269622",
     29: "https://tappedout.net/mtg-decks/5-card-blind-week-29-advanced-ritual-magic/?cb=1776910093",
+    30: "https://tappedout.net/mtg-decks/5-card-blind-week-30-neck-and-neck/?cb=1777480322",
 }
 
 with open("./app/data/week_links.json", "w") as file:

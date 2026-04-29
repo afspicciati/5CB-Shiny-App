@@ -60,23 +60,19 @@ def app_ui():
                         ui.card(
                             ui.input_slider("weeks", "Weeks", 1, N_weeks, [0, N_weeks]),
                             ui.input_slider(
-                                "N_decks", "Minimum Decks Containing Card", 2, 10, 6
+                                "N_decks", "Minimum Decks Containing Card", 2, 20, 10
                             ),
                             ui.input_checkbox("banned", "Include Banned Decks", True),
                             ui.input_checkbox("silly", "Include Silly Weeks", True),
                         ),
-                        ui.card(
-                            ui.markdown(
-                                """
+                        ui.card(ui.markdown("""
         #### Mirrored Winrates:
         Matches played against the same card are included in the dataset, so cards with high play rates will tend towards middle scores.
         #### Silly Weeks:
         The 4th week of each month, starting with week 17.
         #### Mobile:
         On mobile, I recommend opening the plot in a seperate tab or saving it, for easier viewing.
-        """
-                            )
-                        ),
+        """)),
                         bg="#e6e6e6",
                     ),
                     ui.page_auto(ui.output_ui("my_plot")),
@@ -91,6 +87,25 @@ def app_ui():
                 ),
             ),
         ),
+        ### some failed attempts at favicon
+        # ui.panel_title(
+        #     window_title="Chancellor",
+        #     title=ui.tags.head(
+        #         ui.tags.link(
+        #             rel="icon",
+        #             type="image/x-icon",
+        #             href="favicon.ico",
+        #         )
+        #     ),
+        # ),
+        # ui.head_content(
+        #     ui.tags.link(
+        #         rel="icon",
+        #         type="image/png",
+        #         sizes="32x32",
+        #         href="favicon-32x32.png",
+        #     )
+        # ),
         title="Chancellor",
     )
 
@@ -133,11 +148,9 @@ def server(input: Inputs, output, session):
                 card_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[0]
                 image_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[1]
                 graphing_table.loc[i, f"Card {j+1}"] = ui.a(
-                    ui.HTML(
-                        f"""<a href="{card_uri}">
+                    ui.HTML(f"""<a href="{card_uri}">
                         <img src="{image_uri}" alt="{graphing_table['Deck'].iloc[i][j]}" style="width:150px;height:210px;">
-                                </a>"""
-                    )
+                                </a>""")
                 )
         graphing_table.drop(["index", "Deck"], axis=1, inplace=True)
         graphing_table = graphing_table.sort_values("Score", ascending=False)
