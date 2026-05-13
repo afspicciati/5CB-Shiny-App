@@ -220,6 +220,8 @@ week_links = {
     28: "https://tappedout.net/mtg-decks/5-card-blind-week-28-we-hate-lands/?cb=1776269622",
     29: "https://tappedout.net/mtg-decks/5-card-blind-week-29-advanced-ritual-magic/?cb=1776910093",
     30: "https://tappedout.net/mtg-decks/5-card-blind-week-30-neck-and-neck/?cb=1777480322",
+    31: "https://tappedout.net/mtg-decks/5-card-blind-week-31-copy-their-stylus/?cb=1778084725",
+    32: "https://tappedout.net/mtg-decks/5-card-blind-week-32-mono-white-delver/?cb=1778688913",
 }
 
 with open("./app/data/week_links.json", "w") as file:
