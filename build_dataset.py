@@ -127,7 +127,6 @@ card_event_df = pd.DataFrame(
 # adding column for how many decks a given card is played in
 value_counts = card_event_df["Card"].value_counts()
 card_event_df["N Decks"] = card_event_df["Card"].apply(lambda x: value_counts[x])
-
 card_event_df.to_csv("./app/data/card_event_df.csv", index=False)
 
 # building table-stats dataframe
@@ -166,6 +165,19 @@ for i in range(len(df)):
 df["Deck"] = decklist
 df["Score"] = df["Adjusted Score"]
 df.drop("Adjusted Score", axis=1, inplace=True)
+
+# adding a trophy emoji to the score of trophy decks!
+trophy = []
+# for i in range(len(card_event_df)):
+for i in range(len(df)):
+    event = df.iloc[i]
+    # print(event["Deck Score"])
+    # print(max(card_event_df[df["Week"] == event["Week"]]["Score"]))
+    trophy.append(event["Score"] != df[df["Week"] == event["Week"]]["Score"].max())
+
+df["Score"] = [str(score) for score in df["Score"]]
+df["Score"] = df["Score"].where(trophy, df["Score"] + " 👑")
+
 df.to_csv("./app/data/table_stats.csv", index=False)
 
 
