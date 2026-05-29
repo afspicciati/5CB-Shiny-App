@@ -171,8 +171,6 @@ trophy = []
 # for i in range(len(card_event_df)):
 for i in range(len(df)):
     event = df.iloc[i]
-    # print(event["Deck Score"])
-    # print(max(card_event_df[df["Week"] == event["Week"]]["Score"]))
     trophy.append(event["Score"] != df[df["Week"] == event["Week"]]["Score"].max())
 
 df["Score"] = [str(score) for score in df["Score"]]
@@ -234,6 +232,8 @@ week_links = {
     30: "https://tappedout.net/mtg-decks/5-card-blind-week-30-neck-and-neck/?cb=1777480322",
     31: "https://tappedout.net/mtg-decks/5-card-blind-week-31-copy-their-stylus/?cb=1778084725",
     32: "https://tappedout.net/mtg-decks/5-card-blind-week-32-mono-white-delver/?cb=1778688913",
+    33: "https://tappedout.net/mtg-decks/5-card-blind-week-33-hell-hath-no-fury/",
+    34: "https://tappedout.net/mtg-decks/5-card-blind-week-34-and-stone-rained-down/?cb=1779898995",
 }
 
 with open("./app/data/week_links.json", "w") as file:
