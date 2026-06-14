@@ -234,6 +234,8 @@ week_links = {
     32: "https://tappedout.net/mtg-decks/5-card-blind-week-32-mono-white-delver/?cb=1778688913",
     33: "https://tappedout.net/mtg-decks/5-card-blind-week-33-hell-hath-no-fury/",
     34: "https://tappedout.net/mtg-decks/5-card-blind-week-34-and-stone-rained-down/?cb=1779898995",
+    35: "https://tappedout.net/mtg-decks/5-card-blind-week-35-creature-feature/",
+    36: "https://tappedout.net/mtg-decks/5-card-blind-week-36-combo-spring/?cb=1781111107",
 }
 
 with open("./app/data/week_links.json", "w") as file:
