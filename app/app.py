@@ -26,7 +26,8 @@ table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
 
 # weeks count
 N_weeks = table_stats["Week"].max()
-# building selectize list
+# building selectize lists
+# listing individual card appearances
 card_value_counts = card_event_df[
     ~card_event_df["Card"].isin(basic_lands)
 ].Card.value_counts()
@@ -34,13 +35,29 @@ cards_counts_list = []
 for i in range(len(card_value_counts)):
     cards_counts_list.append([card_value_counts.index[i], card_value_counts.iloc[i]])
 
+# sorting by N decks then by alphabetical
 sorted_choices = sorted(cards_counts_list, key=lambda x: (-x[1], x[0]))
-selectize_choices = [
+deck_selectize = [
     str(card_name) + " (" + str(card_counts) + ")"
     for (card_name, card_counts) in sorted_choices
 ]
 all_decks = "All (" + str(len(table_stats)) + ")"
-selectize_choices = [all_decks] + selectize_choices
+deck_selectize = [all_decks] + deck_selectize
+
+# listing player appearances
+player_counts = table_stats["Player"].value_counts()
+player_counts_list = []
+for i in range(len(player_counts)):
+    player_counts_list.append([player_counts.index[i], player_counts.iloc[i]])
+
+# sorting players by N decks then by alphabetical
+sorted_players = sorted(player_counts_list, key=lambda x: (-x[1], x[0]))
+player_selectize = [
+    str(player_name) + " (" + str(player_counts) + ")"
+    for (player_name, player_counts) in sorted_players
+]
+all_players = "All (" + str(len(player_counts)) + " Players)"
+player_selectize = [all_players] + player_selectize
 
 
 # App function
@@ -50,14 +67,36 @@ def app_ui():
         ui.navset_card_pill(
             ui.nav_panel(
                 "Card Search",
-                ui.input_selectize("selectize_cards", "Card", selectize_choices),
-                ui.page_fluid(ui.output_data_frame("deck_table")),
+                # some truly  cursed shit i did to make the inputs arrange correctly
+                ui.page_fluid(
+                    ui.layout_columns(
+                        ui.page_fluid(
+                            ui.layout_columns(
+                                ui.input_selectize(
+                                    "selectize_cards", "Card", deck_selectize
+                                ),
+                                ui.input_selectize(
+                                    "selectize_players", "Player", player_selectize
+                                ),
+                            )
+                        ),
+                        ui.page_fluid(
+                            ui.page_fillable(
+                                ui.a(ui.HTML("<p style='margin-bottom: 48px;'>"))
+                            ),
+                            ui.input_checkbox("pizzazz", "Pizzazz Decks", False),
+                        ),
+                        fill=False,
+                        height="50px",
+                    ),
+                    ui.page_fluid(ui.output_data_frame("deck_table")),
+                ),
             ),
             ui.nav_panel(
                 "Card Stats",
                 ui.page_sidebar(
                     ui.sidebar(
-                        ui.card(
+                        ui.card_header(
                             ui.input_slider("weeks", "Weeks", 1, N_weeks, [0, N_weeks]),
                             ui.input_slider(
                                 "N_decks", "Minimum Decks Containing Card", 2, 20, 10
@@ -131,16 +170,11 @@ def server(input: Inputs, output, session):
                 ]
             ].reset_index()
 
-        # # adding cards as links
-        # for i in range(len(graphing_table)):
-        #     for j in range(5):
-        #         graphing_table.loc[i, f"Card {j+1}"] = "test"
-
-        # ui.a(
-        #     graphing_table["Deck"].iloc[i][j],
-        #     href=graphing_table[f"Card {j+1}"].iloc[i],
-        #     target="_blank",
-        # )
+        player_choice = input.selectize_players().split(" (")[0]
+        if player_choice != "All":
+            graphing_table = graphing_table[
+                graphing_table["Player"] == player_choice
+            ].reset_index(drop=True)
 
         # adding cards as images
         for i in range(len(graphing_table)):
