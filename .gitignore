@@ -12,3 +12,4 @@ app/__pycache__
 app/__pycache__/*
 app/testing3.ipynb
 app/test_app.py
+all_cards.csv
