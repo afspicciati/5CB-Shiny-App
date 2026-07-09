@@ -67,6 +67,7 @@ def app_ui():
         ui.navset_card_pill(
             ui.nav_panel(
                 "Card Search",
+                # ui.output_ui("pizzazz_background"),
                 # some truly  cursed shit i did to make the inputs arrange correctly
                 ui.page_fluid(
                     ui.layout_columns(
@@ -155,8 +156,16 @@ def app_ui():
 def server(input: Inputs, output, session):
 
     ### TAB 1 (card table)
+
+    # a failed attempt to make the background change when you hit pizzazz button
+    # @render.ui
+    # @reactive.event(input.pizzazz)
+    # def pizzazz_background():
+    #     return ui.Theme(preset="darkly")
+
     @reactive.calc
     def create_graphing_table():
+        # filtering data by card input
         card_choice = input.selectize_cards().split(" (")[0]
         if card_choice == "All":
             # reset_index() to fix error cause when dropping the index, not an elegant solution
@@ -170,11 +179,19 @@ def server(input: Inputs, output, session):
                 ]
             ].reset_index()
 
+        #  filtering data by player input
         player_choice = input.selectize_players().split(" (")[0]
         if player_choice != "All":
             graphing_table = graphing_table[
                 graphing_table["Player"] == player_choice
             ].reset_index(drop=True)
+
+        # filtering data by pizzazz
+        pizzazz_choice = input.pizzazz()
+        if pizzazz_choice:
+            graphing_table = graphing_table[graphing_table["Pizzazz"] == 1].reset_index(
+                drop=True
+            )
 
         # adding cards as images
         for i in range(len(graphing_table)):
@@ -186,7 +203,7 @@ def server(input: Inputs, output, session):
                         <img src="{image_uri}" alt="{graphing_table['Deck'].iloc[i][j]}" style="width:150px;height:210px;">
                                 </a>""")
                 )
-        graphing_table.drop(["index", "Deck"], axis=1, inplace=True)
+        graphing_table.drop(["index", "Deck", "Pizzazz"], axis=1, inplace=True)
         graphing_table = graphing_table.sort_values("Score", ascending=False)
         return graphing_table
 

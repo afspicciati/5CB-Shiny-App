@@ -167,15 +167,17 @@ df["Deck"] = decklist
 df["Score"] = df["Adjusted Score"]
 df.drop("Adjusted Score", axis=1, inplace=True)
 
-# adding a trophy emoji to the score of trophy decks!
+# adding a trophy emoji to the score of trophy decks, and a pizzazz emoji to the pizzazz decks!
 trophy = []
-# for i in range(len(card_event_df)):
 for i in range(len(df)):
     event = df.iloc[i]
     trophy.append(event["Score"] != df[df["Week"] == event["Week"]]["Score"].max())
 
+pizzazz = [val != 1 for val in df["Pizzazz"]]
+
 df["Score"] = [str(score) for score in df["Score"]]
 df["Score"] = df["Score"].where(trophy, df["Score"] + " 👑")
+df["Score"] = df["Score"].where(pizzazz, df["Score"] + " 🎉")
 
 df.to_csv("./app/data/table_stats.csv", index=False)
 
@@ -240,6 +242,7 @@ week_links = {
     37: "https://tappedout.net/mtg-decks/5-card-blind-week-37-treasure-for-your-thoughts/",
     38: "https://tappedout.net/mtg-decks/5-card-blind-week-38-force-who/",
     39: "https://tappedout.net/mtg-decks/5-card-blind-week-39-off-to-the-races/?cb=1782922136",
+    40: "https://tappedout.net/mtg-decks/5-card-blind-week-40-im-having-a-flare/",
 }
 
 with open("./app/data/week_links.json", "w") as file:
