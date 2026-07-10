@@ -13,3 +13,5 @@ app/__pycache__/*
 app/testing3.ipynb
 app/test_app.py
 all_cards.csv
+test_app/*
+test_app
