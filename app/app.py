@@ -100,7 +100,7 @@ def app_ui():
                         ui.card_header(
                             ui.input_slider("weeks", "Weeks", 1, N_weeks, [0, N_weeks]),
                             ui.input_slider(
-                                "N_decks", "Minimum Decks Containing Card", 2, 20, 10
+                                "N_decks", "Minimum Decks Containing Card", 2, 30, 10
                             ),
                             ui.input_checkbox("banned", "Include Banned Decks", True),
                             ui.input_checkbox("silly", "Include Silly Weeks", True),
@@ -228,7 +228,7 @@ def server(input: Inputs, output, session):
         ]
 
         if not input.silly():
-            silly_weeks = [17, 21, 25, 29]
+            silly_weeks = [17 + (4 * (n + 1)) for n in range(100)]
             graphing_df = graphing_df[~graphing_df["Week"].isin(silly_weeks)]
 
         if not input.banned():
