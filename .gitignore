@@ -15,3 +15,5 @@ app/test_app.py
 all_cards.csv
 test_app/*
 test_app
+app_clone
+app_clone/*

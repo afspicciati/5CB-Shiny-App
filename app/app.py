@@ -100,7 +100,7 @@ def app_ui():
                         ui.card_header(
                             ui.input_slider("weeks", "Weeks", 1, N_weeks, [0, N_weeks]),
                             ui.input_slider(
-                                "N_decks", "Minimum Decks Containing Card", 2, 30, 10
+                                "N_decks", "Minimum Decks Containing Card", 2, 20, 10
                             ),
                             ui.input_checkbox("banned", "Include Banned Decks", True),
                             ui.input_checkbox("silly", "Include Silly Weeks", True),
