@@ -2,6 +2,9 @@ from shiny import ui, render, App, Inputs, reactive
 import pandas as pd
 import seaborn as sns
 import json
+from pathlib import Path
+
+css_path = Path(__file__).parent / "styles.css"
 
 # constants
 basic_lands = ["Plains", "Island", "Swamp", "Mountain", "Forest"]
@@ -19,10 +22,17 @@ with open("./data/card_uris.json") as file:
 # fixing list read in
 table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
 
-# for i in range(len(table_stats)):
-#     for j in range(5):
-#         table_stats.loc[i, f"Card {j+1}"] = eval(table_stats[f"Card {j+1}"].iloc[i])
-
+# changing deck names to be hyperlinks
+deck_hyperlinks = []
+for i in range(len(table_stats)):
+    row = table_stats.iloc[i]
+    link_ui = ui.a(
+        str(row["Deck Name"]),
+        href=week_links[str(row["Week"])],
+        target="_blank",
+    )
+    deck_hyperlinks.append(link_ui)
+table_stats["Deck Name"] = deck_hyperlinks
 
 # weeks count
 N_weeks = table_stats["Week"].max()
@@ -64,6 +74,7 @@ player_selectize = [all_players] + player_selectize
 def app_ui():
 
     my_ui = ui.page_fillable(
+        ui.include_css(css_path),  # Link CSS file
         ui.navset_card_pill(
             ui.nav_panel(
                 "Card Search",
@@ -210,11 +221,6 @@ def server(input: Inputs, output, session):
     @render.data_frame
     def deck_table():
         graphing_table = create_graphing_table()
-
-        graphing_table["Week"] = [
-            ui.a(str(w), href=week_links[str(w)], target="_blank")
-            for w in graphing_table["Week"]
-        ]
 
         return render.DataTable(graphing_table, height="800px", width="1700px")
 
