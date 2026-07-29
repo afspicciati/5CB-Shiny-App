@@ -243,6 +243,9 @@ week_links = {
     38: "https://tappedout.net/mtg-decks/5-card-blind-week-38-force-who/",
     39: "https://tappedout.net/mtg-decks/5-card-blind-week-39-off-to-the-races/?cb=1782922136",
     40: "https://tappedout.net/mtg-decks/5-card-blind-week-40-im-having-a-flare/",
+    41: "https://tappedout.net/mtg-decks/5-card-blind-week-41-negative-force/",
+    42: "https://tappedout.net/mtg-decks/5-card-blind-week-42-mm-spaghetti/",
+    43: "https://tappedout.net/mtg-decks/5-card-blind-week-43-dni/",
 }
 
 with open("./app/data/week_links.json", "w") as file:
