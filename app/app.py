@@ -26,9 +26,15 @@ table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
 deck_hyperlinks = []
 for i in range(len(table_stats)):
     row = table_stats.iloc[i]
+    deck_name = str(row["Deck Name"])
+    if deck_name.startswith("https://"):
+        href = deck_name
+    else:
+        href = week_links[str(row["Week"])]
+
     link_ui = ui.a(
-        str(row["Deck Name"]),
-        href=week_links[str(row["Week"])],
+        deck_name,
+        href=href,
         target="_blank",
     )
     deck_hyperlinks.append(link_ui)
