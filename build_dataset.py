@@ -31,9 +31,9 @@ banned_cards = [
 
 # reading in card data from scryfall
 # json link does not update automatically, I'm not sure how to do that :-)
-# updated 3/11/26 for tmnt
+# updated 8/28/26 for HOB
 scryfall_cards_original = pd.read_json(
-    "https://data.scryfall.io/default-cards/default-cards-20260702090945.jsonl.gz",
+    "https://data.scryfall.io/default-cards/default-cards-20260828210538.jsonl.gz",
     lines=True,
 )
 # cleaning scryfall card data
@@ -248,6 +248,8 @@ week_links = {
     43: "https://tappedout.net/mtg-decks/5-card-blind-week-43-dni/",
     44: "https://tappedout.net/mtg-decks/5-card-blind-week-44-whos-that-pokemon/",
     45: "https://tappedout.net/mtg-decks/5-card-blind-week-45-titanic/",
+    46: "https://tappedout.net/mtg-decks/5-card-blind-week-46-exile-target-creature/",
+    47: "https://tappedout.net/mtg-decks/5-card-blind-week-47-these-things-are-fungible/",
 }
 
 with open("./app/data/week_links.json", "w") as file:
