@@ -250,6 +250,9 @@ week_links = {
     45: "https://tappedout.net/mtg-decks/5-card-blind-week-45-titanic/",
     46: "https://tappedout.net/mtg-decks/5-card-blind-week-46-exile-target-creature/",
     47: "https://tappedout.net/mtg-decks/5-card-blind-week-47-these-things-are-fungible/",
+    48: "https://tappedout.net/mtg-decks/5-card-blind-week-48-i-brought-protection/",
+    49: "https://tappedout.net/mtg-decks/5-card-blind-week-49-a-bridge-too-far/",
+    50: "https://tappedout.net/mtg-decks/5-card-blind-week-50-pay-1-more/",
 }
 
 with open("./app/data/week_links.json", "w") as file:
