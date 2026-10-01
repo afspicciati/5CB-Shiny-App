@@ -33,7 +33,7 @@ banned_cards = [
 # json link does not update automatically, I'm not sure how to do that :-)
 # updated 8/28/26 for HOB
 scryfall_cards_original = pd.read_json(
-    "https://data.scryfall.io/default-cards/default-cards-20260828210538.jsonl.gz",
+    "https://data.scryfall.io/default-cards/default-cards-20261001090535.jsonl.gz",
     lines=True,
 )
 # cleaning scryfall card data
@@ -253,7 +253,13 @@ week_links = {
     48: "https://tappedout.net/mtg-decks/5-card-blind-week-48-i-brought-protection/",
     49: "https://tappedout.net/mtg-decks/5-card-blind-week-49-a-bridge-too-far/",
     50: "https://tappedout.net/mtg-decks/5-card-blind-week-50-pay-1-more/",
+    51: "https://tappedout.net/mtg-decks/5-card-blind-week-51-off-to-the-races/",
+    52.1: "https://tappedout.net/mtg-decks/5-card-blind-week-52-1-whole-year/?cb=1790797027",
+    52.2: "https://tappedout.net/mtg-decks/5-card-blind-week-52-1-whole-year/?cb=1790797027",
+    52.3: "https://tappedout.net/mtg-decks/5-card-blind-week-52-1-whole-year/?cb=1790797027",
 }
 
+# kinda some bs i'll probably move this all to a google sheet when im not lazy
+week_links = {float(k): v for k, v in week_links.items()}
 with open("./app/data/week_links.json", "w") as file:
     json.dump(week_links, file, indent=4)
