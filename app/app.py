@@ -149,7 +149,7 @@ def app_ui():
 
 
 # Server function
-def server(input: Inputs, output, session):
+def server(input, output, session):
 
     ### TAB 1 (card table)
 
@@ -444,5 +444,4 @@ def server(input: Inputs, output, session):
         return ui.output_plot("plot", width=graph_inputs[1], height=graph_inputs[2])
 
 
-# This is a shiny.App object. It must be named `app`.
-app = App(app_ui(), server)
+app = App(app_ui(), server, static_assets=www_dir)
