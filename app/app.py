@@ -3,13 +3,15 @@ import pandas as pd
 import seaborn as sns
 import json
 from pathlib import Path
+from itertools import chain
 
 css_path = Path(__file__).parent / "styles.css"
 
 # constants
 basic_lands = ["Plains", "Island", "Swamp", "Mountain", "Forest"]
-with open("./data/week_links.json") as file:
-    week_links = json.load(file)
+filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8VISOoiM3TTh9JGk/export?format=csv&gid=217295091"
+week_links_df = pd.read_csv(filepath)
+week_links = dict(zip(week_links_df["Week"], week_links_df["Link"]))
 
 # load data
 card_event_df = pd.read_csv("./data/card_event_df.csv", index_col=False)
@@ -22,26 +24,8 @@ with open("./data/card_uris.json") as file:
 # fixing list read in
 table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
 
-# changing deck names to be hyperlinks
-deck_hyperlinks = []
-for i in range(len(table_stats)):
-    row = table_stats.iloc[i]
-    deck_name = str(row["Deck Name"])
-    if deck_name.startswith("https://"):
-        href = deck_name
-    else:
-        href = week_links[str(row["Week"])]
-
-    link_ui = ui.a(
-        deck_name,
-        href=href,
-        target="_blank",
-    )
-    deck_hyperlinks.append(link_ui)
-table_stats["Deck Name"] = deck_hyperlinks
-
 # weeks count
-N_weeks = table_stats["Week"].max()
+N_weeks = int(table_stats["Week"].max())
 # building selectize lists
 # listing individual card appearances
 card_value_counts = card_event_df[
@@ -80,6 +64,7 @@ player_selectize = [all_players] + player_selectize
 def app_ui():
 
     my_ui = ui.page_fillable(
+        ui.tags.head(ui.tags.script(src="device-detect.js")),  # Link the JS file
         ui.include_css(css_path),  # Link CSS file
         ui.navset_card_pill(
             ui.nav_panel(
@@ -98,13 +83,9 @@ def app_ui():
                                 ),
                             )
                         ),
-                        ui.page_fluid(
-                            ui.page_fillable(
-                                ui.a(ui.HTML("<p style='margin-bottom: 48px;'>"))
-                            ),
-                            ui.input_checkbox("pizzazz", "Pizzazz Decks", False),
-                        ),
+                        ui.page_fluid(ui.output_ui("Checkbox_UI")),
                         fill=False,
+                        col_widths=(4, 4),
                         height="50px",
                     ),
                     ui.page_fluid(ui.output_data_frame("deck_table")),
@@ -114,10 +95,10 @@ def app_ui():
                 "Card Stats",
                 ui.page_sidebar(
                     ui.sidebar(
-                        ui.card_header(
+                        ui.card(
                             ui.input_slider("weeks", "Weeks", 1, N_weeks, [0, N_weeks]),
                             ui.input_slider(
-                                "N_decks", "Minimum Decks Containing Card", 2, 20, 10
+                                "N_decks", "Minimum Decks Containing Card", 2, 40, 15
                             ),
                             ui.input_checkbox("banned", "Include Banned Decks", True),
                             ui.input_checkbox("silly", "Include Silly Weeks", True),
@@ -125,12 +106,9 @@ def app_ui():
                         ui.card(ui.markdown("""
         #### Mirrored Winrates:
         Matches played against the same card are included in the dataset, so cards with high play rates will tend towards middle scores.
-        #### Silly Weeks:
-        The 4th week of each month, starting with week 17.
-        #### Mobile:
-        On mobile, I recommend opening the plot in a seperate tab or saving it, for easier viewing.
         """)),
                         bg="#e6e6e6",
+                        width="400px",
                     ),
                     ui.page_auto(ui.output_ui("my_plot")),
                 ),
@@ -180,14 +158,72 @@ def server(input: Inputs, output, session):
     # def pizzazz_background():
     #     return ui.Theme(preset="darkly")
 
+    @render.ui
+    def Checkbox_UI():
+        mobile = input.is_mobile()
+
+        if mobile:
+            style = "margin-bottom: 0px;"
+        else:
+            style = "margin-bottom: 48px;"
+
+        return ui.layout_columns(
+            ui.page_fluid(
+                ui.page_fillable(ui.a(ui.HTML(f"<p style='{style}'>"))),
+                ui.input_checkbox("pizzazz", "Pizzazz Decks", False),
+            ),
+            ui.page_fluid(
+                ui.page_fillable(ui.a(ui.HTML(f"<p style='{style}'>"))),
+                ui.input_checkbox("card_format", "View Cards as Text?", False),
+            ),
+            col_widths=(5, 7),
+        )
+
     @reactive.calc
     def create_graphing_table():
+
+        mobile = input.is_mobile()
+
+        # changing deck names to be hyperlinks
+        deck_hyperlinks = []
+        for i in range(len(table_stats)):
+            row = table_stats.iloc[i]
+            deck_name = str(row["Deck Name"])
+            if deck_name.startswith("https://"):
+                href = deck_name
+            else:
+                href = week_links[row["Week"]]
+
+            if mobile:
+                split = deck_name.split(" ")
+                for i in range(len(split)):
+                    if len(split[i]) > 10:
+                        n_split = int(len(split[i]) / 15) + 1
+                        idx_split = int(len(split[i]) / n_split)
+                        split[i] = " ".join(
+                            [
+                                split[i][j : j + idx_split]
+                                for j in range(0, len(split[i]), idx_split)
+                            ]
+                        )
+                deck_name = " ".join(chain(split))
+                deck_name = deck_name[:150]
+            else:
+                deck_name = deck_name[:200]
+
+            link_ui = ui.a(
+                deck_name,
+                href=href,
+                target="_blank",
+            )
+            deck_hyperlinks.append(link_ui)
+
+        graphing_table = table_stats.reset_index()
+        graphing_table["Deck Name"] = deck_hyperlinks
+
         # filtering data by card input
         card_choice = input.selectize_cards().split(" (")[0]
-        if card_choice == "All":
-            # reset_index() to fix error cause when dropping the index, not an elegant solution
-            graphing_table = table_stats.reset_index()
-        else:
+        if card_choice != "All":
             # filter table to input
             graphing_table = table_stats[
                 [
@@ -210,25 +246,128 @@ def server(input: Inputs, output, session):
                 drop=True
             )
 
-        # adding cards as images
-        for i in range(len(graphing_table)):
-            for j in range(5):
-                card_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[0]
-                image_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[1]
-                graphing_table.loc[i, f"Card {j+1}"] = ui.a(
-                    ui.HTML(f"""<a href="{card_uri}">
-                        <img src="{image_uri}" alt="{graphing_table['Deck'].iloc[i][j]}" style="width:150px;height:210px;">
-                                </a>""")
+        ### placing cards into graphing table
+        # this is broken into two operations, for mobile or
+        # desktop users. The code is unfortunately long here
+        # but it seems more efficient to do it this way.
+        card_format_choice = input.card_format()
+
+        if mobile:
+            card_style = "width:57px;height:80px;"
+        else:
+            card_style = "width:165px;height:231px;"
+
+        # as text
+        if card_format_choice:
+            deck_list = []
+            for i in range(len(graphing_table)):
+                current_deck = []
+                for j in range(5):
+                    card_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[0]
+                    # creating single element for mobile display
+                    card = ui.a(
+                        graphing_table["Deck"].iloc[i][j],
+                        href=card_uri,
+                        target="_blank",
+                        style="color: black;",
+                    )
+                    current_deck.append(card)
+                current_deck_html = ui.p(
+                    current_deck[0],
+                    ui.br(),
+                    current_deck[1],
+                    ui.br(),
+                    current_deck[2],
+                    ui.br(),
+                    current_deck[3],
+                    ui.br(),
+                    current_deck[4],
                 )
+                deck_list.append(current_deck_html)
+        # as images
+        else:
+            deck_list = []
+            for i in range(len(graphing_table)):
+                current_deck = []
+                for j in range(5):
+                    card_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[0]
+                    image_uri = graphing_table[f"Card {j+1}"].iloc[i].split("SPACE")[1]
+                    card = ui.a(ui.HTML(f"""<a href="{card_uri}">
+                                <img src="{image_uri}" alt="{graphing_table['Deck'].iloc[i][j]}" style={card_style}>
+                                        </a>"""))
+                    current_deck.append(card)
+                if mobile:
+
+                    current_deck_html = ui.HTML(
+                        f"""
+                        <p>{current_deck[0]} {current_deck[1]} {current_deck[2]} <br>
+                            &emsp;&emsp;&emsp;&ensp;&nbsp;{current_deck[3]} {current_deck[4]} </p>"""
+                    )
+                else:
+                    current_deck_html = ui.HTML(
+                        f"""<p>{current_deck[0]} {current_deck[1]} {current_deck[2]}{current_deck[3]} {current_deck[4]} </p>"""
+                    )
+                deck_list.append(current_deck_html)
+
         graphing_table.drop(["index", "Deck", "Pizzazz"], axis=1, inplace=True)
+
+        if mobile:
+            deck_col_name = "~~~~~~~~~~~~~~~~~~~Deck~~~~~~~~~~~~~~~~~~~~"
+        else:
+            deck_col_name = "Deck"
+
+        graphing_table[deck_col_name] = deck_list
+        graphing_table = graphing_table[
+            [
+                "Week",
+                "Player",
+                "Deck Name",
+                deck_col_name,
+                "Score",
+            ]
+        ]
+
         graphing_table = graphing_table.sort_values("Score", ascending=False)
-        return graphing_table
+
+        return graphing_table, mobile, card_format_choice
 
     @render.data_frame
     def deck_table():
-        graphing_table = create_graphing_table()
+        graphing_table, mobile, text = create_graphing_table()
 
-        return render.DataTable(graphing_table, height="800px", width="1700px")
+        if mobile:
+            if text:
+                width = 500
+            else:
+                width = 700
+        # non-mobile
+        else:
+            if text:
+                width = 700
+            else:
+                width = 1500
+
+        if mobile:
+            height = "1000px"
+        else:
+            height = "800px"
+
+        return render.DataGrid(
+            graphing_table,
+            width=str(width) + "px",
+            height=height,
+            styles=[
+                {"cols": [0], "style": {"width": "1px"}},
+                {"location": "body", "cols": [1], "style": {"width": "1px"}},
+                {"location": "body", "cols": [2], "style": {"width": "1px"}},
+                {
+                    "location": "body",
+                    "cols": [3],
+                    "style": {"width": f"{str(width - 50)}px"},
+                },
+                {"location": "body", "cols": [4], "style": {"width": "1px"}},
+            ],
+        )
 
     ### TAB 2 (card stats)
     @reactive.calc
@@ -240,7 +379,7 @@ def server(input: Inputs, output, session):
         ]
 
         if not input.silly():
-            silly_weeks = [17 + (4 * (n + 1)) for n in range(100)]
+            silly_weeks = [17 + (4 * (n + 1)) for n in range(100)] + [52.1, 52.3]
             graphing_df = graphing_df[~graphing_df["Week"].isin(silly_weeks)]
 
         if not input.banned():
@@ -263,7 +402,23 @@ def server(input: Inputs, output, session):
         value_counts = graphing_df["Card"].value_counts()
         graphing_df["N Decks"] = graphing_df["Card"].apply(lambda x: value_counts[x])
         graphing_df = graphing_df[graphing_df["N Decks"] >= input.N_decks()]
-        return graphing_df, len(graphing_df["Card"].unique()) / 35 * 800
+
+        # # calculating graph width based on device size
+        mobile = input.is_mobile()
+
+        if mobile:
+            width = "350px"
+        else:
+            width = "900 px"
+
+        # calculating graph height based on n cards in graph, and device size
+        n_cards = len(graphing_df["Card"].unique())
+        if n_cards < 11:
+            height = "240px"
+        else:
+            height = str(n_cards * 23) + "px"
+
+        return graphing_df, width, height
 
     @render.plot()
     def plot():
@@ -278,14 +433,14 @@ def server(input: Inputs, output, session):
             saturation=1,
             palette="flare",
         )
-        ax.legend().set_title(title="Number of\n    Decks")
+        ax.legend(bbox_to_anchor=(1, 1)).set_title(title="Number of\n    Decks")
         return ax
 
     @render.ui
     def my_plot():
-        return ui.output_plot(
-            "plot", width="1000px", height=str(filtered_graphing_df()[1]) + "px"
-        )
+        graph_inputs = filtered_graphing_df()
+
+        return ui.output_plot("plot", width=graph_inputs[1], height=graph_inputs[2])
 
 
 # This is a shiny.App object. It must be named `app`.

@@ -27,6 +27,11 @@ banned_cards = [
     "scion of draco",
     "electrodominance",
     "mental misstep",
+    "boseiju, who endures",
+    "petrified hamlet",
+    "riling dawnbreaker",
+    "cabal therapist",
+    "fblthp, impossibly lost",
 ]
 
 # reading in card data from scryfall
@@ -200,66 +205,3 @@ for card in card_event_df["Card Lower"].unique():
 
 with open("./app/data/card_uris.json", "w") as file:
     json.dump(card_uris, file, indent=4)
-
-# reading weeks dictionary to file (so github may be cloned)
-week_links = {
-    1: "https://tappedout.net/mtg-decks/5-card-blind-week-1-the-mirror-crackd-1/",
-    2: "https://tappedout.net/mtg-decks/5-card-blind-week-2-mysterious-mysteries/",
-    3: "https://tappedout.net/mtg-decks/5-card-blind-week-3-flying-spaghetti-monsters-1/",
-    4: "https://tappedout.net/mtg-decks/5-card-blind-week-4-return-of-the-hatebears/",
-    5: "https://tappedout.net/mtg-decks/5-card-blind-week-5-oh-the-wurmanity/",
-    6: "https://tappedout.net/mtg-decks/5-card-blind-week-6-combos-galore/",
-    7: "https://tappedout.net/mtg-decks/5-card-blind-week-7-scorched-earth/",
-    8: "https://tappedout.net/mtg-decks/5-card-blind-week-8-misstep-up-to-the-plate-2/",
-    9: "https://tappedout.net/mtg-decks/5-card-blind-week-9-pili-your-palas/",
-    10: "https://tappedout.net/mtg-decks/5-card-blind-week-10-oof-oko/",
-    11: "https://tappedout.net/mtg-decks/5-card-blind-week-11-why-i-otter/",
-    12: "https://tappedout.net/mtg-decks/5-card-blind-week-12-big-guys-and-discard/",
-    13: "https://tappedout.net/mtg-decks/5-card-blind-week-13-be-vigilant/",
-    14: "https://tappedout.net/mtg-decks/5-card-blind-week-14-mirrodin-hosts-5cb/",
-    15: "https://tappedout.net/mtg-decks/5-card-blind-week-15-return-of-the-eldrazi/",
-    16: "https://tappedout.net/mtg-decks/5-card-blind-week-16-wake-up-and-smell-the-lotus/",
-    17: "https://tappedout.net/mtg-decks/5-card-blind-week-17-a-crash-of-footfalls/",
-    18: "https://tappedout.net/mtg-decks/5-card-blind-week-18-shadowy-missteps/",
-    19: "https://tappedout.net/mtg-decks/5-card-blind-week-19-land-of-1000-counters/",
-    20: "https://tappedout.net/mtg-decks/5-card-blind-week-20-hivemind-pairs/",
-    21: "https://tappedout.net/mtg-decks/5-card-blind-week-21-105-card-blind/",
-    22: "https://tappedout.net/mtg-decks/5-card-blind-week-22-keeping-the-peace/",
-    23: "https://tappedout.net/mtg-decks/5-card-blind-week-23-3-of-a-kind/",
-    24: "https://tappedout.net/mtg-decks/5-card-blind-week-24-dont-let-your-guard-down/",
-    25: "https://tappedout.net/mtg-decks/5-card-blind-week-25-123-draw/",
-    26: "https://tappedout.net/mtg-decks/5-card-blind-week-26-creature-combats-back-1/",
-    27: "https://tappedout.net/mtg-decks/5-card-blind-week-27-start-your-engines/",
-    28: "https://tappedout.net/mtg-decks/5-card-blind-week-28-we-hate-lands/?cb=1776269622",
-    29: "https://tappedout.net/mtg-decks/5-card-blind-week-29-advanced-ritual-magic/?cb=1776910093",
-    30: "https://tappedout.net/mtg-decks/5-card-blind-week-30-neck-and-neck/?cb=1777480322",
-    31: "https://tappedout.net/mtg-decks/5-card-blind-week-31-copy-their-stylus/?cb=1778084725",
-    32: "https://tappedout.net/mtg-decks/5-card-blind-week-32-mono-white-delver/?cb=1778688913",
-    33: "https://tappedout.net/mtg-decks/5-card-blind-week-33-hell-hath-no-fury/",
-    34: "https://tappedout.net/mtg-decks/5-card-blind-week-34-and-stone-rained-down/?cb=1779898995",
-    35: "https://tappedout.net/mtg-decks/5-card-blind-week-35-creature-feature/",
-    36: "https://tappedout.net/mtg-decks/5-card-blind-week-36-combo-spring/?cb=1781111107",
-    37: "https://tappedout.net/mtg-decks/5-card-blind-week-37-treasure-for-your-thoughts/",
-    38: "https://tappedout.net/mtg-decks/5-card-blind-week-38-force-who/",
-    39: "https://tappedout.net/mtg-decks/5-card-blind-week-39-off-to-the-races/?cb=1782922136",
-    40: "https://tappedout.net/mtg-decks/5-card-blind-week-40-im-having-a-flare/",
-    41: "https://tappedout.net/mtg-decks/5-card-blind-week-41-negative-force/",
-    42: "https://tappedout.net/mtg-decks/5-card-blind-week-42-mm-spaghetti/",
-    43: "https://tappedout.net/mtg-decks/5-card-blind-week-43-dni/",
-    44: "https://tappedout.net/mtg-decks/5-card-blind-week-44-whos-that-pokemon/",
-    45: "https://tappedout.net/mtg-decks/5-card-blind-week-45-titanic/",
-    46: "https://tappedout.net/mtg-decks/5-card-blind-week-46-exile-target-creature/",
-    47: "https://tappedout.net/mtg-decks/5-card-blind-week-47-these-things-are-fungible/",
-    48: "https://tappedout.net/mtg-decks/5-card-blind-week-48-i-brought-protection/",
-    49: "https://tappedout.net/mtg-decks/5-card-blind-week-49-a-bridge-too-far/",
-    50: "https://tappedout.net/mtg-decks/5-card-blind-week-50-pay-1-more/",
-    51: "https://tappedout.net/mtg-decks/5-card-blind-week-51-off-to-the-races/",
-    52.1: "https://tappedout.net/mtg-decks/5-card-blind-week-52-1-whole-year/?cb=1790797027",
-    52.2: "https://tappedout.net/mtg-decks/5-card-blind-week-52-1-whole-year/?cb=1790797027",
-    52.3: "https://tappedout.net/mtg-decks/5-card-blind-week-52-1-whole-year/?cb=1790797027",
-}
-
-# kinda some bs i'll probably move this all to a google sheet when im not lazy
-week_links = {float(k): v for k, v in week_links.items()}
-with open("./app/data/week_links.json", "w") as file:
-    json.dump(week_links, file, indent=4)
