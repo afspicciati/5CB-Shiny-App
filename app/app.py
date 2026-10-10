@@ -4,6 +4,7 @@ import seaborn as sns
 import json
 from pathlib import Path
 from itertools import chain
+import matplotlib.pyplot as plt
 
 css_path = Path(__file__).parent / "styles.css"
 www_dir = Path(__file__).parent / "www"
@@ -408,16 +409,18 @@ def server(input, output, session):
         mobile = input.is_mobile()
 
         if mobile:
-            width = "350px"
+            width = 550
+            sns.set_context("paper")
         else:
-            width = "900 px"
+            width = 1100
+            sns.set_context("notebook")
 
         # calculating graph height based on n cards in graph, and device size
         n_cards = len(graphing_df["Card"].unique())
         if n_cards < 11:
-            height = "240px"
+            height = "325px"
         else:
-            height = str(n_cards * 23) + "px"
+            height = str(n_cards * 27) + "px"
 
         return graphing_df, width, height
 
@@ -434,6 +437,10 @@ def server(input, output, session):
             saturation=1,
             palette="flare",
         )
+
+        ymin, ymax = ax.get_ylim()
+        ax.set_ylim(ymin + 0.2, ymax - 0.2)
+
         ax.legend(bbox_to_anchor=(1, 1)).set_title(title="Number of\n    Decks")
         return ax
 
