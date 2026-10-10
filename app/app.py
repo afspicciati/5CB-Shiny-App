@@ -6,6 +6,7 @@ from pathlib import Path
 from itertools import chain
 
 css_path = Path(__file__).parent / "styles.css"
+www_dir = Path(__file__).parent / "www"
 
 # constants
 basic_lands = ["Plains", "Island", "Swamp", "Mountain", "Forest"]
