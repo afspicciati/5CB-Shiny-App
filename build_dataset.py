@@ -4,6 +4,7 @@ This file builds the dataset for the shiny app to use, cleaning the data, and ou
 
 import pandas as pd
 import json
+import math
 
 # reading in data from google sheet
 filepath = "https://docs.google.com/spreadsheets/d/1TrqDiT_gXJaCpTRu19GR5e4TYDC8VISOoiM3TTh9JGk/export?format=csv&gid=0"
@@ -42,6 +43,13 @@ scryfall_cards_original = pd.read_json(
     lines=True,
 )
 # cleaning scryfall card data
+
+# removing non-english cards
+scryfall_cards = scryfall_cards_original[scryfall_cards_original["lang"] == "en"]
+
+# removing art cards
+scryfall_cards = scryfall_cards[scryfall_cards["type_line"] != "Card // Card"]
+
 columns = [
     "oracle_id",
     "name",
@@ -53,12 +61,23 @@ columns = [
     "released_at",
     "card_faces",
 ]
-scryfall_cards = scryfall_cards_original[columns].sort_values(
-    "released_at", ascending=True
-)
+scryfall_cards = scryfall_cards[columns].sort_values("released_at", ascending=True)
+
+
 # setting card names to lowercase to match my convention
 scryfall_cards["name_lower"] = [str.lower(x) for x in scryfall_cards["name"]]
-# removing the backside name from double-sided cards
+
+# some bs I gotta do TRUST ME
+scryfall_cards = scryfall_cards.reset_index(drop=True)
+
+# removing the backside name from double-sided cards, and fixing their color/type data
+for i in range(len(scryfall_cards)):
+    card_current = scryfall_cards.iloc[i]
+    if type(card_current.colors) != list:
+
+        scryfall_cards.at[i, "colors"] = card_current.card_faces[0]["colors"]
+        scryfall_cards.at[i, "type_line"] = card_current.card_faces[0]["type_line"]
+
 scryfall_cards.loc[scryfall_cards.name_lower.str.contains("//"), "name_lower"] = [
     x.split(" //")[0]
     for x in scryfall_cards.loc[
@@ -99,12 +118,38 @@ for i in range(len(df)):
             else:
                 color_identity = color_identity[0]
 
-            # additionally adding the capitalized name from scryfall
+            # adding color data from scryfall
+            color = (
+                scryfall_cards[scryfall_cards["name_lower"] == card]
+                .reset_index()
+                .iloc[0]
+                .colors
+            )
+
+            # # checking for double-faced cards, whose color data will be NaN
+            # if type(color) != list:
+            #     color = (scryfall_cards[scryfall_cards["name_lower"] == card]
+            #                         .reset_index()
+            #                         .iloc[0]
+            #                         .card_faces[0]['colors']
+            #                     )
+
+            # adding type line data from scryfall
+            type_line = (
+                scryfall_cards[scryfall_cards["name_lower"] == card]
+                .reset_index()
+                .iloc[0]
+                .type_line.split(" —")[0]
+                .split()
+            )
+
+            # adding the capitalized name from scryfall
             card_name_caps = (
                 scryfall_cards[scryfall_cards["name_lower"] == card]
                 .reset_index()
                 .iloc[0]["name"]
             )
+
         except:
             print(card)
             color_identity = "colorless"
@@ -114,7 +159,16 @@ for i in range(len(df)):
         deck_score = df.iloc[i]["Adjusted Score"]
 
         card_event.append(
-            [card_name_caps, card, color_identity, week, deck_score, deck_legal]
+            [
+                card_name_caps,
+                card,
+                color_identity,
+                color,
+                type_line,
+                week,
+                deck_score,
+                deck_legal,
+            ]
         )
 
 # each row is an instance of a single card in a deck (decks with duplicates only contain one entry)
@@ -124,6 +178,8 @@ card_event_df = pd.DataFrame(
         "Card",
         "Card Lower",
         "Color Identity",
+        "Color",
+        "Card Type",
         "Week",
         "Deck Score",
         "Deck Legal",

@@ -381,7 +381,11 @@ def server(input, output, session):
         ]
 
         if not input.silly():
-            silly_weeks = [17 + (4 * (n + 1)) for n in range(100)] + [52.1, 52.3]
+            silly_weeks = (
+                [21 + (4 * n) for n in range(8)]
+                + [52.1, 52.3]
+                + [56 + (4 * n) for n in range(100)]
+            )
             graphing_df = graphing_df[~graphing_df["Week"].isin(silly_weeks)]
 
         if not input.banned():
@@ -417,7 +421,7 @@ def server(input, output, session):
 
         # calculating graph height based on n cards in graph, and device size
         n_cards = len(graphing_df["Card"].unique())
-        if n_cards < 11:
+        if n_cards < 13:
             height = "325px"
         else:
             height = str(n_cards * 27) + "px"
