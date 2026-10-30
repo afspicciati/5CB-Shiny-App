@@ -1,5 +1,6 @@
 from shiny import ui, render, App, Inputs, reactive
 import pandas as pd
+import numpy as np
 import seaborn as sns
 import json
 from pathlib import Path
@@ -25,9 +26,14 @@ with open("./data/card_uris.json") as file:
 ### working with data
 # fixing list read in
 table_stats["Deck"] = [eval(x) for x in table_stats["Deck"]]
+card_event_df["Card Type"] = [eval(x) for x in card_event_df["Card Type"]]
 
 # weeks count
 N_weeks = int(table_stats["Week"].max())
+# card type list
+card_types_unique = list(set(np.concatenate(card_event_df["Card Type"]).tolist()))
+card_types_unique.remove("//")
+card_types_unique = sorted(card_types_unique)
 # building selectize lists
 # listing individual card appearances
 card_value_counts = card_event_df[
@@ -101,6 +107,19 @@ def app_ui():
                             ui.input_slider("weeks", "Weeks", 1, N_weeks, [0, N_weeks]),
                             ui.input_slider(
                                 "N_decks", "Minimum Decks Containing Card", 2, 40, 15
+                            ),
+                            ui.input_select(
+                                "color",
+                                "Color Identity",
+                                ["All", "W", "U", "B", "R", "G", "gold", "colorless"],
+                                selected="All",
+                            ),
+                            ui.input_selectize(
+                                "type",
+                                "Card Type",
+                                card_types_unique,
+                                selected="All",
+                                multiple=True,
                             ),
                             ui.input_checkbox("banned", "Include Banned Decks", True),
                             ui.input_checkbox("silly", "Include Silly Weeks", True),
@@ -185,44 +204,6 @@ def server(input, output, session):
     def create_graphing_table():
 
         mobile = input.is_mobile()
-
-        # changing deck names to be hyperlinks
-        deck_hyperlinks = []
-        for i in range(len(table_stats)):
-            row = table_stats.iloc[i]
-            deck_name = str(row["Deck Name"])
-            if deck_name.startswith("https://"):
-                href = deck_name
-            else:
-                href = week_links[row["Week"]]
-
-            if mobile:
-                split = deck_name.split(" ")
-                for i in range(len(split)):
-                    if len(split[i]) > 10:
-                        n_split = int(len(split[i]) / 15) + 1
-                        idx_split = int(len(split[i]) / n_split)
-                        split[i] = " ".join(
-                            [
-                                split[i][j : j + idx_split]
-                                for j in range(0, len(split[i]), idx_split)
-                            ]
-                        )
-                deck_name = " ".join(chain(split))
-                deck_name = deck_name[:150]
-            else:
-                deck_name = deck_name[:200]
-
-            link_ui = ui.a(
-                deck_name,
-                href=href,
-                target="_blank",
-            )
-            deck_hyperlinks.append(link_ui)
-
-        graphing_table = table_stats.reset_index()
-        graphing_table["Deck Name"] = deck_hyperlinks
-
         # filtering data by card input
         card_choice = input.selectize_cards().split(" (")[0]
         if card_choice != "All":
@@ -233,6 +214,8 @@ def server(input, output, session):
                     for i in range(len(table_stats))
                 ]
             ].reset_index()
+        else:
+            graphing_table = table_stats.reset_index()
 
         #  filtering data by player input
         player_choice = input.selectize_players().split(" (")[0]
@@ -337,6 +320,43 @@ def server(input, output, session):
     def deck_table():
         graphing_table, mobile, text = create_graphing_table()
 
+        # changing deck names to be hyperlinks
+        deck_hyperlinks = []
+        for i in range(len(graphing_table)):
+            row = graphing_table.iloc[i]
+            deck_name = str(row["Deck Name"])
+            if deck_name.startswith("https://"):
+                href = deck_name
+            else:
+                href = week_links[row["Week"]]
+
+            if mobile:
+                split = deck_name.split(" ")
+                for i in range(len(split)):
+                    if len(split[i]) > 10:
+                        n_split = int(len(split[i]) / 15) + 1
+                        idx_split = int(len(split[i]) / n_split)
+                        split[i] = " ".join(
+                            [
+                                split[i][j : j + idx_split]
+                                for j in range(0, len(split[i]), idx_split)
+                            ]
+                        )
+                deck_name = " ".join(chain(split))
+                deck_name = deck_name[:150]
+            else:
+                deck_name = deck_name[:200]
+
+            link_ui = ui.a(
+                deck_name,
+                href=href,
+                target="_blank",
+            )
+            deck_hyperlinks.append(link_ui)
+
+        graphing_table["Deck Name"] = deck_hyperlinks
+
+        # setting user-dependent table widths
         if mobile:
             if text:
                 width = 500
@@ -378,7 +398,24 @@ def server(input, output, session):
             (~card_event_df["Card"].isin(basic_lands))
             & (card_event_df["Week"] >= input.weeks()[0])
             & (card_event_df["Week"] <= input.weeks()[1])
-        ]
+        ].reset_index(drop=True)
+
+        color = input.color()
+        if color != "All":
+            graphing_df = graphing_df[
+                graphing_df["Color Identity"] == color
+            ].reset_index(drop=True)
+
+        type = input.type()
+        if len(type) > 0:
+            for t in type:
+                type_filter = [
+                    t in graphing_df.iloc[i]["Card Type"]
+                    for i in range(len(graphing_df))
+                ]
+                graphing_df = graphing_df[type_filter].reset_index(drop=True)
+        if not input.banned():
+            graphing_df = graphing_df[graphing_df["Deck Legal"] == True]
 
         if not input.silly():
             silly_weeks = (
@@ -388,11 +425,10 @@ def server(input, output, session):
             )
             graphing_df = graphing_df[~graphing_df["Week"].isin(silly_weeks)]
 
-        if not input.banned():
-            graphing_df = graphing_df[graphing_df["Deck Legal"] == True]
-
         score_agg = (
-            graphing_df.drop(columns=["Card Lower", "Color Identity", "Week"])
+            graphing_df.drop(
+                columns=["Card Lower", "Color Identity", "Color", "Card Type", "Week"]
+            )
             .groupby(by="Card", as_index=False)
             .agg("mean")
             .sort_values("Deck Score", ascending=False)
